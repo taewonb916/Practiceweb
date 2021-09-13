@@ -179,7 +179,7 @@ header a:hover{
     text-align:left;
 }
 #Calculator input{
-    width: 100px;
+    width: px;
     text-align: right;
 }
 #Calculator input[type="button"]{
@@ -270,16 +270,22 @@ header a:hover{
         height: auto;
     }
     #GPA_formula img{
-        width: 100%;
-        
+        width: 90%;        
     }
     #GPA_calculator{
-        display: block;
+        display: inline-block;
     }
     #Calculator{
         margin: auto;
         border: none;
     }
+    #Calculator label, input{
+        display: inline-block;
+    }
+    #Calculator input{
+        width: 50%;
+    }
+
     #Result{
         margin: auto;
         padding: 25px;
