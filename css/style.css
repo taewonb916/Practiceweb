@@ -31,7 +31,7 @@ header a:hover{
     background-color: grey;
 }
 
-
+/*top menu*/
 #top_menu{
     font-size: 0;
     margin: 0;
@@ -39,17 +39,17 @@ header a:hover{
     text-align: center;
     list-style: none;
 }
-#top_menu li{
+#top_menu ul li{
     font-size: 15px;
     width: 150px;
     color: honeydew;
     display: inline-block;
     border: 1px solid;
+    line-height: 30px;
 }
 #top_menu a{
     text-decoration: none;
     display: block;
-    padding: 10px;
 }
 #top_menu a:link{
     color: honeydew;
@@ -57,13 +57,86 @@ header a:hover{
 #top_menu a:visited{
     color: honeydew;
 }
-#top_menu li:hover{
+#top_menu li:hover, a:hover{
     background-color: grey;
 }
+
+.dropdown{
+    color: gray;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    color: black;
+}
+.dropdown-content a {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: black;
+    text-decoration: none;
+    text-align: left;
+    width: 180px;
+    border: solid rgb(97, 96, 96) 1px;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+    color: gray;
+}
+.dropdown-content:hover a{
+    background-color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 #Site_AllBox{
     margin: 0 auto;
     text-align: center;
-    padding: 5px;
-    width: 1000px;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-bottom: 100px;
+    width: 600px;
+    background-color: #eeeeee;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
 }
+#Site_AllBox h3{
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: left;
+    border-bottom: dotted 1px gray;
+}
+#Site_AllBox iframe{
+    padding-top: 30px;
+}
+#Sitetotop{
+    text-align: left;
+    border: 2px solid rgb(97, 96, 96);
+    background-color: gray;
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#Sitetotop a{
+    text-decoration: none;
+}
+#Sitetotop a:link{
+    color: honeydew;
+}
+#Sitetotop a:visited{   
+    color: honeydew;
