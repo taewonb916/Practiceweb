@@ -18,30 +18,122 @@
     <nav id="top_menu">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a></li>
             <li><a href="introduction.html">소개</a></li>
             <li class="dropdown">재학생
                 <div class="dropdown-content">
                     <a href="departmentintroduction.html">학부</a>
                 </div>
             </li>
-            <li class="dropdown">기능
+            <li class="dropdown">유용한 기능
                 <div class="dropdown-content">
                     <a href="gpacalculator.html">GPA 계산기</a>
                     <a href="requirementsforgraduation.html">졸업요건 확인</a>
-
                 </div>
+            <li><a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a></li>
         </ul>
     </nav>
     
 
     <div id="Site_AllBox">
-        <h3>준비 중입니다.</h3>
+        <nav id="GPA_formula">
+            <h3>GPA 산출 공식</h3>
+            <a href="https://www.kagoshima-u.ac.jp/educenter/gpa.html" target="_blank">▷가고시마대학 GPA제도 확인◁</a>
+            <img src="https://latex.codecogs.com/gif.latex?GPA=\frac{\left&space;(4&space;\times&space;N_{A}&space;\right&space;)&plus;&space;\left&space;(3&space;\times&space;N_{B}&space;\right&space;)&plus;\left&space;(2&space;\times&space;N_{C}&space;\right&space;)&plus;\left&space;(1&space;\times&space;N_{D}&space;\right&space;)&plus;\left&space;(0&space;\times&space;N_{F}&space;\right&space;)}{\left&space;(N_{A}&space;\right&space;)&plus;\left&space;(N_{B}&space;\right&space;)&plus;\left&space;(N_{C}&space;\right&space;)&plus;\left&space;(N_{D}&space;\right&space;)&plus;\left&space;(N_{F}&space;\right&space;)}" title="GPA=\frac{\left (4 \times N_{A} \right )+ \left (3 \times N_{B} \right )+\left (2 \times N_{C} \right )+\left (1 \times N_{D} \right )+\left (0 \times N_{F} \right )}{\left (N_{A} \right )+\left (N_{B} \right )+\left (N_{C} \right )+\left (N_{D} \right )+\left (N_{F} \right )}"/>
+            
+            <ul>
+                <li>N<sub>A</sub> : A (優) 학점 총 단위수</li>
+                <li>N<sub>B</sub> : B (美) 학점 총 단위수</li>
+                <li>N<sub>C</sub> : C (良) 학점 총 단위수</li>
+                <li>N<sub>D</sub> : D (可) 학점 총 단위수</li>
+                <li>N<sub>F</sub> : F (不可) 학점 총 단위수</li>
+            </ul>
+            <p>&#8251 <u>A+ (秀)는 없기 때문에 최고 학점은 4.30이 아닌 4.00입니다.</u> &#8251</p> 
+        </nav>
+
+            <h3>GPA 계산기</h3>
+
+            <div id="GPA_calculator">
+                <div id="Calculator">
+                    <fieldset>
+                        <li>
+                            <label>A (優)</label>
+                            <input type="text" placeholder="A 학점 총 단위수" id="A_Grade" autocomplete="off">
+                        </li>
+                        <li>
+                            <label>B (美)</label>
+                            <input type="text" placeholder="B 학점 총 단위수" id="B_Grade" autocomplete="off">
+                        </li>
+                        <li>
+                            <label>C (良)</label>
+                            <input type="text" placeholder="C 학점 총 단위수" id="C_Grade" autocomplete="off">
+                        </li>
+                        <li>
+                            <label>D (可)</label>
+                            <input type="text" placeholder="D 학점 총 단위수" id="D_Grade" autocomplete="off">
+                            </li>
+                        <li>
+                            <label>F (不可)</label>
+                            <input type="text" placeholder="F 학점 총 단위수" id="F_Grade" autocomplete="off">
+                        </li>
+                    <input type="button" value="계산" onclick="change();">
+                    <input type="button" value="All clear" onclick="clearInput();"> 
+                </fieldset>
+                </div>
+
+                <div id="Result">
+                    <li>
+                        <label>전체 단위수</label>
+                        <input type="text" id="total" readonly>
+                    </li>
+                    <li>
+                        <label>학점</label>
+                        <input type="text" id="Gpagrade"readonly>
+                    </li>
+                </div>
+            </div>
+    
+        </div>
+
+
+    
     </div>
 
         <nav id="Sitetotop">
             <a href="#">△TOP</a>
         </nav>
+
+
+    <script>
+        function change() {
+            var a = document.getElementById("A_Grade").value;
+            var b = document.getElementById("B_Grade").value;
+            var c = document.getElementById("C_Grade").value;
+            var d = document.getElementById("D_Grade").value;
+            var f = document.getElementById("F_Grade").value;
+            var total = parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d)+parseInt(f);
+            var gpa = (4*parseInt(a) + 3*parseInt(b) + 2*parseInt(c) + 1*parseInt(d) + 0* parseInt(f))/total;
+            
+        
+            if(a=="" || b=="" || c=="" || d=="" || f==""){
+               alert("제대로 입력해 주세요.");
+            }
+            else {
+            document.getElementById("total").value= total;
+            document.getElementById("Gpagrade").value= gpa;
+            }
+        }
+
+        function clearInput() {
+            document.getElementById("A_Grade").value = "";
+            document.getElementById("B_Grade").value = "";
+            document.getElementById("C_Grade").value = "";
+            document.getElementById("D_Grade").value = "";
+            document.getElementById("F_Grade").value = "";
+            document.getElementById("total").value = "";
+            document.getElementById("Gpagrade").value = "";
+        }
+
+    </script>
    
 
     

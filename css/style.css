@@ -1,6 +1,7 @@
 body{
     margin: 0;
 }
+/*header start!*/
 header{
     text-align: center;
     border: solid gray;
@@ -30,8 +31,9 @@ header a:visited{
 header a:hover{
     background-color: grey;
 }
+/*header finish!*/
 
-/*top menu*/
+/*top menu start!*/
 #top_menu{
     font-size: 0;
     margin: 0;
@@ -46,6 +48,7 @@ header a:hover{
     display: inline-block;
     border: 1px solid;
     line-height: 30px;
+    text-align: center;
 }
 #top_menu a{
     text-decoration: none;
@@ -87,19 +90,10 @@ header a:hover{
 .dropdown-content a:hover a{
     background-color: gray;
 }
+/*top_menu finish!*/
 
 
-
-
-
-
-
-
-
-
-
-
-
+/*Site Layout start!*/
 #Site_AllBox{
     margin: 0 auto;
     text-align: center;
@@ -140,3 +134,92 @@ header a:hover{
 }
 #Sitetotop a:visited{   
     color: honeydew;
+}
+/*Site Layout finish!*/
+
+
+/*gpacalculator.html CSS start!*/
+#GPA_formula{
+    text-align: left;
+    list-style: none;
+}
+#GPA_formula a{
+    text-decoration: none;
+}
+#GPA_formula a:link{
+    color: black;
+}
+#GPA_formula a:visited{
+    color: black;
+}
+#GPA_formula img{
+    margin-top: 30px;
+    border: 1px solid;
+    padding: 5px;
+    background-color: white;
+}
+#GPA_formula ul li{
+    list-style: none;
+}
+
+#GPA_calculator{
+    list-style: none;
+    text-align: left;
+}
+#Calculator{
+    background-color: #E2E2E2;
+    width: 250px;
+    border-right: dashed 1px;
+    padding: 25px;
+    background-clip: content-box;
+}
+#Calculator label{
+    width: 100px;
+    float:left;
+    text-align:left;
+}
+#Calculator input{
+    width: 100px;
+    text-align: right;
+}
+#Calculator input[type="button"]{
+    background-color: #5F5F5F;
+    color: white;
+    float: right;
+    text-align: center;
+    width: 70px;
+    margin-top: 10px;
+    margin-right: 3px;
+    height: 30px;
+}
+#GPA_calculator{
+    display: grid;
+    grid-template-columns: 300px 300px;
+}
+
+#Result{
+    width: 250px;
+    padding: 25px;
+    padding-top: 30%;
+}
+#Result label{
+    width: 100px;
+    float: left;
+    text-align: left;
+}
+#Result input{
+    width:70px;
+}
+/*gpacalculator.html CSS finish!*/
+
+
+
+
+
+
+
+
+
+
+
+
