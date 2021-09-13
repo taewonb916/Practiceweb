@@ -196,6 +196,10 @@ fieldset li{
     margin-right: 3px;
     height: 30px;
 }
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 #GPA_calculator{
     display: grid;
     grid-template-columns: 300px 300px;
@@ -213,7 +217,9 @@ fieldset li{
 }
 #Result input{
     width:70px;
+    text-align: right;
 }
+
 /*gpacalculator.html CSS finish!*/
 
 
