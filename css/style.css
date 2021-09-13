@@ -174,12 +174,12 @@ header a:hover{
     background-clip: content-box;
 }
 #Calculator label{
-    width: 100px;
+    width: 40%;
     float:left;
     text-align:left;
 }
 #Calculator input{
-    width: px;
+    width: 50%;
     text-align: right;
 }
 #Calculator input[type="button"]{
@@ -278,6 +278,11 @@ header a:hover{
     #Calculator{
         margin: auto;
         border: none;
+        width: auto;
+        height: auto;
+    }
+    fieldset {
+        padding:3%;
     }
     #Calculator label{
         display: inline-block;
@@ -285,7 +290,7 @@ header a:hover{
     }
     #Calculator input{
         display: inline-block;
-        width: 40%;
+        width: 50%;
     }
 
     #Result{
