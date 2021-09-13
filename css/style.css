@@ -84,7 +84,7 @@ header a:hover{
     display: block;
     color: gray;
 }
-.dropdown-content:hover a{
+.dropdown-content a:hover a{
     background-color: gray;
 }
 
