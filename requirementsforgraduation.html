@@ -37,9 +37,11 @@
     <div id="Site_AllBox">
         <h3>졸업 요건 확인</h3>
 
+        <a href="1.html"></a>
+
         <form id="graduation">
             <select id="department" onchange="categoryChange(this)">
-                <option>학부 선택</option>
+                <option selected disabled>학부 선택</option>
                 <option value="1">법문학부</option>
                 <option value="2">교육학부</option>
                 <option value="3">이학부</option>
@@ -51,24 +53,29 @@
                 <option value="9">공동수의학부</option>
             </select>
             
-            <select id="faculty">
-                <option>학과 선택</option>
+            <select id="faculty" onchange="category();">
+                <option selected disabled>학과 선택</option>
             </select>
 
             <select id="year">
-                <option>입학 년도</option>
+                <option selected disabled>입학 년도</option>
                 <option>2016</option>
                 <option>2017</option>
                 <option>2018</option>
                 <option>2019</option>
                 <option>2020</option>
-                <option>2021</option>
                 <option>추가 예정</option>
             </select>
 
-            <input type="button" value="확인" onclick="Onclick();">
-            <input type="button" value="All clear">
+            
+
+            <input type="button" value="확인" onclick="viewpdf();">
         </form>
+
+        <div id="viewpdf">
+
+        </div>
+
     </div>
 
         <nav id="Sitetotop">
@@ -86,9 +93,11 @@
             var faculty_7 = ["준비 중", "농업생산과학과", "식료생명과학과", "농림환경과학과","국제식료자원학 특별코스"];
             var faculty_8 = ["준비 중", "수산학과"];
             var faculty_9 = ["준비 중", "수의학과"];
+            
+
+
         
         function categoryChange(e) {
-            console.log(document.getElementById("department").value);
 
             var target = document.getElementById("faculty");
         
@@ -110,7 +119,38 @@
                 opt.innerHTML = d[x];
                 target.appendChild(opt);
             }
+
         }
+
+        function category(){
+            console.log(document.getElementById("department").value);
+            console.log(document.getElementById("faculty").value);
+        }
+        function viewpdf(){
+            if(document.getElementById("faculty").value=="기계공학 프로그램" && document.getElementById("year").value=="2016"){
+                var element = document.getElementById("viewpdf");
+                element.innerHTML= "<object data="+"pdf/28-mech.pdf"+"></object>";
+                    
+            }
+            else if(document.getElementById("faculty").value=="기계공학 프로그램" && document.getElementById("year").value=="2017"){
+                var element = document.getElementById("viewpdf");
+                element.innerHTML= "<object data="+"pdf/29-mech.pdf"+"></object>";
+                }
+            else if(document.getElementById("faculty").value=="기계공학 프로그램" && document.getElementById("year").value=="2018"){
+                var element = document.getElementById("viewpdf");
+                element.innerHTML= "<object data="+"pdf/30-mech.pdf"+"></object>";
+            }
+            else if(document.getElementById("faculty").value=="기계공학 프로그램" && document.getElementById("year").value=="2019"){
+                var element = document.getElementById("viewpdf");
+                element.innerHTML= "<object data="+"pdf/31-mech.pdf"+"></object>";
+            }
+            else if(document.getElementById("faculty").value=="기계공학 프로그램" && document.getElementById("year").value=="2020"){
+                var element = document.getElementById("viewpdf");
+                element.innerHTML= "<object data="+"pdf/r2-mech.pdf"+"></object>";
+            }
+            
+        }
+        
         </script>
 </body>
 </html>
