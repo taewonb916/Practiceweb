@@ -21,7 +21,7 @@
             <li><a href="introduction.html">소개</a></li>
             <li class="dropdown"><a>재학생</a>
                 <div class="dropdown-content">
-                    <a href="departmentintroduction.html">학부</a>
+                    <a href="facultyintroduction.html">학부</a>
                 </div>
             </li>
             <li class="dropdown"><a>유용한 기능</a>
@@ -35,7 +35,40 @@
     
 
     <div id="Site_AllBox">
-        <h3>준비 중 입니다.</h3>
+        <h3>졸업 요건 확인</h3>
+
+        <form id="graduation">
+            <select id="department" onchange="categoryChange(this)">
+                <option>학부 선택</option>
+                <option value="1">법문학부</option>
+                <option value="2">교육학부</option>
+                <option value="3">이학부</option>
+                <option value="4">의학부</option>
+                <option value="5">치학부</option>
+                <option value="6">공학부</option>
+                <option value="7">농학부</option>
+                <option value="8">수산학부</option>
+                <option value="9">공동수의학부</option>
+            </select>
+            
+            <select id="faculty">
+                <option>학과 선택</option>
+            </select>
+
+            <select id="year">
+                <option>입학 년도</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>추가 예정</option>
+            </select>
+
+            <input type="button" value="확인" onclick="Onclick();">
+            <input type="button" value="All clear">
+        </form>
     </div>
 
         <nav id="Sitetotop">
@@ -43,6 +76,41 @@
         </nav>
     
 
-    
+    <script>
+            var faculty_1 = ["준비 중", "--법경사회학과--","법학 코스","지역사회 코스","경제 코스","--인문학과--","다원지역문화 코스","심리학 코스"];
+            var faculty_2 = ["준비 중","초등교육 코스", "중등교육 코스","고등교육 코스"];
+            var faculty_3 = ["준비 중", "--이학과--","수리정보과학 프로그램","물리·우주 프로그램","화학 프로그램","물리학 프로그램","지구과학 프로그램"];
+            var faculty_4 = ["준비 중", "의학과", "간호학과"];
+            var faculty_5 = ["준비 중", "치학과"];
+            var faculty_6 = ["--선진공학과--","기계공학 프로그램","전기전자공학 프로그램","해양토목공학 프로그램","화학공학 프로그램","화학생명공학 프로그램","정보·생체공학 프로그램", "--건축학과--","건축학 프로그램"];
+            var faculty_7 = ["준비 중", "농업생산과학과", "식료생명과학과", "농림환경과학과","국제식료자원학 특별코스"];
+            var faculty_8 = ["준비 중", "수산학과"];
+            var faculty_9 = ["준비 중", "수의학과"];
+        
+        function categoryChange(e) {
+            console.log(document.getElementById("department").value);
+
+            var target = document.getElementById("faculty");
+        
+            if(e.value == "1") var d = faculty_1;
+            else if(e.value == "2") var d = faculty_2;
+            else if(e.value == "3") var d = faculty_3;
+            else if(e.value == "4") var d = faculty_4;
+            else if(e.value == "5") var d = faculty_5;
+            else if(e.value == "6") var d = faculty_6;
+            else if(e.value == "7") var d = faculty_7;
+            else if(e.value == "8") var d = faculty_8;
+            else if(e.value == "9") var d = faculty_9;
+        
+            target.options.length = 0;
+        
+            for (x in d) {
+                var opt = document.createElement("option");
+                opt.value = d[x];
+                opt.innerHTML = d[x];
+                target.appendChild(opt);
+            }
+        }
+        </script>
 </body>
 </html>
