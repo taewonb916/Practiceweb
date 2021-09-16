@@ -1,7 +1,0 @@
-@charset "utf-8";
-/**
- * @author http://www.cosmosfarm.com/
- */
-#cosmosfarm-latest-comments { list-style: none; }
-#cosmosfarm-latest-comments .latest-comments { padding: 4px 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-#cosmosfarm-latest-comments .latest-comments .latest-username { padding-right: 10px; }
