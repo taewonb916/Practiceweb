@@ -45,7 +45,7 @@
         <h3>졸업 요건 확인</h3>
 
         <form id="graduation">
-            <p>현재 공학부만 확인가능. 준비 중</p>
+            <p>졸업요건 계산기 준비 중</p>
             <select id="department" onchange="categoryChange(this)">
                 <option selected disabled>학부 선택</option>
                 <option value="1">법문학부</option>
@@ -89,15 +89,15 @@
     
 
     <script>
-            var faculty_1 = ["준비 중", "--법경사회학과--","법학 코스","지역사회 코스","경제 코스","--인문학과--","다원지역문화 코스","심리학 코스"];
-            var faculty_2 = ["준비 중","초등교육 코스", "중등교육 코스","고등교육 코스"];
-            var faculty_3 = ["준비 중", "--이학과--","수리정보과학 프로그램","물리·우주 프로그램","화학 프로그램","물리학 프로그램","지구과학 프로그램"];
-            var faculty_4 = ["준비 중", "의학과", "간호학과"];
-            var faculty_5 = ["준비 중", "치학과"];
-            var faculty_6 = ["--선진공학과--","기계공학 프로그램","전기전자공학 프로그램","해양토목공학 프로그램","화학공학 프로그램","화학생명공학 프로그램","정보·생체공학 프로그램", "--건축학과--","건축학 프로그램"];
-            var faculty_7 = ["준비 중", "농업생산과학과", "식료생명과학과", "농림환경과학과","국제식료자원학 특별코스"];
-            var faculty_8 = ["준비 중", "수산학과"];
-            var faculty_9 = ["준비 중", "수의학과"];
+            var faculty_1 = [ "(법경사회학과)","&nbsp;&nbsp;&nbsp;&nbsp; 법학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 지역사회 코스","&nbsp;&nbsp;&nbsp;&nbsp; 경제 코스","(인문학과)","&nbsp;&nbsp;&nbsp;&nbsp; 다원지역문화 코스","&nbsp;&nbsp;&nbsp;&nbsp;심리학 코스"];
+            var faculty_2 = ["(학교교육교원양성과정)","&nbsp;&nbsp;&nbsp;&nbsp; 초등교육 코스", "&nbsp;&nbsp;&nbsp;&nbsp; 중등교육 코스","&nbsp;&nbsp;&nbsp;&nbsp; 특별지원교육 코스 (소학교)","&nbsp;&nbsp;&nbsp;&nbsp; 특별지원교육 코스 (중학교)"];
+            var faculty_3 = [ "(이학과)","&nbsp;&nbsp;&nbsp;&nbsp; 수리정보과학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 물리·우주 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 화학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 물리학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 지구과학 프로그램"];
+            var faculty_4 = [ "의학과", "보건학과 (간호)","보건학과 (이학)","보건학과 (작업)"];
+            var faculty_5 = [ "치학과"];
+            var faculty_6 = ["(선진공학과)","&nbsp;&nbsp;&nbsp;&nbsp; 기계공학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 전기전자공학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 해양토목공학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 화학공학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 화학생명공학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 정보·생체공학 프로그램", "(건축학과)","&nbsp;&nbsp;&nbsp;&nbsp; 건축학 프로그램"];
+            var faculty_7 = [ "(농업생산과학과)","&nbsp;&nbsp;&nbsp;&nbsp; 응용식물과학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 축산과학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 식료농업경제학 코스", "(식료생명과학과)","&nbsp;&nbsp;&nbsp;&nbsp; 식품기능과학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 식환경제어과학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 소주발효·미생물과학 코스", "(농림환경과학과)","&nbsp;&nbsp;&nbsp;&nbsp; 삼림과학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 지역환경시스템학 코스","(국제식료자원학 특별코스)","&nbsp;&nbsp;&nbsp;&nbsp; 농학계 서브"];
+            var faculty_8 = ["(수산학과)", "&nbsp;&nbsp;-- (수권과학분야) --","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;해양환경과학 코스","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수권생물과학 코스","&nbsp;&nbsp;-- (수산자원과학분야) --","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;자원생산관리학 코스","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;증양식학 코스","&nbsp;&nbsp;-- (식품생명과학분야) --","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수산식품학 코스","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;선진자원이용학 코스","&nbsp;&nbsp;-- (수산경제학분야) --","&nbsp;&nbsp;-- (수권환경보전학분야) --","(국제식료자원학 특별코스)","&nbsp;&nbsp;&nbsp;&nbsp;수산학 서브"];
+            var faculty_9 = [ "수의학과"];
             
 
 
@@ -130,19 +130,22 @@
         function viewpdf(){
             if (document.getElementById("year").value=="2018") {
                 var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/공통/2018.pdf"+"></iframe>";
+                element.innerHTML= "<a href='pdf/공통/2018.pdf' target='_blank'>2018년 공통교육 과목 졸업요건 단위수 (외국인 유학생) </a>";
             }
             else if (document.getElementById("year").value=="2019") {
                 var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/공통/2019.pdf"+"></iframe>";
+                element.innerHTML= "<a href='pdf/공통/2018.pdf' target='_blank'>2019년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>";
+                
             }
             else if (document.getElementById("year").value=="2020") {
                 var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/공통/2020.pdf"+"></iframe>";
+                element.innerHTML= "<a href='pdf/공통/2018.pdf' target='_blank'>2020년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>";
+                
             }
             else if (document.getElementById("year").value=="2021") {
                 var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/공통/2021.pdf"+"></iframe>";
+                element.innerHTML= "<a href='pdf/공통/2018.pdf' target='_blank'>2021년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>";
+               
             }
 
             /*

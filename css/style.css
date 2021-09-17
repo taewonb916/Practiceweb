@@ -232,11 +232,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     text-align: left;
 }
 
-#viewpdf iframe{
-    border: none;
-    margin-left: -200px;
-    width: 1000px;
-    height: 1400px;
+#viewpdf{
+    text-align: left;
+
 }
 
 
@@ -355,11 +353,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         margin: 2%;
         display: block;
     }
-    #viewpdf iframe{
-        margin-left: -10%;
-        width: 90%;
-        height: 600px;
-    }
+    
 }
 
 /*모바일 모드 가로 스크롤 금지*/
