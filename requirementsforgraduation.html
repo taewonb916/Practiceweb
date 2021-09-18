@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="linkport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>가고시마 대학 한국인유학생</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -72,235 +72,238 @@
                 <option>추가 예정</option>
             </select>
 
-            
-
-            <input type="button" value="확인" onclick="viewpdf();">
+            <input type="button" value="확인" onclick="linkpdf();">
         </form>
 
-        <div id="viewpdf">
+        <div id="linkpdf"></div>
+
+        <h3>졸업 요건 계산기</h3>
+        <div id="graduation_calculator">
 
         </div>
-
+        
     </div>
-
+    
         <nav id="Sitetotop">
             <a href="#">△TOP</a>
         </nav>
     
 
     <script>
-            var faculty_1 = [ "(법경사회학과)","&nbsp;&nbsp;&nbsp;&nbsp; 법학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 지역사회 코스","&nbsp;&nbsp;&nbsp;&nbsp; 경제 코스","(인문학과)","&nbsp;&nbsp;&nbsp;&nbsp; 다원지역문화 코스","&nbsp;&nbsp;&nbsp;&nbsp;심리학 코스"];
-            var faculty_2 = ["(학교교육교원양성과정)","&nbsp;&nbsp;&nbsp;&nbsp; 초등교육 코스", "&nbsp;&nbsp;&nbsp;&nbsp; 중등교육 코스","&nbsp;&nbsp;&nbsp;&nbsp; 특별지원교육 코스 (소학교)","&nbsp;&nbsp;&nbsp;&nbsp; 특별지원교육 코스 (중학교)"];
-            var faculty_3 = [ "(이학과)","&nbsp;&nbsp;&nbsp;&nbsp; 수리정보과학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 물리·우주 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 화학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 물리학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 지구과학 프로그램"];
-            var faculty_4 = [ "의학과", "보건학과 (간호)","보건학과 (이학)","보건학과 (작업)"];
-            var faculty_5 = [ "치학과"];
-            var faculty_6 = ["(선진공학과)","&nbsp;&nbsp;&nbsp;&nbsp; 기계공학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 전기전자공학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 해양토목공학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 화학공학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 화학생명공학 프로그램","&nbsp;&nbsp;&nbsp;&nbsp; 정보·생체공학 프로그램", "(건축학과)","&nbsp;&nbsp;&nbsp;&nbsp; 건축학 프로그램"];
-            var faculty_7 = [ "(농업생산과학과)","&nbsp;&nbsp;&nbsp;&nbsp; 응용식물과학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 축산과학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 식료농업경제학 코스", "(식료생명과학과)","&nbsp;&nbsp;&nbsp;&nbsp; 식품기능과학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 식환경제어과학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 소주발효·미생물과학 코스", "(농림환경과학과)","&nbsp;&nbsp;&nbsp;&nbsp; 삼림과학 코스","&nbsp;&nbsp;&nbsp;&nbsp; 지역환경시스템학 코스","(국제식료자원학 특별코스)","&nbsp;&nbsp;&nbsp;&nbsp; 농학계 서브"];
-            var faculty_8 = ["(수산학과)", "&nbsp;&nbsp;-- (수권과학분야) --","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;해양환경과학 코스","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수권생물과학 코스","&nbsp;&nbsp;-- (수산자원과학분야) --","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;자원생산관리학 코스","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;증양식학 코스","&nbsp;&nbsp;-- (식품생명과학분야) --","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수산식품학 코스","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;선진자원이용학 코스","&nbsp;&nbsp;-- (수산경제학분야) --","&nbsp;&nbsp;-- (수권환경보전학분야) --","(국제식료자원학 특별코스)","&nbsp;&nbsp;&nbsp;&nbsp;수산학 서브"];
-            var faculty_9 = [ "수의학과"];
-            
-
-
-        
         function categoryChange(e) {
-
-            var target = document.getElementById("faculty");
-        
-            if(e.value == "1") var d = faculty_1;
-            else if(e.value == "2") var d = faculty_2;
-            else if(e.value == "3") var d = faculty_3;
-            else if(e.value == "4") var d = faculty_4;
-            else if(e.value == "5") var d = faculty_5;
-            else if(e.value == "6") var d = faculty_6;
-            else if(e.value == "7") var d = faculty_7;
-            else if(e.value == "8") var d = faculty_8;
-            else if(e.value == "9") var d = faculty_9;
-        
-            target.options.length = 0;
-        
-            for (x in d) {
-                var opt = document.createElement("option");
-                opt.value = d[x];
-                opt.innerHTML = d[x];
-                target.appendChild(opt);
+            if (document.getElementById("department").value==1) {
+                var element = document.getElementById("faculty");
+                element.innerHTML= '<optgroup label="법경사회학과"><option value="a1">법학 코스</option><option value="a2">지역사회 코스</option><option value="a3">경제 코스</option></optgroup><optgroup label="인문학과"><option value="a4">다원지역문화 코스</option><option value="a5">심리학 코스</option></optgroup>';               
             }
-
+            else if (document.getElementById("department").value==2){
+                var element = document.getElementById("faculty");
+                element.innerHTML='<optgroup label="학교교육교원양성과정"><option value="b1">초등교육 코스</option><option value="b2">중등교육 코스</option><option value="b3">특별지원교육 코스 (소학교)</option><option value="b4">특별지원교육 코스 (중학교)</option></optgroup>';          
+            }
+            else if (document.getElementById("department").value==3){
+                var element = document.getElementById("faculty");
+                element.innerHTML='<optgroup label="이학과"><option value="c1">수리정보과학 프로그램</option><option value="c2">물리·우주 프로그램</option><option value="c3">화학 프로그램</option><option value="c4">물리학 프로그램</option><option value="c5">지구과학 프로그램</option></optgroup>';          
+            }
+            else if (document.getElementById("department").value==4){
+                var element = document.getElementById("faculty");
+                element.innerHTML='<option value="d1">의학과</option><option value="d2">보건학과 (간호)</option><option value="d3">보건학과 (이학)</option><option value="d4">보건학과 (작업)</option>';          
+            }
+            else if (document.getElementById("department").value==5){
+                var element = document.getElementById("faculty");
+                element.innerHTML='<option value="e1">치학과</option>';          
+            }
+            else if (document.getElementById("department").value==6){
+                var element = document.getElementById("faculty");
+                element.innerHTML='<optgroup label="선진공학과"><option value="f1">기계공학 프로그램</option><option value="f2">전기전자공학 프로그램</option><option value="f3">화학공학 프로그램</option><option value="f4">화학공학 프로그램</option><option value="f5">화학생명공학 프로그램</option><option value="f6">정보·생체공학 프로그램</option></optgroup><optgroup label="건축학과"><option value="f7">건축학 프로그램</option></optgroup>';          
+            }
+            else if (document.getElementById("department").value==7){
+                var element = document.getElementById("faculty");
+                element.innerHTML='<optgroup label="농업생산과학과"><option value="g1">응용식물과학 코스</option><option value="g2">축산과학 코스</option><option value="g3">식료농업경제학 코스</option></optgroup><optgroup label="식료생명과학과"><option value="g4">식품기능과학 코스</option><option value="g5">식환경제어과학 코스</option><option value="g6">소주발효·미생물과학 코스</option></optgroup><optgroup label="농림환경과학과"><option value="g7">삼림과학 코스</option><option value="g8">지역환경시스템학 코스</option></optgroup><optgroup label="국제식료자원학 특별코스"><option value="g9">농학계 서브</option></optgroup>';          
+            }
+            else if (document.getElementById("department").value==8){
+                var element = document.getElementById("faculty");
+                element.innerHTML='<optgroup label="수산학과"><optgroup label="수권과학분야"><option value="h1">해양환경과학 코스</option><option value="h2">수권생물과학 코스</option></optgroup><optgroup label="수권자원과학분야"><option value="h3">자원생산관리학 코스</option><option value="h4">증양식학 코스</option></optgroup><optgroup label="식품생명과학분야"><option value="h5">수산식품학 코스</option><option value="h6">선진자원이용학 코스</option></optgroup><option value="h7">수산경제학분야</option><option value="h8">수권환경보전학분야</option><optgroup label="국제식료자원학 특별코스"><option value="h9">수산학 서브</option></optgroup></optgroup>';          
+            }
+            else if (document.getElementById("department").value==9){
+                var element = document.getElementById("faculty");
+                element.innerHTML='<option value="i1">수의학과</option>';          
+            }
         }
-
-        function viewpdf(){
+        function linkpdf(){
             if (document.getElementById("year").value=="2018") {
-                var element = document.getElementById("viewpdf");
+                var element = document.getElementById("linkpdf");
                 element.innerHTML= "<a href='pdf/공통/2018.pdf' target='_blank'>2018년 공통교육 과목 졸업요건 단위수 (외국인 유학생) </a>";
             }
             else if (document.getElementById("year").value=="2019") {
-                var element = document.getElementById("viewpdf");
+                var element = document.getElementById("linkpdf");
                 element.innerHTML= "<a href='pdf/공통/2018.pdf' target='_blank'>2019년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>";
                 
             }
             else if (document.getElementById("year").value=="2020") {
-                var element = document.getElementById("viewpdf");
+                var element = document.getElementById("linkpdf");
                 element.innerHTML= "<a href='pdf/공통/2018.pdf' target='_blank'>2020년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>";
                 
             }
             else if (document.getElementById("year").value=="2021") {
-                var element = document.getElementById("viewpdf");
+                var element = document.getElementById("linkpdf");
                 element.innerHTML= "<a href='pdf/공통/2018.pdf' target='_blank'>2021년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>";
-               
             }
+        }
+
+        
 
             /*
             //기계공학 프로그램, mech
             if(document.getElementById("faculty").value=="기계공학 프로그램" && document.getElementById("year").value=="2016"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/mech/2016.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/mech/2016.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="기계공학 프로그램" && document.getElementById("year").value=="2017"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/mech/2017.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/mech/2017.pdf"+"></iframe>";
                 }
             else if(document.getElementById("faculty").value=="기계공학 프로그램" && document.getElementById("year").value=="2018"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/mech/2018.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/mech/2018.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="기계공학 프로그램" && document.getElementById("year").value=="2019"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/mech/2019.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/mech/2019.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="기계공학 프로그램" && document.getElementById("year").value=="2020"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/mech/2020.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/mech/2020.pdf"+"></iframe>";
             }
 
             //전기전자공학 프로그램, eee
             else if(document.getElementById("faculty").value=="전기전자공학 프로그램" && document.getElementById("year").value=="2016"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/eee/2016.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/eee/2016.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="전기전자공학 프로그램" && document.getElementById("year").value=="2017"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/eee/2017.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/eee/2017.pdf"+"></iframe>";
                 }
             else if(document.getElementById("faculty").value=="전기전자공학 프로그램" && document.getElementById("year").value=="2018"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/eee/2018.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/eee/2018.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="전기전자공학 프로그램" && document.getElementById("year").value=="2019"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/eee/2019.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/eee/2019.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="전기전자공학 프로그램" && document.getElementById("year").value=="2020"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/eee/2020.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/eee/2020.pdf"+"></iframe>";
             }
 
             //해양토목공학 프로그램, oce
             else if(document.getElementById("faculty").value=="해양토목공학 프로그램" && document.getElementById("year").value=="2016"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/oce/2016.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/oce/2016.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="해양토목공학 프로그램" && document.getElementById("year").value=="2017"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/oce/2017.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/oce/2017.pdf"+"></iframe>";
                 }
             else if(document.getElementById("faculty").value=="해양토목공학 프로그램" && document.getElementById("year").value=="2018"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/oce/2018.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/oce/2018.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="해양토목공학 프로그램" && document.getElementById("year").value=="2019"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/oce/2019.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/oce/2019.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="해양토목공학 프로그램" && document.getElementById("year").value=="2020"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/oce/2020.pdf"+"></iframe>";            
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/oce/2020.pdf"+"></iframe>";            
             }
 
             //화학공학 프로그램, cen
             else if(document.getElementById("faculty").value=="화학공학 프로그램" && document.getElementById("year").value=="2016"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/cen/2016.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/cen/2016.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="화학공학 프로그램" && document.getElementById("year").value=="2017"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/cen/2017.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/cen/2017.pdf"+"></iframe>";
                 }
             else if(document.getElementById("faculty").value=="화학공학 프로그램" && document.getElementById("year").value=="2018"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/cen/2018.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/cen/2018.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="화학공학 프로그램" && document.getElementById("year").value=="2019"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/cen/2019.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/cen/2019.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="화학공학 프로그램" && document.getElementById("year").value=="2020"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/cen/2020.pdf"+"></iframe>";            
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/cen/2020.pdf"+"></iframe>";            
             }
 
             //화학생명공학 프로그램, cb
             else if(document.getElementById("faculty").value=="화학생명공학 프로그램" && document.getElementById("year").value=="2016"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/cb/2016.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/cb/2016.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="화학생명공학 프로그램" && document.getElementById("year").value=="2017"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/cb/2017.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/cb/2017.pdf"+"></iframe>";
                 }
             else if(document.getElementById("faculty").value=="화학생명공학 프로그램" && document.getElementById("year").value=="2018"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/cb/2018.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/cb/2018.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="화학생명공학 프로그램" && document.getElementById("year").value=="2019"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/cb/2019.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/cb/2019.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="화학생명공학 프로그램" && document.getElementById("year").value=="2020"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/cb/2020.pdf"+"></iframe>";            
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/cb/2020.pdf"+"></iframe>";            
             }
 
             //정보·생체공학 프로그램, ibe
             else if(document.getElementById("faculty").value=="정보·생체공학 프로그램" && document.getElementById("year").value=="2016"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/ibe/2016.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/ibe/2016.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="정보·생체공학 프로그램" && document.getElementById("year").value=="2017"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/ibe/2017.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/ibe/2017.pdf"+"></iframe>";
                 }
             else if(document.getElementById("faculty").value=="정보·생체공학 프로그램" && document.getElementById("year").value=="2018"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/ibe/2018.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/ibe/2018.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="정보·생체공학 프로그램" && document.getElementById("year").value=="2019"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/ibe/2019.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/ibe/2019.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="정보·생체공학 프로그램" && document.getElementById("year").value=="2020"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/ibe/2020.pdf"+"></iframe>";            
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/ibe/2020.pdf"+"></iframe>";            
             }
 
             //건축학 프로그램, aae
             else if(document.getElementById("faculty").value=="건축학 프로그램" && document.getElementById("year").value=="2016"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/aae/2016.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/aae/2016.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="건축학 프로그램" && document.getElementById("year").value=="2017"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/aae/2017.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/aae/2017.pdf"+"></iframe>";
                 }
             else if(document.getElementById("faculty").value=="건축학 프로그램" && document.getElementById("year").value=="2018"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/aae/2018.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/aae/2018.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="건축학 프로그램" && document.getElementById("year").value=="2019"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/aae/2019.pdf"+"></iframe>";
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/aae/2019.pdf"+"></iframe>";
             }
             else if(document.getElementById("faculty").value=="건축학 프로그램" && document.getElementById("year").value=="2020"){
-                var element = document.getElementById("viewpdf");
-                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/viewer.html?file=pdf/aae/2020.pdf"+"></iframe>";            
+                var element = document.getElementById("linkpdf");
+                element.innerHTML= "<iframe src="+"https://taewonb916.github.io/Practiceweb/pdfjs-2.9.359-dist/web/linker.html?file=pdf/aae/2020.pdf"+"></iframe>";            
             }
             */
         }
