@@ -107,6 +107,7 @@ header a:hover{
 }
 #Site_AllBox h3{
     margin: 0;
+    margin-bottom: 3%;
     padding-top: 30px;
     padding-bottom: 10px;
     text-align: left;
@@ -234,8 +235,11 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 #viewpdf{
     text-align: left;
-
 }
+#graduation_calculator table{
+    margin: 0 auto;
+}
+
 
 
 
