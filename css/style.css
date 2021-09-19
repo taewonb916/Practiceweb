@@ -236,8 +236,15 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 #viewpdf{
     text-align: left;
 }
-#graduation_calculator table{
-    margin: 0 auto;
+#graduation_calculator{
+    display: none;
+}
+#graduation_calculator fieldset li{
+    text-align: left;
+    list-style-type: none;
+}
+#graduation_calculator fieldset li input{
+    text-align: left;
 }
 
 
