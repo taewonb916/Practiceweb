@@ -233,18 +233,45 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     text-align: left;
 }
 
-#viewpdf{
+#linkpdf{
     text-align: left;
 }
 #graduation_calculator{
     display: none;
 }
+#graduation_calculator fieldset{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #E2E2E2;
+}
+#graduation_calculator fieldset legend{
+    font-size: 18px;
+    font-weight: bold;
+    
+}
 #graduation_calculator fieldset li{
-    text-align: left;
+    border-bottom: dashed 1px;
+    border-collapse: separate;
+    padding: 2%;
     list-style-type: none;
 }
-#graduation_calculator fieldset li input{
+#graduation_calculator fieldset li label{
     text-align: left;
+    width: 70%;
+    float: left;
+}
+#graduation_calculator fieldset li input{
+    width: 20%;
+    text-align: right;
+    display: flex;
+    margin-left: auto;
+    
+}
+#graduation_calculator fieldset li input::-webkit-input-placeholder{
+    text-align: right;
+}
+#graduation_calculator fieldset input{
+    margin-top: 2%;
 }
 
 
@@ -320,7 +347,6 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         margin: 0;
         padding: 5%;
         width: 100%;
-        padding-right: 0;
     }
     #Site_AllBox iframe{
         width: auto;
@@ -364,6 +390,15 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         margin: 2%;
         display: block;
     }
+    #graduation_calculator fieldset li{
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+    #graduation_calculator fieldset input{
+        margin-top: 4%;
+        display: inline;
+    }
+
     
 }
 
