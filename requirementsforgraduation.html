@@ -87,29 +87,61 @@
                 <legend id="department_name"></legend>
                 <li>
                     <label>공통 교육</label>
-                    <input type="number" pattern="\d*" placeholder="단위 수" autocomplete="off">
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
                 </li>
                 <li class="spceialty">
                     <label class="specialty_subject"></label>
-                    <input type="number" pattern="\d*" placeholder="단위 수" autocomplete="off">
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
                 </li>
                 <li class="spceialty">
                     <label class="specialty_subject"></label>
-                    <input type="number" pattern="\d*" placeholder="단위 수" autocomplete="off">
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
                 </li>
                 <li class="spceialty">
                     <label class="specialty_subject"></label>
-                    <input type="number" pattern="\d*" placeholder="단위 수" autocomplete="off">
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
                 </li>
                 <li class="spceialty">
                     <label class="specialty_subject"></label>
-                    <input type="number" pattern="\d*" placeholder="단위 수" autocomplete="off">
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
                 </li>
                 <li class="spceialty">
                     <label class="specialty_subject"></label>
-                    <input type="number" pattern="\d*" placeholder="단위 수" autocomplete="off">
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
                 </li>
-            <input type="button" value="계산" onclick="change();">
+                <li class="spceialty">
+                    <label class="specialty_subject"></label>
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                </li>
+                <li class="spceialty">
+                    <label class="specialty_subject"></label>
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                </li>
+                <li class="spceialty">
+                    <label class="specialty_subject"></label>
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                </li>
+                <li class="spceialty">
+                    <label class="specialty_subject"></label>
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                </li>
+                <li class="spceialty">
+                    <label class="specialty_subject"></label>
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                </li>
+                <li class="spceialty">
+                    <label class="specialty_subject"></label>
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                </li>
+                <li class="spceialty">
+                    <label class="specialty_subject"></label>
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                </li>
+                <li class="spceialty">
+                    <label class="specialty_subject"></label>
+                    <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                </li>
+            <input type="button" value="계산" onclick="calculate();">
             <input type="button" value="All clear" onclick="clearInput();"> 
         </fieldset>
         </div>
@@ -134,7 +166,7 @@
                     element.innerHTML='<optgroup label="학교교육교원양성과정"><option value="b1">초등교육 코스</option><option value="b2">중등교육 코스</option><option value="b3">특별지원교육 코스 (소학교)</option><option value="b4">특별지원교육 코스 (중학교)</option></optgroup>';
                     break;
                 case '3':
-                    element.innerHTML='<optgroup label="이학과"><option value="c1">수리정보과학 프로그램</option><option value="c2">물리·우주 프로그램</option><option value="c3">화학 프로그램</option><option value="c4">물리학 프로그램</option><option value="c5">지구과학 프로그램</option></optgroup>';
+                    element.innerHTML='<optgroup label="이학과"><option value="c1">수리정보과학 프로그램</option><option value="c2">물리·우주 프로그램</option><option value="c3">화학 프로그램</option><option value="c4">생물학 프로그램</option><option value="c5">지구과학 프로그램</option></optgroup>';
                     break;
                 case '4':
                     element.innerHTML='<option value="d1">의학과</option><optgroup label="보건학과"><option value="d2">간호사 과정</option><option value="d3">보건사 과정</option></optgroup><option value="d4">보건학과 (이학)</option><option value="d5">보건학과 (작업)</option>';
@@ -143,7 +175,7 @@
                     element.innerHTML='<option value="e1">치학과</option>';
                     break;
                 case '6':
-                    element.innerHTML='<optgroup label="선진공학과"><option value="f1">기계공학 프로그램</option><option value="f2">전기전자공학 프로그램</option><option value="f3">화학공학 프로그램</option><option value="f4">화학공학 프로그램</option><option value="f5">화학생명공학 프로그램</option><option value="f6">정보·생체공학 프로그램</option></optgroup><optgroup label="건축학과"><option value="f7">건축학 프로그램</option></optgroup>';
+                    element.innerHTML='<optgroup label="선진공학과"><option value="f1">기계공학 프로그램</option><option value="f2">전기전자공학 프로그램</option><option value="f3">해양토목공학 프로그램</option><option value="f4">화학공학 프로그램</option><option value="f5">화학생명공학 프로그램</option><option value="f6">정보·생체공학 프로그램</option></optgroup><optgroup label="건축학과"><option value="f7">건축학 프로그램</option></optgroup>';
                     break;
                 case '7':
                     element.innerHTML='<optgroup label="농업생산과학과"><option value="g1">응용식물과학 코스</option><option value="g2">축산과학 코스</option><option value="g3">식료농업경제학 코스</option></optgroup><optgroup label="식료생명과학과"><option value="g4">식품기능과학 코스</option><option value="g5">식환경제어과학 코스</option><option value="g6">소주발효·미생물과학 코스</option></optgroup><optgroup label="농림환경과학과"><option value="g7">삼림과학 코스</option><option value="g8">지역환경시스템학 코스</option></optgroup><optgroup label="국제식료자원학 특별코스"><option value="g9">농학계 서브</option></optgroup>';
@@ -179,45 +211,1858 @@
                             specialty_subject[0].innerText = '필수';
                             specialty_subject[1].innerText = '선택필수';
                             specialty_subject[2].innerText = '선택 + 자유';
-                            spceialty[3].style.display = 'none';
-                            spceialty[4].style.display = 'none';
+                            for(var j = 3; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
                             break;
                         case 'a2':
                             specialty_subject[0].innerText = '필수';
                             specialty_subject[1].innerText = '선택 + 자유';
-                            spceialty[2].style.display = 'none';
-                            spceialty[3].style.display = 'none';
-                            spceialty[4].style.display = 'none';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
                             break;
                         case 'a3':
                             specialty_subject[0].innerText = '필수';
                             specialty_subject[1].innerText = '선택필수';
                             specialty_subject[2].innerText = '선택';
                             specialty_subject[3].innerText = '자유';
-                            spceialty[4].style.display = 'none';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
                             break;
                         case 'a4':
                             specialty_subject[0].innerText = '필수';
                             specialty_subject[1].innerText = '선택필수';
                             specialty_subject[2].innerText = '선택';
                             specialty_subject[3].innerText = '자유';
-                            spceialty[4].style.display = 'none';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b1':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (소학교교과)';
+                            specialty_subject[3].innerText = '전문 (영역)';
+                            specialty_subject[4].innerText = '교육실지연구';
+                            specialty_subject[5].innerText = '자유선택';
+                            specialty_subject[6].innerText = '졸업논문';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b2':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문';
+                            specialty_subject[3].innerText = '교육실지연구';
+                            specialty_subject[4].innerText = '자유선택';
+                            specialty_subject[5].innerText = '졸업논문';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b3':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (소학교교과)';
+                            specialty_subject[3].innerText = '전문 (과정)';
+                            specialty_subject[4].innerText = '교육실지연구 (기초면허)';
+                            specialty_subject[5].innerText = '교육실지연구 (특별지원학교 제1면허)';
+                            specialty_subject[6].innerText = '자유선택';
+                            specialty_subject[7].innerText = '졸업논문';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b4':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (기초교과)';
+                            specialty_subject[3].innerText = '전문 (과정)';
+                            specialty_subject[4].innerText = '교육실지연구 (기초면허)';
+                            specialty_subject[5].innerText = '교육실지연구 (특별지원학교 제1면허)';
+                            specialty_subject[6].innerText = '자유선택';
+                            specialty_subject[7].innerText = '졸업논문';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c1':
+                            specialty_subject[0].innerText = '전문영어필수';
+                            specialty_subject[1].innerText = '기초교육필수';
+                            specialty_subject[2].innerText = '기초전문필수';
+                            specialty_subject[3].innerText = '전문필수';
+                            specialty_subject[4].innerText = '전문선택필수';
+                            specialty_subject[5].innerText = '전문선택';
+                            specialty_subject[6].innerText = '자유과목 (인정가능)';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c2':
+                            specialty_subject[0].innerText = '기초교육 (선택필수 A군)';
+                            specialty_subject[1].innerText = '기초교육 (선택필수 B군)';
+                            specialty_subject[2].innerText = '기초전문 (필수)';
+                            specialty_subject[3].innerText = '기초전문 (선택필수)';
+                            specialty_subject[4].innerText = '기초전문 (선택)';
+                            specialty_subject[5].innerText = '전문 (필수)';
+                            specialty_subject[6].innerText = '전문 (코스 공통선택필수)';
+                            specialty_subject[7].innerText = '전문 (코스 전수선택필수)';
+                            specialty_subject[8].innerText = '전문 (선택)';
+                            specialty_subject[9].innerText = '전문교육과목';
+                            specialty_subject[10].innerText = '자유과목 (인정가능)';
+                            for(var j = 11; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c3':
+                            specialty_subject[0].innerText = '기초교육 (필수)';
+                            specialty_subject[1].innerText = '기초교육 (선택필수)';
+                            specialty_subject[2].innerText = '기초전문필수';
+                            specialty_subject[3].innerText = '기초전문 (선택1)';
+                            specialty_subject[4].innerText = '기초전문 (선택2)';
+                            specialty_subject[5].innerText = '기초전문 (선택3 [인정가능])';
+                            specialty_subject[6].innerText = '기초전문 (전문 [필수])';
+                            specialty_subject[7].innerText = '기초전문 (전문 [선택])';
+                            specialty_subject[8].innerText = '자유과목 (인정가능)';
+                            for(var j = 9; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c4':
+                            specialty_subject[0].innerText = '기초교육 (필수)';
+                            specialty_subject[1].innerText = '기초교육 (선택필수)';
+                            specialty_subject[2].innerText = '기초전문필수';
+                            specialty_subject[3].innerText = '기초전문 (선택1)';
+                            specialty_subject[4].innerText = '기초전문 (선택2)';
+                            specialty_subject[5].innerText = '기초전문 (선택3 [인정가능])';
+                            specialty_subject[6].innerText = '기초전문 (전문 [필수])';
+                            specialty_subject[7].innerText = '기초전문 (전문 [선택])';
+                            specialty_subject[8].innerText = '자유과목 (인정가능)';
+                            for(var j = 9; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c5':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '기초전문 (필수)';
+                            specialty_subject[2].innerText = '기초전문 (선택)';
+                            specialty_subject[3].innerText = '전문 (필수)';
+                            specialty_subject[4].innerText = '전문 (선택)';
+                            specialty_subject[5].innerText = '자유과목 (인정가능)';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd1':
+                            specialty_subject[0].innerText = '의학도입과목';
+                            specialty_subject[1].innerText = '의학의료기초과목';
+                            specialty_subject[2].innerText = '종합의료과목';
+                            specialty_subject[3].innerText = '프로페셔널리즘';
+                            specialty_subject[4].innerText = '의학연구과목';
+                            specialty_subject[5].innerText = '임상실습 (필수)';
+                            specialty_subject[6].innerText = '임상실습 (필수선택)';
+                            specialty_subject[7].innerText = '종합강의';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd2':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '간호전문교육 (필수)';
+                            specialty_subject[3].innerText = '간호전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd3':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '간호전문교육 (필수)';
+                            specialty_subject[3].innerText = '간호전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd4':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '전문교육 (필수)';
+                            specialty_subject[3].innerText = '전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd5':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '전문교육 (필수)';
+                            specialty_subject[3].innerText = '전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'e1':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '치학도입계과목';
+                            specialty_subject[2].innerText = '기초계과목';
+                            specialty_subject[3].innerText = '보건·사회계과목';
+                            specialty_subject[4].innerText = '임상계과목 (의계과목 포함)';
+                            specialty_subject[5].innerText = '치학종합계과목';
+                            specialty_subject[6].innerText = '임상실습';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f1':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [A군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [B군])';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f2':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [B군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [C군])';
+                            specialty_subject[4].innerText = '전문과목 (선택과목 [D군])';
+                            specialty_subject[5].innerText = '전문과목 (선택과목 [E군])';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f3':
+                        specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [A군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [B군])';
+                            specialty_subject[4].innerText = '전문과목 (선택과목 [C군])';
+                            specialty_subject[5].innerText = '전문과목 (선택과목 [D군])';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f4':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [공학기초])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [전문기초A])';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f5':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [A군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [B군])';
+                            specialty_subject[4].innerText = '전문과목 (선택과목 [C군])';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f6':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [A군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [B군])';
+                            specialty_subject[4].innerText = '전문과목 (선택과목 [C군])';
+                            specialty_subject[5].innerText = '전문과목 (선택과목 [D군])';
+                            specialty_subject[6].innerText = '전문과목 (선택과목 [E군])';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f7':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [A군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [B군])';
+                            specialty_subject[4].innerText = '전문과목 (선택과목 [C군])';
+                            specialty_subject[5].innerText = '전문과목 (선택과목 [D군])';
+                            specialty_subject[6].innerText = '전문과목 (선택과목 [E군])';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g1':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g2':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g3':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g4':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g5':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g6':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g7':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g8':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g9':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 1a';
+                            specialty_subject[2].innerText = '선택 1b';
+                            specialty_subject[3].innerText = '선택 2';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h1':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h2':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h3':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h4':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h5':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h6':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h7':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h8':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '추장·선택';
+                            specialty_subject[3].innerText = '졸업연구';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h9':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 1a';
+                            specialty_subject[2].innerText = '선택 1b';
+                            specialty_subject[3].innerText = '선택 2';
+                            specialty_subject[4].innerText = '졸업프로젝트';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'i1':
+                            specialty_subject[0].innerText = '제1교육과목 (기초교육과목)';
+                            specialty_subject[1].innerText = '제1교육과목 (도입과목)';
+                            specialty_subject[2].innerText = '제1교육과목 (기초수의계과목)';
+                            specialty_subject[3].innerText = '제1교육과목 (응용수의계과목)';
+                            specialty_subject[4].innerText = '제1교육과목 (임상수의계과목)';
+                            specialty_subject[5].innerText = '전수교육과목';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
                     }
                     break;            
                 case '2019':
                     element.innerHTML= "<a href='pdf/공통/2019.pdf' target='_blank'>2019년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>";
+                    switch (department.value) {
+                        case 'a1':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택필수';
+                            specialty_subject[2].innerText = '선택 + 자유';
+                            for(var j = 3; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'a2':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 + 자유';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'a3':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택필수';
+                            specialty_subject[2].innerText = '선택';
+                            specialty_subject[3].innerText = '자유';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'a4':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택필수';
+                            specialty_subject[2].innerText = '선택';
+                            specialty_subject[3].innerText = '자유';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b1':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (소학교교과)';
+                            specialty_subject[3].innerText = '전문 (영역)';
+                            specialty_subject[4].innerText = '교육실습';
+                            specialty_subject[5].innerText = '자유선택';
+                            specialty_subject[6].innerText = '졸업논문';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b2':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문';
+                            specialty_subject[3].innerText = '교육실습';
+                            specialty_subject[4].innerText = '자유선택';
+                            specialty_subject[5].innerText = '졸업논문';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b3':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (소학교교과)';
+                            specialty_subject[3].innerText = '전문 (과정)';
+                            specialty_subject[4].innerText = '교육실습 (기초면허)';
+                            specialty_subject[5].innerText = '교육실습 (특별지원학교 제1면허)';
+                            specialty_subject[6].innerText = '자유선택';
+                            specialty_subject[7].innerText = '졸업논문';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b4':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (기초교과)';
+                            specialty_subject[3].innerText = '전문 (과정)';
+                            specialty_subject[4].innerText = '교육실습 (기초면허)';
+                            specialty_subject[5].innerText = '교육실습 (특별지원학교 제1면허)';
+                            specialty_subject[6].innerText = '자유선택';
+                            specialty_subject[7].innerText = '졸업논문';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c1':
+                            specialty_subject[0].innerText = '전문영어필수';
+                            specialty_subject[1].innerText = '기초교육필수';
+                            specialty_subject[2].innerText = '기초전문필수';
+                            specialty_subject[3].innerText = '전문필수';
+                            specialty_subject[4].innerText = '전문선택필수';
+                            specialty_subject[5].innerText = '전문과목';
+                            specialty_subject[6].innerText = '자유과목 (인정가능)';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c2':
+                            specialty_subject[0].innerText = '기초교육 (선택필수 A군)';
+                            specialty_subject[1].innerText = '기초교육 (선택필수 B군)';
+                            specialty_subject[2].innerText = '기초전문 (선택필수)';
+                            specialty_subject[3].innerText = '기초전문 (선택)';
+                            specialty_subject[4].innerText = '전문 (필수)';
+                            specialty_subject[5].innerText = '전문 (코스 공통선택필수)';
+                            specialty_subject[6].innerText = '전문 (코스 전수선택필수)';
+                            specialty_subject[7].innerText = '전문 (선택)';
+                            specialty_subject[8].innerText = '전문교육과목';
+                            specialty_subject[9].innerText = '자유과목 (인정가능)';
+                            for(var j = 10; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c3':
+                            specialty_subject[0].innerText = '기초교육 (필수)';
+                            specialty_subject[1].innerText = '기초교육 (선택필수)';
+                            specialty_subject[2].innerText = '기초전문필수';
+                            specialty_subject[3].innerText = '기초전문 (선택1)';
+                            specialty_subject[4].innerText = '기초전문 (선택2)';
+                            specialty_subject[5].innerText = '기초전문 (선택3 [인정가능])';
+                            specialty_subject[6].innerText = '기초전문 (전문 [필수])';
+                            specialty_subject[7].innerText = '기초전문 (전문 [선택])';
+                            specialty_subject[8].innerText = '자유과목 (인정가능)';
+                            for(var j = 9; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c4':
+                            specialty_subject[0].innerText = '기초교육 (필수)';
+                            specialty_subject[1].innerText = '기초교육 (선택필수)';
+                            specialty_subject[2].innerText = '기초전문필수';
+                            specialty_subject[3].innerText = '기초전문 (선택1)';
+                            specialty_subject[4].innerText = '기초전문 (선택2)';
+                            specialty_subject[5].innerText = '기초전문 (선택3 [인정가능])';
+                            specialty_subject[6].innerText = '기초전문 (전문 [필수])';
+                            specialty_subject[7].innerText = '기초전문 (전문 [선택])';
+                            specialty_subject[8].innerText = '자유과목 (인정가능)';
+                            for(var j = 9; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c5':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '기초전문 (필수)';
+                            specialty_subject[2].innerText = '기초전문 (선택)';
+                            specialty_subject[3].innerText = '전문 (필수)';
+                            specialty_subject[4].innerText = '전문 (선택)';
+                            specialty_subject[5].innerText = '자유과목 (인정가능)';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd1':
+                            specialty_subject[0].innerText = '의학도입과목';
+                            specialty_subject[1].innerText = '의학의료기초과목';
+                            specialty_subject[2].innerText = '종합의료과목';
+                            specialty_subject[3].innerText = '프로페셔널리즘';
+                            specialty_subject[4].innerText = '의학연구과목';
+                            specialty_subject[5].innerText = '임상실습 (필수)';
+                            specialty_subject[6].innerText = '임상실습 (필수선택)';
+                            specialty_subject[7].innerText = '종합강의';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd2':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '간호전문교육 (필수)';
+                            specialty_subject[3].innerText = '간호전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd3':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '간호전문교육 (필수)';
+                            specialty_subject[3].innerText = '간호전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd4':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '전문교육 (필수)';
+                            specialty_subject[3].innerText = '전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd5':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '전문교육 (필수)';
+                            specialty_subject[3].innerText = '전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'e1':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '치학도입계과목';
+                            specialty_subject[2].innerText = '기초계과목';
+                            specialty_subject[3].innerText = '보건·사회계과목';
+                            specialty_subject[4].innerText = '임상계과목 (의계과목 포함)';
+                            specialty_subject[5].innerText = '치학종합계과목';
+                            specialty_subject[6].innerText = '임상실습';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f1':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [A군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [B군])';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f2':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [B군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [C군])';
+                            specialty_subject[4].innerText = '전문과목 (선택과목 [D군])';
+                            specialty_subject[5].innerText = '전문과목 (선택과목 [E군])';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f3':
+                        specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [A군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [B군])';
+                            specialty_subject[4].innerText = '전문과목 (선택과목 [C군])';
+                            specialty_subject[5].innerText = '전문과목 (선택과목 [D군])';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f4':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [공학기초])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [전문기초 A])';
+                            specialty_subject[4].innerText = '전문과목 (선택과목 [전문])';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f5':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [A군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [B군])';
+                            specialty_subject[4].innerText = '전문과목 (선택과목 [C군])';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f6':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [A군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [B군])';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f7':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '전문과목 (필수과목)';
+                            specialty_subject[2].innerText = '전문과목 (선택과목 [A군])';
+                            specialty_subject[3].innerText = '전문과목 (선택과목 [B군])';
+                            specialty_subject[4].innerText = '전문과목 (선택과목 [C군])';
+                            specialty_subject[5].innerText = '전문과목 (선택과목 [D군])';
+                            specialty_subject[6].innerText = '전문과목 (선택과목 [E군])';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g1':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g2':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g3':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g4':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g5':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g6':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g7':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g8':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g9':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 1a';
+                            specialty_subject[2].innerText = '선택 1b';
+                            specialty_subject[3].innerText = '선택 2';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h1':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h2':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h3':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h4':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h5':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h6':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h7':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h8':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '추장·선택';
+                            specialty_subject[3].innerText = '졸업연구';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h9':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 1a';
+                            specialty_subject[2].innerText = '선택 1b';
+                            specialty_subject[3].innerText = '선택 2';
+                            specialty_subject[4].innerText = '졸업프로젝트';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'i1':
+                            specialty_subject[0].innerText = '제1교육과목 (기초교육과목)';
+                            specialty_subject[1].innerText = '제1교육과목 (도입과목)';
+                            specialty_subject[2].innerText = '제1교육과목 (기초수의계과목)';
+                            specialty_subject[3].innerText = '제1교육과목 (응용수의계과목)';
+                            specialty_subject[4].innerText = '제1교육과목 (임상수의계과목)';
+                            specialty_subject[5].innerText = '전수교육과목';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                    }
                     break;
                 case '2020':
                     element.innerHTML= "<a href='pdf/공통/2020.pdf' target='_blank'>2020년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>"; 
+                    switch (department.value) {
+                        case 'a1':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 + 자유';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'a2':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 + 자유';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'a3':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택필수';
+                            specialty_subject[2].innerText = '선택 + 자유';
+                            for(var j = 3; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'a4':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택필수';
+                            specialty_subject[2].innerText = '선택 + 자유';
+                            for(var j = 3; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b1':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (소학교교과)';
+                            specialty_subject[3].innerText = '전문 (영역)';
+                            specialty_subject[4].innerText = '교육실습';
+                            specialty_subject[5].innerText = '자유선택';
+                            specialty_subject[6].innerText = '졸업논문';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b2':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문';
+                            specialty_subject[3].innerText = '교육실습';
+                            specialty_subject[4].innerText = '자유선택';
+                            specialty_subject[5].innerText = '졸업논문';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b3':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (소학교교과)';
+                            specialty_subject[3].innerText = '전문 (과정)';
+                            specialty_subject[4].innerText = '교육실습 (기초면허)';
+                            specialty_subject[5].innerText = '교육실습 (특별지원학교 제1면허)';
+                            specialty_subject[6].innerText = '자유선택';
+                            specialty_subject[7].innerText = '졸업논문';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b4':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (기초교과)';
+                            specialty_subject[3].innerText = '전문 (과정)';
+                            specialty_subject[4].innerText = '교육실습 (기초면허)';
+                            specialty_subject[5].innerText = '교육실습 (특별지원학교 제1면허)';
+                            specialty_subject[6].innerText = '자유선택';
+                            specialty_subject[7].innerText = '졸업논문';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c1':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '커리어교육과목필수';
+                            specialty_subject[2].innerText = '기초전문선택필수';
+                            specialty_subject[3].innerText = '전문과목 (특별연구 or 특별연습) 선택필수';
+                            specialty_subject[4].innerText = '전문과목 (논문구독) 선택필수';
+                            specialty_subject[5].innerText = '전문과목 (강의, 실험, 세미나등) 선택필수';
+                            specialty_subject[6].innerText = '전문과목 (강의, 실험, 세미나등) 선택';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c2':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '커리어교육과목필수';
+                            specialty_subject[2].innerText = '기초전문선택필수';
+                            specialty_subject[3].innerText = '전문과목 (특별연구 or 특별연습) 선택필수';
+                            specialty_subject[4].innerText = '전문과목 (논문구독) 선택필수';
+                            specialty_subject[5].innerText = '전문과목 (강의, 실험, 세미나등) 선택필수';
+                            specialty_subject[6].innerText = '전문과목 (강의, 실험, 세미나등) 선택';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c3':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '커리어교육과목필수';
+                            specialty_subject[2].innerText = '기초전문선택필수';
+                            specialty_subject[3].innerText = '전문과목 (특별연구 or 특별연습) 선택필수';
+                            specialty_subject[4].innerText = '전문과목 (논문구독) 선택필수';
+                            specialty_subject[5].innerText = '전문과목 (강의, 실험, 세미나등) 선택필수';
+                            specialty_subject[6].innerText = '전문과목 (강의, 실험, 세미나등) 선택';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c4':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '커리어교육과목필수';
+                            specialty_subject[2].innerText = '기초전문선택필수';
+                            specialty_subject[3].innerText = '전문과목 (특별연구 or 특별연습) 선택필수';
+                            specialty_subject[4].innerText = '전문과목 (논문구독) 선택필수';
+                            specialty_subject[5].innerText = '전문과목 (강의, 실험, 세미나등) 선택필수';
+                            specialty_subject[6].innerText = '전문과목 (강의, 실험, 세미나등) 선택';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c5':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '커리어교육과목필수';
+                            specialty_subject[2].innerText = '기초전문선택필수';
+                            specialty_subject[3].innerText = '전문과목 (특별연구 or 특별연습) 선택필수';
+                            specialty_subject[4].innerText = '전문과목 (논문구독) 선택필수';
+                            specialty_subject[5].innerText = '전문과목 (강의, 실험, 세미나등) 선택필수';
+                            specialty_subject[6].innerText = '전문과목 (강의, 실험, 세미나등) 선택';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd1':
+                            specialty_subject[0].innerText = '의학도입과목';
+                            specialty_subject[1].innerText = '의학의료기초과목';
+                            specialty_subject[2].innerText = '종합의료과목';
+                            specialty_subject[3].innerText = '프로페셔널리즘';
+                            specialty_subject[4].innerText = '의학연구과목';
+                            specialty_subject[5].innerText = '임상실습 (필수)';
+                            specialty_subject[6].innerText = '임상실습 (필수선택)';
+                            specialty_subject[7].innerText = '종합강의';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd2':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '간호전문교육 (필수)';
+                            specialty_subject[3].innerText = '간호전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd3':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '간호전문교육 (필수)';
+                            specialty_subject[3].innerText = '간호전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd4':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '전문교육 (필수)';
+                            specialty_subject[3].innerText = '전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd5':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '전문교육 (필수)';
+                            specialty_subject[3].innerText = '전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'e1':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '치학도입계과목';
+                            specialty_subject[2].innerText = '기초계과목';
+                            specialty_subject[3].innerText = '보건·사회계과목';
+                            specialty_subject[4].innerText = '임상계과목 (의계과목 포함)';
+                            specialty_subject[5].innerText = '치학종합계과목';
+                            specialty_subject[6].innerText = '임상실습';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f1':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목 [선택필수과목])';
+                            specialty_subject[8].innerText = '프로그램과목 (분야전문과목)';
+                            for(var j = 9; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f2':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목 [선택필수과목])';
+                            specialty_subject[8].innerText = '프로그램과목 (분야전문과목)';
+                            for(var j = 9; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f3':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목 [A군])';
+                            specialty_subject[8].innerText = '프로그램과목 (분야전문과목 [B군])';
+                            specialty_subject[9].innerText = '프로그램과목 (분야전문과목 [C군])';
+                            for(var j = 10; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f4':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목)';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f5':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목 [선택필수과목])';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f6':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목)';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f7':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (공학기반정보과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (종합력육성기초과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (종합력육성실천과목)';
+                            specialty_subject[8].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[9].innerText = '프로그램과목 (분야전문과목 [A군])';
+                            specialty_subject[10].innerText = '프로그램과목 (분야전문과목 [B군])';
+                            specialty_subject[11].innerText = '프로그램과목 (분야전문과목 [c군])';
+                            for(var j = 12; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g1':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g2':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g3':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g4':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g5':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g6':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g7':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g8':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g9':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 1a';
+                            specialty_subject[2].innerText = '선택 1b';
+                            specialty_subject[3].innerText = '선택 2';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h1':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h2':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h3':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h4':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h5':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h6':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h7':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h8':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '추장·선택';
+                            specialty_subject[3].innerText = '졸업연구';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h9':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 1a';
+                            specialty_subject[2].innerText = '선택 1b';
+                            specialty_subject[3].innerText = '선택 2';
+                            specialty_subject[4].innerText = '졸업프로젝트';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'i1':
+                            specialty_subject[0].innerText = '제1교육과목 (기초교육과목)';
+                            specialty_subject[1].innerText = '제1교육과목 (도입과목)';
+                            specialty_subject[2].innerText = '제1교육과목 (기초수의계과목)';
+                            specialty_subject[3].innerText = '제1교육과목 (응용수의계과목)';
+                            specialty_subject[4].innerText = '제1교육과목 (임상수의계과목)';
+                            specialty_subject[5].innerText = '전수교육과목';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                    }
                     break; 
                 case '2021':
                     element.innerHTML= "<a href='pdf/공통/2021.pdf' target='_blank'>2021년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>";
+                    switch (department.value) {
+                        case 'a1':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 + 자유';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'a2':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 + 자유';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'a3':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택필수';
+                            specialty_subject[2].innerText = '선택 + 자유';
+                            for(var j = 3; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'a4':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택필수';
+                            specialty_subject[2].innerText = '선택 + 자유';
+                            for(var j = 3; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b1':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (소학교교과)';
+                            specialty_subject[3].innerText = '전문 (영역)';
+                            specialty_subject[4].innerText = '교육실습';
+                            specialty_subject[5].innerText = '자유선택';
+                            specialty_subject[6].innerText = '졸업논문';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b2':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문';
+                            specialty_subject[3].innerText = '교육실습';
+                            specialty_subject[4].innerText = '자유선택';
+                            specialty_subject[5].innerText = '졸업논문';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b3':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (소학교교과)';
+                            specialty_subject[3].innerText = '전문 (과정)';
+                            specialty_subject[4].innerText = '교육실습 (기초면허)';
+                            specialty_subject[5].innerText = '교육실습 (특별지원학교 제1면허)';
+                            specialty_subject[6].innerText = '자유선택';
+                            specialty_subject[7].innerText = '졸업논문';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'b4':
+                            specialty_subject[0].innerText = '교직이해';
+                            specialty_subject[1].innerText = '교과교육학';
+                            specialty_subject[2].innerText = '전문 (기초교과)';
+                            specialty_subject[3].innerText = '전문 (과정)';
+                            specialty_subject[4].innerText = '교육실습 (기초면허)';
+                            specialty_subject[5].innerText = '교육실습 (특별지원학교 제1면허)';
+                            specialty_subject[6].innerText = '자유선택';
+                            specialty_subject[7].innerText = '졸업논문';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c1':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '커리어교육과목필수';
+                            specialty_subject[2].innerText = '기초전문선택필수';
+                            specialty_subject[3].innerText = '전문과목 (특별연구 or 특별연습) 선택필수';
+                            specialty_subject[4].innerText = '전문과목 (논문구독) 선택필수';
+                            specialty_subject[5].innerText = '전문과목 (강의, 실험, 세미나등) 선택필수';
+                            specialty_subject[6].innerText = '전문과목 (강의, 실험, 세미나등) 선택';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c2':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '커리어교육과목필수';
+                            specialty_subject[2].innerText = '기초전문선택필수';
+                            specialty_subject[3].innerText = '전문과목 (특별연구 or 특별연습) 선택필수';
+                            specialty_subject[4].innerText = '전문과목 (논문구독) 선택필수';
+                            specialty_subject[5].innerText = '전문과목 (강의, 실험, 세미나등) 선택필수';
+                            specialty_subject[6].innerText = '전문과목 (강의, 실험, 세미나등) 선택';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c3':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '커리어교육과목필수';
+                            specialty_subject[2].innerText = '기초전문선택필수';
+                            specialty_subject[3].innerText = '전문과목 (특별연구 or 특별연습) 선택필수';
+                            specialty_subject[4].innerText = '전문과목 (논문구독) 선택필수';
+                            specialty_subject[5].innerText = '전문과목 (강의, 실험, 세미나등) 선택필수';
+                            specialty_subject[6].innerText = '전문과목 (강의, 실험, 세미나등) 선택';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c4':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '커리어교육과목필수';
+                            specialty_subject[2].innerText = '기초전문선택필수';
+                            specialty_subject[3].innerText = '전문과목 (특별연구 or 특별연습) 선택필수';
+                            specialty_subject[4].innerText = '전문과목 (논문구독) 선택필수';
+                            specialty_subject[5].innerText = '전문과목 (강의, 실험, 세미나등) 선택필수';
+                            specialty_subject[6].innerText = '전문과목 (강의, 실험, 세미나등) 선택';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'c5':
+                            specialty_subject[0].innerText = '기초교육선택필수';
+                            specialty_subject[1].innerText = '커리어교육과목필수';
+                            specialty_subject[2].innerText = '기초전문선택필수';
+                            specialty_subject[3].innerText = '전문과목 (특별연구 or 특별연습) 선택필수';
+                            specialty_subject[4].innerText = '전문과목 (논문구독) 선택필수';
+                            specialty_subject[5].innerText = '전문과목 (강의, 실험, 세미나등) 선택필수';
+                            specialty_subject[6].innerText = '전문과목 (강의, 실험, 세미나등) 선택';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd1':
+                            specialty_subject[0].innerText = '의학도입과목';
+                            specialty_subject[1].innerText = '의학의료기초과목';
+                            specialty_subject[2].innerText = '종합의료과목';
+                            specialty_subject[3].innerText = '프로페셔널리즘';
+                            specialty_subject[4].innerText = '의학연구과목';
+                            specialty_subject[5].innerText = '임상실습 (필수)';
+                            specialty_subject[6].innerText = '임상실습 (필수선택)';
+                            specialty_subject[7].innerText = '종합강의';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd2':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '간호전문교육 (필수)';
+                            specialty_subject[3].innerText = '간호전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd3':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '간호전문교육 (필수)';
+                            specialty_subject[3].innerText = '간호전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd4':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '전문교육 (필수)';
+                            specialty_subject[3].innerText = '전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'd5':
+                            specialty_subject[0].innerText = '전문지지교육 (필수)';
+                            specialty_subject[1].innerText = '전문지지교육 (선택)';
+                            specialty_subject[2].innerText = '전문교육 (필수)';
+                            specialty_subject[3].innerText = '전문교육 (선택)';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'e1':
+                            specialty_subject[0].innerText = '기초교육과목';
+                            specialty_subject[1].innerText = '치학도입계과목';
+                            specialty_subject[2].innerText = '기초계과목';
+                            specialty_subject[3].innerText = '보건·사회계과목';
+                            specialty_subject[4].innerText = '임상계과목 (의계과목 포함)';
+                            specialty_subject[5].innerText = '치학종합계과목';
+                            specialty_subject[6].innerText = '임상실습';
+                            for(var j = 7; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f1':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목 [선택필수과목])';
+                            specialty_subject[8].innerText = '프로그램과목 (분야전문과목)';
+                            for(var j = 9; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f2':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목 [선택필수과목])';
+                            specialty_subject[8].innerText = '프로그램과목 (분야전문과목)';
+                            for(var j = 9; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f3':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목 [A군])';
+                            specialty_subject[8].innerText = '프로그램과목 (분야전문과목 [B군])';
+                            specialty_subject[9].innerText = '프로그램과목 (분야전문과목 [C군])';
+                            for(var j = 10; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f4':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목)';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f5':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목 [선택필수과목])';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f6':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (분야전문과목)';
+                            for(var j = 8; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'f7':
+                            specialty_subject[0].innerText = '학부·학과공통과목 (공학기초교육강화과목)';
+                            specialty_subject[1].innerText = '학부·학과공통과목 (공학개론계과목)';
+                            specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
+                            specialty_subject[3].innerText = '프로그램과목 (공학기초교육강화과목)';
+                            specialty_subject[4].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (공학기반정보과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (종합력육성기초과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (종합력육성실천과목)';
+                            specialty_subject[8].innerText = '프로그램과목 (분야기반과목)';
+                            specialty_subject[9].innerText = '프로그램과목 (분야전문과목 [A군])';
+                            specialty_subject[10].innerText = '프로그램과목 (분야전문과목 [B군])';
+                            specialty_subject[11].innerText = '프로그램과목 (분야전문과목 [c군])';
+                            for(var j = 12; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g1':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g2':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g3':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g4':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g5':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g6':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g7':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g8':
+                            specialty_subject[0].innerText = '필수 (강의, 실습 등)';
+                            specialty_subject[1].innerText = '선택 (강의, 실습 등)';
+                            for(var j = 2; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'g9':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 1a';
+                            specialty_subject[2].innerText = '선택 1b';
+                            specialty_subject[3].innerText = '선택 2';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h1':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h2':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h3':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h4':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h5':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h6':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h7':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '코스필수';
+                            specialty_subject[3].innerText = '추장·선택';
+                            specialty_subject[4].innerText = '졸업연구';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h8':
+                            specialty_subject[0].innerText = '학부필수';
+                            specialty_subject[1].innerText = '분야필수';
+                            specialty_subject[2].innerText = '추장·선택';
+                            specialty_subject[3].innerText = '졸업연구';
+                            for(var j = 4; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'h9':
+                            specialty_subject[0].innerText = '필수';
+                            specialty_subject[1].innerText = '선택 1a';
+                            specialty_subject[2].innerText = '선택 1b';
+                            specialty_subject[3].innerText = '선택 2';
+                            specialty_subject[4].innerText = '졸업프로젝트';
+                            for(var j = 5; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                        case 'i1':
+                            specialty_subject[0].innerText = '제1교육과목 (기초교육과목)';
+                            specialty_subject[1].innerText = '제1교육과목 (도입과목)';
+                            specialty_subject[2].innerText = '제1교육과목 (기초수의계과목)';
+                            specialty_subject[3].innerText = '제1교육과목 (응용수의계과목)';
+                            specialty_subject[4].innerText = '제1교육과목 (임상수의계과목)';
+                            specialty_subject[5].innerText = '전수교육과목';
+                            for(var j = 6; j < spceialty.length; j++){
+                                spceialty[j].style.display = 'none';
+                            }
+                            break;
+                    }
                     break; 
             }
-            
+        }
+        
+        function change(){
+            var department = document.getElementById("department");
+            var unit_input = document.getElementsByClassName("unit_input");
+            var year = document.getElementById("year");
 
         }
 
+        function clearInput(){
+            var x = document.getElementsByClassName('unit_input');
+
+            for(var i = 0; i < x.length; i++)
+                x[i].value = "";
+        }
         </script>
 </body>
 </html>
