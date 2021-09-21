@@ -114,8 +114,8 @@ header a:hover{
     margin: 0;
     margin-bottom: 3%;
     padding: 3%;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 5%;
+    padding-left: 0;
     text-align: left;
     border-bottom: dotted 1px gray;
 }
@@ -273,6 +273,12 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 #graduation_calculator fieldset input{
     margin-top: 2%;
 }
+/*requirementsforgraduation.html CSS end!*/
+
+/*commoneducation.html CSS start!*/
+.department_name{
+    display: none;
+}
 
 
 /*
@@ -328,6 +334,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         padding: 0;
         margin: 0;
         width: 100%;
+    }
+    #Site_AllBox h3{
+        padding-left: 3%;
     }
     #Site_AllBox iframe{
         width: auto;
@@ -391,6 +400,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     }
     #graduation_calculator fieldset li input{
         width: 20%;
+    }
+    #linkpdf{
+        margin: 3%;
     }
     
 }

@@ -43,12 +43,147 @@
     
 
     <div id="Site_AllBox">
-        <h3>준비 중 입니다.</h3>
+        <h3>공통교육 과목 졸업요건 확인</h3>
+
+        <form id="graduation">
+            <p>공통교육 과목 졸업요건 계산기 준비 중
+            </p>
+            <select id="faculty" onchange="categoryChange();">
+                <option selected disabled>학부 선택</option>
+                <option value="1">법문학부</option>
+                <option value="2">교육학부</option>
+                <option value="3">이학부</option>
+                <option value="4">의학부</option>
+                <option value="5">치학부</option>
+                <option value="6">공학부</option>
+                <option value="7">농학부</option>
+                <option value="8">수산학부</option>
+                <option value="9">공동수의학부</option>
+            </select>
+            
+            <select id="department">
+                <option id="choice" selected disabled>학과 선택</option>
+                <option class="department_name"></option>
+                <option class="department_name"></option>
+                <option class="department_name"></option>
+                <option class="department_name"></option>
+            </select>
+
+            <select id="year">
+                <option selected disabled>입학 년도</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option>추가 예정</option>
+            </select>
+
+            <input type="button" value="확인" onclick="Onclick();">
+        </form>
+
+        <a id="linkpdf"></a>
     </div>
+
 
         <nav id="Sitetotop">
             <a href="#">△TOP</a>
         </nav>
+    
+    <script>
+        function categoryChange(){
+            var faculty = document.getElementById("faculty");
+            var department_name = document.getElementsByClassName("department_name");
 
+            document.getElementById("choice").setAttribute("hidden","hidden")
+            department_name[0].removeAttribute("selected","selected");
+            for(var i = 0; i < department_name.length; i++){
+                        department_name[i].style = 'display:block';
+                    }
+            switch (faculty.value) {               
+                case '1':
+                    department_name[0].innerText = '법경사회학과';
+                    department_name[0].setAttribute("selected","selected");
+                    department_name[1].innerText = '인문학과';
+                    for(var j = 2; j < department_name.length; j++){
+                        department_name[j].style = 'display:none';
+                    }
+                    break;
+                case '2':
+                    department_name[0].innerText = '학교교육교원양성과정';
+                    department_name[0].setAttribute("selected","selected");
+                    for(var j = 1; j < department_name.length; j++){
+                        department_name[j].style = 'display:none';
+                    }
+                    break;
+                case '3':
+                    department_name[0].innerText = '이학과';
+                    department_name[0].setAttribute("selected","selected");
+                    for(var j = 1; j < department_name.length; j++){
+                        department_name[j].style = 'display:none';
+                    }
+                    break;
+                case '4':
+                    department_name[0].innerText = '의학과';
+                    department_name[0].setAttribute("selected","selected");
+                    department_name[1].innerText = '간호학과 (간호)';
+                    department_name[2].innerText = '간호학과 (이학요법)';
+                    department_name[3].innerText = '간호학과 (작업요법)';
+                    break;
+                case '5':
+                    department_name[0].innerText = '치학과';
+                    department_name[0].setAttribute("selected","selected");
+                    for(var j = 1; j < department_name.length; j++){
+                        department_name[j].style = 'display:none';
+                    }
+                    break;
+                case '6':
+                    department_name[0].innerText = '선진공학과';
+                    department_name[0].setAttribute("selected","selected");
+                    department_name[1].innerText = '건축학과';
+                    for(var j = 2; j < department_name.length; j++){
+                        department_name[j].style = 'display:none';
+                    }
+                    break;
+                case '7':
+                    department_name[0].innerText = '농업생산과학과';
+                    department_name[0].setAttribute("selected","selected");
+                    department_name[1].innerText = '식료생명과학과';
+                    department_name[2].innerText = '농림환경과학과';
+                    department_name[3].innerText = '국제식료자원학 특별코스(농학계 serve)';
+                    break;
+                case '8':
+                    department_name[0].innerText = '수산학과';
+                    department_name[0].setAttribute("selected","selected");
+                    department_name[1].innerText = '국제식료자원학 특별코스(수산계 serve)';
+                    for(var j = 2; j < department_name.length; j++){
+                        department_name[j].style = 'display:none';
+                    }
+                    break;
+                case '9':
+                    department_name[0].innerText = '수의학과';
+                    department_name[0].setAttribute("selected","selected");
+                    for(var j = 1; j < department_name.length; j++){
+                        department_name[j].style = 'display:none';
+                    }
+                    break;
+                    
+            }
+        }
+    
+        function Onclick(){
+            var year = document.getElementById("year");
+            var link = document.getElementById("linkpdf");
+
+            switch (year.value) {
+                case '2020':
+                    link.innerText = '2020년 공통교육 과목 졸업요건 (외국인 유학생)';
+                    link.setAttribute("href","pdf/공통/2020.pdf");
+                    link.setAttribute("target","_blank");
+                    break;
+                case '2021':
+                    link.innerText = '2021년 공통교육 과목 졸업요건 (외국인 유학생)';
+                    link.setAttribute("href","pdf/공통/2021.pdf");
+                    link.setAttribute("target","_blank");
+            }
+        }
+    </script>
 </body>
 </html>
