@@ -108,6 +108,7 @@ header a:hover{
 #Site_AllBox h3{
     margin: 0;
     margin-bottom: 3%;
+    padding: 3%;
     padding-top: 30px;
     padding-bottom: 10px;
     text-align: left;
@@ -240,6 +241,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     width: 80%;
     margin: 0 auto;
     background-color: #E2E2E2;
+    margin-bottom: 3%;
 }
 #graduation_calculator fieldset legend{
     font-size: 18px;
@@ -341,19 +343,23 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         background-color: #778899;
     }
     #Site_AllBox{
+        border: none;
+        padding: 0;
         margin: 0;
-        padding: 5%;
         width: 100%;
     }
     #Site_AllBox iframe{
         width: auto;
         height: auto;
     }
+    #GPA_formula{
+        padding: 3%;
+    }
     #GPA_formula img{
-        width: 90%;        
+        width: 100%;        
     }
     #GPA_formula p{
-        width: 90%;
+        width: 100%;
     }
     #GPA_calculator{
         display: inline-block;
@@ -361,8 +367,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     #Calculator{
         margin: auto;
         border: none;
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
     }
     fieldset {
         padding:2%;
@@ -387,6 +393,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         margin: 2%;
         display: block;
     }
+    #graduation_calculator {
+        width: 100%;
+    }
     #graduation_calculator fieldset li{
         padding-bottom: 5%;
         padding-top: 5%;
@@ -395,6 +404,12 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         margin-top: 4%;
         display: inline;
     } 
+    #graduation_calculator fieldset li label{
+        width: 70%;
+    }
+    #graduation_calculator fieldset li input{
+        width: 20%;
+    }
 }
 
 /*모바일 모드 가로 스크롤 금지*/
