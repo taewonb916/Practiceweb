@@ -397,9 +397,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     #graduation_calculator fieldset input{
         margin-top: 4%;
         display: inline;
-    }
-
-    
+    } 
 }
 
 /*모바일 모드 가로 스크롤 금지*/

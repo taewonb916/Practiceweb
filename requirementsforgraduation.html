@@ -76,13 +76,13 @@
             <input type="button" value="확인" onclick="Onclick();">
         </form>
 
-        <div id="linkpdf"></div>
+        <a id="linkpdf"></a>
 
         <h3>졸업 요건 계산기</h3>
         <p id="buttonclick"> 조건 선택 후 확인 버튼을 눌러주세요.</p>
 
         <div id="graduation_calculator">
-            
+
             <fieldset>
                 <legend id="department_name"></legend>
                 <li>
@@ -156,46 +156,47 @@
     <script>
         function categoryChange(e) {
             var faculty= document.getElementById("faculty");
-            var element = document.getElementById("department");
+            var department = document.getElementById("department");
 
             switch(faculty.value){
                 case '1': 
-                    element.innerHTML= '<optgroup label="법경사회학과"><option value="a1">법학 코스</option><option value="a2">지역사회·경제 코스</option></optgroup><optgroup label="인문학과"><option value="a3">다원지역문화 코스</option><option value="a4">심리학 코스</option></optgroup>';
+                    department.innerHTML= '<optgroup label="법경사회학과"><option value="a1">법학 코스</option><option value="a2">지역사회·경제 코스</option></optgroup><optgroup label="인문학과"><option value="a3">다원지역문화 코스</option><option value="a4">심리학 코스</option></optgroup>';
                     break;
                 case '2':
-                    element.innerHTML='<optgroup label="학교교육교원양성과정"><option value="b1">초등교육 코스</option><option value="b2">중등교육 코스</option><option value="b3">특별지원교육 코스 (소학교)</option><option value="b4">특별지원교육 코스 (중학교)</option></optgroup>';
+                    department.innerHTML='<optgroup label="학교교육교원양성과정"><option value="b1">초등교육 코스</option><option value="b2">중등교육 코스</option><option value="b3">특별지원교육 코스 (소학교)</option><option value="b4">특별지원교육 코스 (중학교)</option></optgroup>';
                     break;
                 case '3':
-                    element.innerHTML='<optgroup label="이학과"><option value="c1">수리정보과학 프로그램</option><option value="c2">물리·우주 프로그램</option><option value="c3">화학 프로그램</option><option value="c4">생물학 프로그램</option><option value="c5">지구과학 프로그램</option></optgroup>';
+                    department.innerHTML='<optgroup label="이학과"><option value="c1">수리정보과학 프로그램</option><option value="c2">물리·우주 프로그램</option><option value="c3">화학 프로그램</option><option value="c4">생물학 프로그램</option><option value="c5">지구과학 프로그램</option></optgroup>';
                     break;
                 case '4':
-                    element.innerHTML='<option value="d1">의학과</option><optgroup label="보건학과"><option value="d2">간호사 과정</option><option value="d3">보건사 과정</option></optgroup><option value="d4">보건학과 (이학)</option><option value="d5">보건학과 (작업)</option>';
+                    department.innerHTML='<option value="d1">의학과</option><optgroup label="보건학과"><option value="d2">간호사 과정</option><option value="d3">보건사 과정</option></optgroup><option value="d4">보건학과 (이학)</option><option value="d5">보건학과 (작업)</option>';
                     break;
                 case '5':
-                    element.innerHTML='<option value="e1">치학과</option>';
+                    department.innerHTML='<option value="e1">치학과</option>';
                     break;
                 case '6':
-                    element.innerHTML='<optgroup label="선진공학과"><option value="f1">기계공학 프로그램</option><option value="f2">전기전자공학 프로그램</option><option value="f3">해양토목공학 프로그램</option><option value="f4">화학공학 프로그램</option><option value="f5">화학생명공학 프로그램</option><option value="f6">정보·생체공학 프로그램</option></optgroup><optgroup label="건축학과"><option value="f7">건축학 프로그램</option></optgroup>';
+                    department.innerHTML='<optgroup label="선진공학과"><option value="f1">기계공학 프로그램</option><option value="f2">전기전자공학 프로그램</option><option value="f3">해양토목공학 프로그램</option><option value="f4">화학공학 프로그램</option><option value="f5">화학생명공학 프로그램</option><option value="f6">정보·생체공학 프로그램</option></optgroup><optgroup label="건축학과"><option value="f7">건축학 프로그램</option></optgroup>';
                     break;
                 case '7':
-                    element.innerHTML='<optgroup label="농업생산과학과"><option value="g1">응용식물과학 코스</option><option value="g2">축산과학 코스</option><option value="g3">식료농업경제학 코스</option></optgroup><optgroup label="식료생명과학과"><option value="g4">식품기능과학 코스</option><option value="g5">식환경제어과학 코스</option><option value="g6">소주발효·미생물과학 코스</option></optgroup><optgroup label="농림환경과학과"><option value="g7">삼림과학 코스</option><option value="g8">지역환경시스템학 코스</option></optgroup><optgroup label="국제식료자원학 특별코스"><option value="g9">농학계 서브</option></optgroup>';
+                    department.innerHTML='<optgroup label="농업생산과학과"><option value="g1">응용식물과학 코스</option><option value="g2">축산과학 코스</option><option value="g3">식료농업경제학 코스</option></optgroup><optgroup label="식료생명과학과"><option value="g4">식품기능과학 코스</option><option value="g5">식환경제어과학 코스</option><option value="g6">소주발효·미생물과학 코스</option></optgroup><optgroup label="농림환경과학과"><option value="g7">삼림과학 코스</option><option value="g8">지역환경시스템학 코스</option></optgroup><optgroup label="국제식료자원학 특별코스"><option value="g9">농학계 서브</option></optgroup>';
                     break;
                 case '8':
-                    element.innerHTML='<optgroup label="수산학과"><optgroup label="수권과학분야"><option value="h1">해양환경과학 코스</option><option value="h2">수권생물과학 코스</option></optgroup><optgroup label="수권자원과학분야"><option value="h3">자원생산관리학 코스</option><option value="h4">증양식학 코스</option></optgroup><optgroup label="식품생명과학분야"><option value="h5">수산식품학 코스</option><option value="h6">선진자원이용학 코스</option></optgroup><option value="h7">수산경제학분야</option><option value="h8">수권환경보전학분야</option><optgroup label="국제식료자원학 특별코스"><option value="h9">수산학 서브</option></optgroup></optgroup>';
+                    department.innerHTML='<optgroup label="수산학과"><optgroup label="수권과학분야"><option value="h1">해양환경과학 코스</option><option value="h2">수권생물과학 코스</option></optgroup><optgroup label="수권자원과학분야"><option value="h3">자원생산관리학 코스</option><option value="h4">증양식학 코스</option></optgroup><optgroup label="식품생명과학분야"><option value="h5">수산식품학 코스</option><option value="h6">선진자원이용학 코스</option></optgroup><option value="h7">수산경제학분야</option><option value="h8">수권환경보전학분야</option><optgroup label="국제식료자원학 특별코스"><option value="h9">수산학 서브</option></optgroup></optgroup>';
                     break;
                 case '9':
-                    element.innerHTML='<option value="i1">수의학과</option>';
+                    department.innerHTML='<option value="i1">수의학과</option>';
             }   
         }
 
         function Onclick(){
             var department = document.getElementById("department");
             var year= document.getElementById("year");
-            var element = document.getElementById("linkpdf");
+            var link = document.getElementById("linkpdf");
             var e = document.getElementById("graduation_calculator");
             var specialty_subject = document.getElementsByClassName("specialty_subject");
             var spceialty = document.getElementsByClassName("spceialty");
-
+            
+            
             document.getElementById("buttonclick").style.display ="none";
             e.style.display = 'block';
             for (var i = 0; i < spceialty.length; i++) {
@@ -204,8 +205,11 @@
             document.getElementById("department_name").innerText = department.options[department.selectedIndex].text;
 
             switch (year.value) {
-                case '2018':
-                    element.innerHTML= "<a href='pdf/공통/2018.pdf' target='_blank'>2018년 공통교육 과목 졸업요건 단위수 (외국인 유학생) </a>";
+                case '2018':    
+                    link.innerText = '2018년 졸업요건 (외국인 유학생)';
+                    link.setAttribute("href","pdf/졸업요건/2018.pdf");
+                    link.setAttribute("target","_blank");
+                    
                     switch (department.value) {
                         case 'a1':
                             specialty_subject[0].innerText = '필수';
@@ -659,7 +663,10 @@
                     }
                     break;            
                 case '2019':
-                    element.innerHTML= "<a href='pdf/공통/2019.pdf' target='_blank'>2019년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>";
+                    link.innerText = '2019년 졸업요건 (외국인 유학생)';
+                    link.setAttribute("href","pdf/졸업요건/2019.pdf");
+                    link.setAttribute("target","_blank");
+                
                     switch (department.value) {
                         case 'a1':
                             specialty_subject[0].innerText = '필수';
@@ -1110,7 +1117,10 @@
                     }
                     break;
                 case '2020':
-                    element.innerHTML= "<a href='pdf/공통/2020.pdf' target='_blank'>2020년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>"; 
+                    link.innerText = '2020년 졸업요건 (외국인 유학생)';
+                    link.setAttribute("href","pdf/졸업요건/2020.pdf");
+                    link.setAttribute("target","_blank");
+
                     switch (department.value) {
                         case 'a1':
                             specialty_subject[0].innerText = '필수';
@@ -1579,7 +1589,10 @@
                     }
                     break; 
                 case '2021':
-                    element.innerHTML= "<a href='pdf/공통/2021.pdf' target='_blank'>2021년 공통교육 과목 졸업요건 단위수 (외국인 유학생)</a>";
+                    link.innerText = '2021년 졸업요건 (외국인 유학생)';
+                    link.setAttribute("href","pdf/졸업요건/2021.pdf");
+                    link.setAttribute("target","_blank");
+
                     switch (department.value) {
                         case 'a1':
                             specialty_subject[0].innerText = '필수';
