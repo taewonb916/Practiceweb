@@ -238,7 +238,6 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     display: none;
 }
 #graduation_calculator fieldset{
-    width: 80%;
     margin: 0 auto;
     background-color: #E2E2E2;
     margin-bottom: 3%;
@@ -256,11 +255,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 }
 #graduation_calculator fieldset li label{
     text-align: left;
-    width: 70%;
     float: left;
 }
 #graduation_calculator fieldset li input{
-    width: 20%;
     text-align: right;
     display: flex;
     margin-left: auto;
@@ -356,7 +353,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         padding: 3%;
     }
     #GPA_formula img{
-        width: 100%;        
+        width: 94%;        
     }
     #GPA_formula p{
         width: 100%;
@@ -365,6 +362,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         display: inline-block;
     }
     #Calculator{
+        padding: 0;
         margin: auto;
         border: none;
         width: 100%;
@@ -394,7 +392,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         display: block;
     }
     #graduation_calculator {
-        width: 100%;
+        padding: 2%;
+        width: 96%;
     }
     #graduation_calculator fieldset li{
         padding-bottom: 5%;
