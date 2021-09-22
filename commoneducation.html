@@ -94,22 +94,22 @@
                 <th class="tg-9wq8" colspan="6">초년차교육과목</th>
                 <th class="tg-9wq8" colspan="2">글로벌<br>교육 과목</th>
                 <th class="tg-9wq8" colspan="2">일본어·<br>일본 사정</th>
-                <th class="tg-0pky" rowspan="3" STYLE="writing-mode: vertical-rl">필수 과목 단위 수 합계</th>
+                <th class="tg-0pky" rowspan="3" STYLE="writing-mode: vertical-lr">필수 과목 단위 수 합계</th>
               </tr>
               <tr>
-                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">초년차세미나Ⅰ</th>
-                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">초년차세미나Ⅱ</th>
-                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">대학과 지역</th>
-                <th class="tg-9wq8" colspan="2" STYLE="writing-mode: vertical-rl">체육·건강</th>
-                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">정보활용</th>
-                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">영어</th>
-                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">이문화이해</th>
-                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">일본어</th>
-                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">일본사정</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">초년차세미나Ⅰ</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">초년차세미나Ⅱ</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">대학과 지역</th>
+                <th class="tg-9wq8" colspan="2" STYLE="writing-mode: vertical-lr">체육·건강</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">정보활용</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">영어</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">이문화이해</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">일본어</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">일본사정</th>
               </tr>
               <tr>
-                <th class="tg-9wq8" STYLE="writing-mode: vertical-rl">이론</th>
-                <th class="tg-9wq8" STYLE="writing-mode: vertical-rl">실습</th>
+                <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">이론</th>
+                <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">실습</th>
               </tr>
             </thead>
             <tbody>
@@ -146,22 +146,82 @@
                     <input type="number" pattern="\d*" placeholder="단위" id="jp2" class="unit_input" autocomplete="off">
                 </td>
                 <td class="tg-0pky">
-                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off" readonly>
                 </td>
               </tr>
             </tbody>
             </table>
 
-            <table id = "table1_2" class="tg">
+            <table id="table2" class="tg">
                 <thead>
                   <tr>
-                    <th class="tg-9wq8" colspan="4">과목</th>
-                    <th class="tg-9wq8">학과</th>
+                    <th class="tg-9wq8" rowspan="5" width="100px">과목</th>
+                    <th class="tg-9wq8" colspan="9" width="500px">선택필수과목</th>
+                  </tr>
+                  <tr>
+                    <th class="tg-9wq8" colspan="8">교양교육과목</th>
+                    <th class="tg-9wq8" rowspan="4" STYLE="writing-mode: vertical-lr" >선택 과목 단위 수 합계</th>
+                  </tr>
+                  <tr>
+                    <th class="tg-9wq8" colspan="5">교양기초과목</th>
+                    <th class="tg-9wq8" colspan="2">교양활용과목</th>
+                    <th class="tg-0lax" rowspan="3" STYLE="writing-mode: vertical-lr">자유선택과목</th>
+                  </tr>
+                  <tr>
+                    <th class="tg-9wq8" colspan="2">인문·사회<br>과학분야</th>
+                    <th class="tg-9wq8" colspan="3">자연과학<br>분야</th>
+                    <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">종합Ⅰ (과제발견)</th>
+                    <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">종합Ⅱ     (과제해결)</th>
+                  </tr>
+                  <tr>
+                    <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">초수외국어</th>
+                    <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">선택과목</th>
+                    <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">실험과목</th>
+                    <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">선택과목</th>
+                    <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">기초교육<br>입문과목</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="tg-9wq8" rowspan="11">필수과목</td>
+                    <td id="d_n2" class="tg-9wq8">학과</td>
+                    <td class="tg-9wq8">
+                        <input type="number" id="language" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                    <td class="tg-9wq8">
+                        <input type="number" id="experiment" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                    <td class="tg-9wq8">
+                        <input type="number" id="choose" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                    <td class="tg-9wq8">
+                        <input type="number" id="basic" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                    <td class="tg-9wq8" colspan="2">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                    <td class="tg-0lax">
+                        <input type="number" id="free" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off" readonly>
+                    </td>
+                  </tr>
+                </tbody>
+                </table>
+
+            <table id = "table1_m" class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-9wq8" colspan="4">과목</th>
+                    <th id="d_n_m" class="tg-9wq8" width="126px">학과</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-9wq8" rowspan="11" STYLE="writing-mode: vertical-lr">필수과목</td>
                     <td class="tg-9wq8" rowspan="6">초년차교육과목</td>
                     <td class="tg-9wq8" colspan="2">초년차세미나1</td>
                     <td class="tg-9wq8">
@@ -171,7 +231,7 @@
                   <tr>
                     <td class="tg-9wq8" colspan="2">초년차세미나2</td>
                     <td class="tg-9wq8">
-                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                        <input type="number" pattern="\d*" placeholder="단위" id = "seminar_m" class="unit_input" autocomplete="off">
                     </td>
                   </tr>
                   <tr>
@@ -216,23 +276,91 @@
                     <td class="tg-9wq8" rowspan="2">일본어·<br>일본 사정</td>   
                     <td class="tg-9wq8" colspan="2">일본어</td>
                     <td class="tg-9wq8">
-                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                        <input type="number" pattern="\d*" placeholder="단위" id="jp1_m" class="unit_input" autocomplete="off">
                     </td>
                   </tr>
                   <tr>
                     <td class="tg-9wq8" colspan="2">일본사정</td>
                     <td class="tg-9wq8">
-                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                        <input type="number" pattern="\d*" placeholder="단위" id="jp2_m" class="unit_input" autocomplete="off">
                     </td>
                   </tr>
                   <tr>
                     <td class="tg-9wq8" colspan="3">필수 과목 단위 수 합계</td>
                     <td class="tg-0pky">
-                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off" readonly>
                     </td>
                   </tr>
                 </tbody>
                 </table>
+            <table id="table2_m" class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-9wq8" colspan="5">과목</th>
+                    <th class="tg-9wq8" id="d_n2_m" width="126px">학과</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-9wq8" rowspan="9" STYLE="writing-mode: vertical-lr">선택필수과목</td>
+                    <td class="tg-9wq8" rowspan="8" STYLE="writing-mode: vertical-lr">교양교육과목</td>
+                    <td class="tg-9wq8" rowspan="5" STYLE="writing-mode: vertical-lr">교양 기초 과목</td>
+                    <td class="tg-9wq8" rowspan="2" >인문·사회과학 분야</td>
+                    <td class="tg-9wq8">초수외국어</td>
+                    <td class="tg-9wq8">
+                        <input type="number" id="language_m" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8">선택과목</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" rowspan="3">자연과학 분야</td>
+                    <td class="tg-9wq8">실험과목</td>
+                    <td class="tg-9wq8">
+                        <input type="number" id="experiment_m" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8">선택과목</td>
+                    <td class="tg-9wq8">
+                        <input type="number" id="choose_m" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8">기초교육입문과목</td>
+                    <td class="tg-9wq8">
+                        <input type="number" id="basic_m" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">교양 활용 과목</td>
+                    <td class="tg-9wq8" colspan="2">종합1 (과제발견)</td>
+                    <td class="tg-9wq8" rowspan="2">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" colspan="2">종합2 (과제해결)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky" colspan="3">자유선택과목</td>
+                    <td class="tg-0pky">
+                        <input type="number" id="free_m" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" colspan="4">선택 과목 단위 수 합계</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off" readonly>
+                    </td>
+                  </tr>
+                </tbody>
+                </table>
+            
         </div>
     </div>
 
@@ -353,29 +481,107 @@
             var year = document.getElementById("year");
             var link = document.getElementById("linkpdf");
             var commoneducation_calculator = document.getElementById("commoneducation_calculator")
-            var department = document.getElementById("department");
-            var d_n = document.getElementById("d_n");
             var buttonclick = document.getElementById("buttonclick");
+            var department = document.getElementById("department");
+
+            //table1
             var table1 = document.getElementById("table1");
+            var d_n = document.getElementById("d_n");
             var seminar = document.getElementById("seminar");
             var jp1 = document.getElementById("jp1");
             var jp2 = document.getElementById("jp2");
+
+            //table1 media query
+            var table1_m = document.getElementById("table1_m");
+            var d_n_m = document.getElementById("d_n_m");
+            var seminar_m = document.getElementById("seminar_m");
+            var jp1_m = document.getElementById("jp1_m");
+            var jp2_m = document.getElementById("jp2_m");
+
+            //table2            
+            var table2 = document.getElementById("table2");
+            var d_n2 = document.getElementById("d_n2");
+            var language = document.getElementById("language");
+            var experiment = document.getElementById("experiment");
+            var choose = document.getElementById("choose");
+            var basic = document.getElementById("basic");
+            var free = document.getElementById("free");
+
+            //table2 media query
+            var table2_m = document.getElementById("table2_m");
+            var d_n2_m = document.getElementById("d_n2_m");
+            var language_m = document.getElementById("language_m");
+            var experiment_m = document.getElementById("experiment_m");
+            var choose_m = document.getElementById("choose_m");
+            var basic_m = document.getElementById("basic_m");
+            var free_m = document.getElementById("free_m");
+
             
             buttonclick.style.display = "none";
-            table1.style.display = "block";
+            if (matchMedia("(min-width: 320px) and (max-width: 480px)").matches){
+                table1_m.style.display ="block";
+                table2_m.style.display ="block";
+            }
+            else {
+                table1.style.display = "block"; 
+                table2.style.display = 'block';
+            }
+
             d_n.innerText = department.options[department.selectedIndex].text;
-
             seminar.removeAttribute("value");
-            jp1.removeAttribute("value");
-            jp2.removeAttribute("value");
-
             seminar.removeAttribute("readonly");
-            jp1.removeAttribute("readonly");
-            jp2.removeAttribute("readonly");
-
             seminar.removeAttribute("style");
+            jp1.removeAttribute("value");
+            jp1.removeAttribute("readonly");
             jp1.removeAttribute("style");
+            jp2.removeAttribute("value");
+            jp2.removeAttribute("readonly");
             jp2.removeAttribute("style");
+
+            d_n_m.innerText = department.options[department.selectedIndex].text;
+            seminar_m.removeAttribute("value");
+            seminar_m.removeAttribute("readonly");
+            seminar_m.removeAttribute("style");
+            jp1_m.removeAttribute("value");
+            jp1_m.removeAttribute("readonly");
+            jp1_m.removeAttribute("style");
+            jp2_m.removeAttribute("value");
+            jp2_m.removeAttribute("readonly");
+            jp2_m.removeAttribute("style");
+
+            d_n2.innerText = department.options[department.selectedIndex].text;
+            language.removeAttribute("value");
+            language.removeAttribute("readonly");
+            language.removeAttribute("style");
+            experiment.removeAttribute("value");
+            experiment.removeAttribute("readonly");
+            experiment.removeAttribute("style");
+            choose.removeAttribute("value");
+            choose.removeAttribute("readonly");
+            choose.removeAttribute("style");
+            basic.removeAttribute("value");
+            basic.removeAttribute("readonly");
+            basic.removeAttribute("style");
+            free.removeAttribute("value");
+            free.removeAttribute("readonly");
+            free.removeAttribute("style");
+
+            d_n2_m.innerText = department.options[department.selectedIndex].text;
+            language_m.removeAttribute("value");
+            language_m.removeAttribute("readonly");
+            language_m.removeAttribute("style");
+            experiment_m.removeAttribute("value");
+            experiment_m.removeAttribute("readonly");
+            experiment_m.removeAttribute("style");
+            choose_m.removeAttribute("value");
+            choose_m.removeAttribute("readonly");
+            choose_m.removeAttribute("style");
+            basic_m.removeAttribute("value");
+            basic_m.removeAttribute("readonly");
+            basic_m.removeAttribute("style");
+            free_m.removeAttribute("value");
+            free_m.removeAttribute("readonly");
+            free_m.removeAttribute("style");
 
             switch (year.value) {
                 case '2020':
@@ -383,19 +589,563 @@
                     link.setAttribute("href","pdf/공통/2020.pdf");
                     link.setAttribute("target","_blank");
                     switch (department.value) {
-                        default:
+                        case 'a1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
                             seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'a2':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'b1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'c1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'd1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'd2':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'd3':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'd4':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'e1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'f1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'f2':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'g1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            break;
+                        case 'g2':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            break;
+                        case 'g3':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            break;
+                        case 'g4':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'h1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            choose.setAttribute("value","0");
+                            choose.setAttribute("readonly",true);
+                            choose.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            choose_m.setAttribute("value","0");
+                            choose_m.setAttribute("readonly",true);
+                            choose_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");_m
+                            break;
+                        case 'h2':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
                             break;
                         case 'i1':
                             jp1.setAttribute("value","0");
                             jp1.setAttribute("readonly",true);
                             jp1.setAttribute("style","border: none;");
-
                             jp2.setAttribute("value","0");
                             jp2.setAttribute("readonly",true);
                             jp2.setAttribute("style","border: none;");
+
+                            jp1_m.setAttribute("value","0");
+                            jp1_m.setAttribute("readonly",true);
+                            jp1_m.setAttribute("style","border: none;");
+                            jp2_m.setAttribute("value","0");
+                            jp2_m.setAttribute("readonly",true);
+                            jp2_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
                             break;
                         }
                     break;
@@ -404,19 +1154,539 @@
                     link.setAttribute("href","pdf/공통/2021.pdf");
                     link.setAttribute("target","_blank");
                     switch (department.value) {
-                        default:
+                        case 'a1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
                             seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'a2':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'b1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'c1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'd1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'd2':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'd3':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'd4':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'e1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'f1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'f2':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'g1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            break;
+                        case 'g2':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            break;
+                        case 'g3':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            break;
+                        case 'g4':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'h1':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            choose.setAttribute("value","0");
+                            choose.setAttribute("readonly",true);
+                            choose.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            choose_m.setAttribute("value","0");
+                            choose_m.setAttribute("readonly",true);
+                            choose_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
+                            break;
+                        case 'h2':
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+
+                            seminar_m.setAttribute("value","0");
+                            seminar_m.setAttribute("readonly",true);
+                            seminar_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
                             break;
                         case 'i1':
                             jp1.setAttribute("value","0");
                             jp1.setAttribute("readonly",true);
                             jp1.setAttribute("style","border: none;");
-
                             jp2.setAttribute("value","0");
                             jp2.setAttribute("readonly",true);
                             jp2.setAttribute("style","border: none;");
+
+                            jp1_m.setAttribute("value","0");
+                            jp1_m.setAttribute("readonly",true);
+                            jp1_m.setAttribute("style","border: none;");
+                            jp2_m.setAttribute("value","0");
+                            jp2_m.setAttribute("readonly",true);
+                            jp2_m.setAttribute("style","border: none;");
+
+                            language.setAttribute("value","0");
+                            language.setAttribute("readonly",true);
+                            language.setAttribute("style","border: none;");
+                            experiment.setAttribute("value","0");
+                            experiment.setAttribute("readonly",true);
+                            experiment.setAttribute("style","border: none;");
+                            basic.setAttribute("value","0");
+                            basic.setAttribute("readonly",true);
+                            basic.setAttribute("style","border: none;");
+                            free.setAttribute("value","0");
+                            free.setAttribute("readonly",true);
+                            free.setAttribute("style","border: none;");
+
+                            language_m.setAttribute("value","0");
+                            language_m.setAttribute("readonly",true);
+                            language_m.setAttribute("style","border: none;");
+                            experiment_m.setAttribute("value","0");
+                            experiment_m.setAttribute("readonly",true);
+                            experiment_m.setAttribute("style","border: none;");
+                            basic_m.setAttribute("value","0");
+                            basic_m.setAttribute("readonly",true);
+                            basic_m.setAttribute("style","border: none;");
+                            free_m.setAttribute("value","0");
+                            free_m.setAttribute("readonly",true);
+                            free_m.setAttribute("style","border: none;");
                             break;
                         }
                     break;

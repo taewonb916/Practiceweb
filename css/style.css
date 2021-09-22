@@ -279,9 +279,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 .department_name{
     display: none;
 }
-
-#commoneducation_calculator #table1 {
-    width: 600px;
+#commoneducation_calculator #table1, #table2, #table1_m, #table2_m{
+    display: none;
 }
 #commoneducation_calculator .tg {
     width: auto;
@@ -328,7 +327,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 ##Screen = 320px에서 479px 사이
 */ 
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
     header{
         width: auto;
     }
