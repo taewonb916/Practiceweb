@@ -443,6 +443,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     #linkpdf{
         margin: 3%;
     }
+    #commoneducation_calculator #table2_m{
+        margin-bottom: 5%;
+    }
 }
 
 
