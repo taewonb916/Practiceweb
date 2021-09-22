@@ -80,6 +80,160 @@
         </form>
 
         <a id="linkpdf"></a>
+
+        <h3>공통교육 과목 졸업요건 계산기</h3>
+        <div id = "commoneducation_calculator">
+            <p id = "buttonclick">조건 선택 후 확인 버튼을 눌러주세요.</p>
+            <table id = "table1" class="tg">
+            <thead>
+              <tr>
+                <th class="tg-9wq8" rowspan="4" STYLE="writing-mode: horizontal-tb" width="100px">과목</th>
+                <th class="tg-9wq8" colspan="11">필수과목</th>
+              </tr>
+              <tr>
+                <th class="tg-9wq8" colspan="6">초년차교육과목</th>
+                <th class="tg-9wq8" colspan="2">글로벌<br>교육 과목</th>
+                <th class="tg-9wq8" colspan="2">일본어·<br>일본 사정</th>
+                <th class="tg-0pky" rowspan="3" STYLE="writing-mode: vertical-rl">필수 과목 단위 수 합계</th>
+              </tr>
+              <tr>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">초년차세미나Ⅰ</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">초년차세미나Ⅱ</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">대학과 지역</th>
+                <th class="tg-9wq8" colspan="2" STYLE="writing-mode: vertical-rl">체육·건강</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">정보활용</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">영어</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">이문화이해</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">일본어</th>
+                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-rl">일본사정</th>
+              </tr>
+              <tr>
+                <th class="tg-9wq8" STYLE="writing-mode: vertical-rl">이론</th>
+                <th class="tg-9wq8" STYLE="writing-mode: vertical-rl">실습</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="d_n" class="tg-9wq8"  STYLE="writing-mode: horizontal-tb">학과</td>
+                <td class="tg-9wq8">
+                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                </td>
+                <td class="tg-9wq8">
+                    <input type="number" pattern="\d*" placeholder="단위" id = "seminar" class="unit_input" autocomplete="off">
+                </td>
+                <td class="tg-9wq8">
+                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                </td>
+                <td class="tg-9wq8">
+                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                </td>
+                <td class="tg-9wq8">
+                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                </td>
+                <td class="tg-9wq8">
+                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                </td>
+                <td class="tg-9wq8">
+                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                </td>
+                <td class="tg-9wq8">
+                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                </td>
+                <td class="tg-9wq8">
+                    <input type="number" pattern="\d*" placeholder="단위" id="jp1" class="unit_input" autocomplete="off">
+                </td>
+                <td class="tg-9wq8">
+                    <input type="number" pattern="\d*" placeholder="단위" id="jp2" class="unit_input" autocomplete="off">
+                </td>
+                <td class="tg-0pky">
+                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                </td>
+              </tr>
+            </tbody>
+            </table>
+
+            <table id = "table1_2" class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-9wq8" colspan="4">과목</th>
+                    <th class="tg-9wq8">학과</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-9wq8" rowspan="11">필수과목</td>
+                    <td class="tg-9wq8" rowspan="6">초년차교육과목</td>
+                    <td class="tg-9wq8" colspan="2">초년차세미나1</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" colspan="2">초년차세미나2</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" colspan="2">대학과 지역</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" rowspan="2">체육·건강</td>
+                    <td class="tg-9wq8">이론</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8">실습</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" colspan="2">정보활용</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" rowspan="2">글로벌<br>교육 과목</td>
+                    <td class="tg-9wq8" colspan="2">영어</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" colspan="2">이문화이해</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" rowspan="2">일본어·<br>일본 사정</td>   
+                    <td class="tg-9wq8" colspan="2">일본어</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" colspan="2">일본사정</td>
+                    <td class="tg-9wq8">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-9wq8" colspan="3">필수 과목 단위 수 합계</td>
+                    <td class="tg-0pky">
+                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                    </td>
+                  </tr>
+                </tbody>
+                </table>
+        </div>
     </div>
 
 
@@ -101,7 +255,10 @@
                 case '1':
                     department_name[0].innerText = '법경사회학과';
                     department_name[0].setAttribute("selected","selected");
+                    department_name[0].setAttribute("value","a1");
+
                     department_name[1].innerText = '인문학과';
+                    department_name[1].setAttribute("value","a2");
                     for(var j = 2; j < department_name.length; j++){
                         department_name[j].style = 'display:none';
                     }
@@ -109,6 +266,7 @@
                 case '2':
                     department_name[0].innerText = '학교교육교원양성과정';
                     department_name[0].setAttribute("selected","selected");
+                    department_name[0].setAttribute("value","b1");
                     for(var j = 1; j < department_name.length; j++){
                         department_name[j].style = 'display:none';
                     }
@@ -116,6 +274,7 @@
                 case '3':
                     department_name[0].innerText = '이학과';
                     department_name[0].setAttribute("selected","selected");
+                    department_name[0].setAttribute("value","c1");
                     for(var j = 1; j < department_name.length; j++){
                         department_name[j].style = 'display:none';
                     }
@@ -123,13 +282,21 @@
                 case '4':
                     department_name[0].innerText = '의학과';
                     department_name[0].setAttribute("selected","selected");
+                    department_name[0].setAttribute("value","d1");
+
                     department_name[1].innerText = '간호학과 (간호)';
+                    department_name[1].setAttribute("value","d2");
+
                     department_name[2].innerText = '간호학과 (이학요법)';
+                    department_name[2].setAttribute("value","d3");
+
                     department_name[3].innerText = '간호학과 (작업요법)';
+                    department_name[3].setAttribute("value","d4");
                     break;
                 case '5':
                     department_name[0].innerText = '치학과';
                     department_name[0].setAttribute("selected","selected");
+                    department_name[0].setAttribute("value","e1");
                     for(var j = 1; j < department_name.length; j++){
                         department_name[j].style = 'display:none';
                     }
@@ -137,7 +304,10 @@
                 case '6':
                     department_name[0].innerText = '선진공학과';
                     department_name[0].setAttribute("selected","selected");
+                    department_name[0].setAttribute("value","f1");
+
                     department_name[1].innerText = '건축학과';
+                    department_name[1].setAttribute("value","f2");
                     for(var j = 2; j < department_name.length; j++){
                         department_name[j].style = 'display:none';
                     }
@@ -145,14 +315,24 @@
                 case '7':
                     department_name[0].innerText = '농업생산과학과';
                     department_name[0].setAttribute("selected","selected");
+                    department_name[0].setAttribute("value","g1");
+
                     department_name[1].innerText = '식료생명과학과';
+                    department_name[1].setAttribute("value","g2");
+
                     department_name[2].innerText = '농림환경과학과';
+                    department_name[2].setAttribute("value","g3");
+
                     department_name[3].innerText = '국제식료자원학 특별코스(농학계 serve)';
+                    department_name[3].setAttribute("value","g4");
                     break;
                 case '8':
                     department_name[0].innerText = '수산학과';
                     department_name[0].setAttribute("selected","selected");
+                    department_name[0].setAttribute("value","h1");
+
                     department_name[1].innerText = '국제식료자원학 특별코스(수산계 serve)';
+                    department_name[1].setAttribute("value","h2");
                     for(var j = 2; j < department_name.length; j++){
                         department_name[j].style = 'display:none';
                     }
@@ -160,6 +340,7 @@
                 case '9':
                     department_name[0].innerText = '수의학과';
                     department_name[0].setAttribute("selected","selected");
+                    department_name[0].setAttribute("value","i1");
                     for(var j = 1; j < department_name.length; j++){
                         department_name[j].style = 'display:none';
                     }
@@ -171,18 +352,76 @@
         function Onclick(){
             var year = document.getElementById("year");
             var link = document.getElementById("linkpdf");
+            var commoneducation_calculator = document.getElementById("commoneducation_calculator")
+            var department = document.getElementById("department");
+            var d_n = document.getElementById("d_n");
+            var buttonclick = document.getElementById("buttonclick");
+            var table1 = document.getElementById("table1");
+            var seminar = document.getElementById("seminar");
+            var jp1 = document.getElementById("jp1");
+            var jp2 = document.getElementById("jp2");
+            
+            buttonclick.style.display = "none";
+            table1.style.display = "block";
+            d_n.innerText = department.options[department.selectedIndex].text;
+
+            seminar.removeAttribute("value");
+            jp1.removeAttribute("value");
+            jp2.removeAttribute("value");
+
+            seminar.removeAttribute("readonly");
+            jp1.removeAttribute("readonly");
+            jp2.removeAttribute("readonly");
+
+            seminar.removeAttribute("style");
+            jp1.removeAttribute("style");
+            jp2.removeAttribute("style");
 
             switch (year.value) {
                 case '2020':
                     link.innerText = '2020년 공통교육 과목 졸업요건 (외국인 유학생)';
                     link.setAttribute("href","pdf/공통/2020.pdf");
                     link.setAttribute("target","_blank");
+                    switch (department.value) {
+                        default:
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+                            break;
+                        case 'i1':
+                            jp1.setAttribute("value","0");
+                            jp1.setAttribute("readonly",true);
+                            jp1.setAttribute("style","border: none;");
+
+                            jp2.setAttribute("value","0");
+                            jp2.setAttribute("readonly",true);
+                            jp2.setAttribute("style","border: none;");
+                            break;
+                        }
                     break;
                 case '2021':
                     link.innerText = '2021년 공통교육 과목 졸업요건 (외국인 유학생)';
                     link.setAttribute("href","pdf/공통/2021.pdf");
                     link.setAttribute("target","_blank");
+                    switch (department.value) {
+                        default:
+                            seminar.setAttribute("value","0");
+                            seminar.setAttribute("readonly",true);
+                            seminar.setAttribute("style","border: none;");
+                            break;
+                        case 'i1':
+                            jp1.setAttribute("value","0");
+                            jp1.setAttribute("readonly",true);
+                            jp1.setAttribute("style","border: none;");
+
+                            jp2.setAttribute("value","0");
+                            jp2.setAttribute("readonly",true);
+                            jp2.setAttribute("style","border: none;");
+                            break;
+                        }
+                    break;
             }
+            
         }
     </script>
 </body>
