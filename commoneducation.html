@@ -84,6 +84,8 @@
         <h3>공통교육 과목 졸업요건 계산기</h3>
         <div id = "commoneducation_calculator">
             <p id = "buttonclick">조건 선택 후 확인 버튼을 눌러주세요.</p>
+
+            <form>
             <table id = "table1" class="tg">
             <thead>
               <tr>
@@ -146,7 +148,7 @@
                     <input type="number" pattern="\d*" placeholder="단위" id="jp2" class="unit_input" autocomplete="off">
                 </td>
                 <td class="tg-0pky">
-                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off" readonly>
+                    <input type="number" pattern="\d*" placeholder="합계" class="total" autocomplete="off" readonly>
                 </td>
               </tr>
             </tbody>
@@ -206,7 +208,7 @@
                         <input type="number" id="free" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
                     </td>
                     <td class="tg-9wq8">
-                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off" readonly>
+                        <input type="number" pattern="\d*" placeholder="합계" class="total" autocomplete="off" readonly>
                     </td>
                   </tr>
                 </tbody>
@@ -288,7 +290,7 @@
                   <tr>
                     <td class="tg-9wq8" colspan="3">필수 과목 단위 수 합계</td>
                     <td class="tg-0pky">
-                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off" readonly>
+                        <input type="number" pattern="\d*" placeholder="합계" class="total" autocomplete="off" readonly>
                     </td>
                   </tr>
                 </tbody>
@@ -355,13 +357,34 @@
                   <tr>
                     <td class="tg-9wq8" colspan="4">선택 과목 단위 수 합계</td>
                     <td class="tg-9wq8">
-                        <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off" readonly>
+                        <input type="number" pattern="\d*" placeholder="합계" class="total" autocomplete="off" readonly>
                     </td>
                   </tr>
                 </tbody>
                 </table>
             
+            <input type="button" class="calculate" value="계산" onclick="change();">
+            <input type="reset" class= "calculate" value="All clear">
+        </form>
         </div>
+        <div id="commoneducation_result">
+            <li class = result></li>
+            <li class = result></li>
+            <dl>
+                <dt></dt>
+                <dd class = result1></dd>
+                <dd class = result1></dd>
+                <dd class = result1></dd>
+                <dd class = result1></dd>
+                <dd class = result1></dd>
+                <dd class = result1></dd>
+                <dd class = result1></dd>
+                <dd class = result1></dd>
+                <dd class = result1></dd>
+                <dd class = result1></dd>
+            </dt>
+        </div>
+
     </div>
 
 
@@ -516,6 +539,10 @@
             var basic_m = document.getElementById("basic_m");
             var free_m = document.getElementById("free_m");
 
+            //.calculate
+            var calculate = document.getElementsByClassName("calculate")
+            calculate[0].style.display = 'inline-block';
+            calculate[1].style.display = 'inline-block';
             
             buttonclick.style.display = "none";
             if (matchMedia("(min-width: 320px) and (max-width: 480px)").matches){
@@ -1693,6 +1720,61 @@
             }
             
         }
+    
+        function change() {
+            var department = document.getElementById("department");
+            var year = document.getElementById("year");
+            var unit_input = document.getElementsByClassName("unit_input");
+            var total = document.getElementsByClassName("total");
+            var sum1 = 0;
+            var sum2 = 0;
+
+            for(var j = 0; j < 10; j++)
+                sum1 += parseInt(unit_input[j].value);
+            for(var j = 10; j < 17; j++)
+                sum2 += parseInt(unit_input[j].value);        
+            total[0].value = sum1;
+            total[1].value = sum2;
+            var all = sum1 + sum2;
+
+            var commoneducation_result = document.getElementById("commoneducation_result");
+            var result = document.getElementsByClassName("result");
+            var result1 = document.getElementsByClassName("result1");
+            result[0].textContent = "전체 단위 수: " + all;
+            if(unit_input[0].value < 2)
+                result1[0].textContent = "초년차세미나 Ⅰ " + (2-unit_input[0].value) + " 단위 부족";
+            if (unit_input[2].value < 2)
+                result1[2].textContent = "대학과 지역 " + (2-unit_input[2].value) + " 단위 부족";
+            if (unit_input[3].value < 1)
+                result1[3].textContent = "체육·건강 (이론) " + (1-unit_input[3].value) + " 단위 부족";
+            if (unit_input[4].value < 1)
+                result1[4].textContent = "체육·건강 (실습) " + (1-unit_input[4].value) + " 단위 부족";
+            if (unit_input[5].value < 2)
+                result1[4].textContent = "정보 활용 " + (2-unit_input[5].value) + " 단위 부족";
+            if (unit_input[7].value < 2)
+                result1[7].textContent = "이문화 이해 " + (2-unit_input[7].value) + " 단위 부족";
+
+            switch (year.value) {
+                case '2020':
+                    switch(department.value) {
+                        case 'a1':
+                            if(all < 30)
+                                result[1].textContent = "부족한 단위 수: " + (30 - all);
+                            else if(all == 30)
+                                result[1].textContent = "부족한 단위 수: " + (30 - all);
+                            else
+                                result[1].textContent = "초과한 단위 수: " + (all - 30); 
+                            break;
+                    }
+                    break;
+            
+                case '2021':
+                    break;
+            }
+
+        }
+
+
     </script>
 </body>
 </html>

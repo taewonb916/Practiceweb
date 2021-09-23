@@ -319,6 +319,17 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     width: 90%;
     text-align: right;
 }
+#commoneducation_calculator .calculate{
+    display: none;
+    margin-top: 3%;
+}
+#commoneducation_calculator .total{
+    border: none;
+}
+#commoneducation_result li, dl{
+    text-align: left;
+    list-style-type: none;
+}
 
 /*
 ##Device = Most of the Smartphones Mobiles (Portrait)
