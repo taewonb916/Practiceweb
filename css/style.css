@@ -282,6 +282,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 #commoneducation_calculator #table1, #table2, #table1_m, #table2_m{
     display: none;
 }
+#commoneducation_calculator table input[type="number"]{
+    text-align: center;
+}
 #commoneducation_calculator .tg {
     width: auto;
     border-collapse:collapse;
@@ -324,7 +327,15 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     margin-top: 3%;
 }
 #commoneducation_calculator .total{
-    border: none;
+    border: 0;
+    outline: 0;
+}
+#commoneducation_result{
+    display: none;
+}
+#commoneducation_result input[type="number"]{
+    text-align: center;
+    width: 20px;
 }
 #commoneducation_result li, dl{
     text-align: left;
