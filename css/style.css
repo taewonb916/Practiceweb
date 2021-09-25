@@ -38,6 +38,10 @@ header a:hover{
 }
 /*header finish!*/
 
+#top_menu_icon{
+    display: none;
+}
+
 /*top menu start!*/
 #top_menu{
     font-size: 0;
@@ -376,7 +380,61 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     header{
         width: auto;
     }
+    header .subtitle{
+        margin-top: 0;
+        padding-top: 30px;
+    }
+    /*top_menu_icon*/
+    #top_menu_icon{
+        display: block;
+    }
+    #top_menu_icon button{
+        margin: 0;
+        float: left;
+        margin: 1%;
+        background-color: gray;
+        border-radius: 50%;
+        border: 0;
+        outline: 0;
+    }
+    #top_menu_icon #lefttop_menu{
+        position: absolute;
+        margin-top: 70px;
+        float: none;
+        background-color: rgb(97, 96, 96);
+    }
+    #top_menu_icon #lefttop_menu ul{
+        border: solid 3px black;
+        width: 200px;
+        padding: 0;
+        margin: 0;
+    }
+    #top_menu_icon #lefttop_menu li{
+        text-align: left;
+        vertical-align: middle;
+        padding:0;
+        list-style: none;
+    }
+    #top_menu_icon #lefttop_menu a:hover{
+        background-color: gray;
+    }
+    #top_menu_icon #lefttop_menu li a{
+        padding: 0;
+        padding-left: 10px;
+        line-height: 50px;
+        color: white;
+        text-shadow:1px 1px black;
+        border-bottom: dashed 0.5px white;
+    }
+    #top_menu_icon #lefttop_menu .dropdown-content1{
+        text-align: center;
+        background-color: #4A4F5A;
+    }
     #top_menu{
+        display: none;
+    }
+
+    /* #top_menu{
         margin:0;   
     }
     #top_menu ul{
@@ -412,7 +470,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     }
     .dropdown-content a:hover{
         background-color: #778899;
-    }
+    }*/
+
     #Site_AllBox{
         border: none;
         padding: 0;
