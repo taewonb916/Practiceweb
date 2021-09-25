@@ -326,12 +326,21 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     display: none;
     margin-top: 3%;
 }
-#commoneducation_calculator .total{
+#commoneducation_calculator .total, .total_m{
     border: 0;
     outline: 0;
 }
-#commoneducation_result{
+#commoneducation_calculator #information{
     display: none;
+}
+#commoneducation_result{
+    margin-top: 3%;
+    display: none;
+}
+#commoneducation_result fieldset{
+    background-color: gray;
+    color: white;
+    text-shadow:1px 1px 0 black;
 }
 #commoneducation_result input[type="number"]{
     text-align: center;
@@ -341,6 +350,20 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     text-align: left;
     list-style-type: none;
 }
+#commoneducation_result dd{
+    border-top: dashed 1px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+#commoneducation_result dt{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 1%;
+}
+#commoneducation_result dd input{
+    float: right;
+}
+
 
 /*
 ##Device = Most of the Smartphones Mobiles (Portrait)
@@ -467,6 +490,16 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     }
     #commoneducation_calculator #table2_m{
         margin-bottom: 5%;
+    }
+    #commoneducation_result dd input{
+        float: none;
+    }
+    #commoneducation_result dt{
+        text-align: left;
+    }
+    #commoneducation_result dt input{
+        float: none;
+        
     }
 }
 
