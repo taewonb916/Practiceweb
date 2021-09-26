@@ -277,6 +277,12 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 #graduation_calculator fieldset input{
     margin-top: 2%;
 }
+#graduation_result{
+    display: none;
+}
+#graduation_result li{
+    list-style: none;
+}
 /*requirementsforgraduation.html CSS end!*/
 
 /*commoneducation.html CSS start!*/
@@ -367,6 +373,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 #commoneducation_result dd input{
     float: right;
 }
+/*commoneducation.html CSS end!*/
 
 
 /*
