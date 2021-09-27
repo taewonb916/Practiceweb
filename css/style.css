@@ -280,8 +280,20 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 #graduation_result{
     display: none;
 }
-#graduation_result li{
-    list-style: none;
+#graduation_result dt{
+    text-align: center;
+}
+#graduation_result dt,dd{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#graduation_result dt input{
+    float: none;
+}
+#graduation_result input{
+    float: right;
+    text-align: center;
+    width: 25px;
 }
 /*requirementsforgraduation.html CSS end!*/
 
