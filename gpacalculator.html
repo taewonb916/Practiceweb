@@ -38,9 +38,9 @@
                     </button>
                     <button class="dropdown-button" oncontextmenu="return false" ondragstart="return false" onselectstart="return false"><a>관련사이트</a>
                         <div class="dropdown-content">
-                            <a href="https://www.kagoshima-u.ac.jp/" target="_blank">가고시마대학 홈페이지</a>
+                            <a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a>
                             <a href="https://www.kagoshima-u.ac.jp/manaba/" target="_blank">manaba</a>
-                            <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반 센터</a>
+                            <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반센터</a>
                         </div>
                     </button>
                 </ul>
@@ -54,7 +54,6 @@
             <h3>GPA 산출 공식</h3>
             <a href="https://www.kagoshima-u.ac.jp/educenter/gpa.html" target="_blank">▷가고시마대학 GPA제도 확인◁</a>
             <img src="https://latex.codecogs.com/gif.latex?GPA=\frac{\left&space;(4&space;\times&space;N_{A}&space;\right&space;)&plus;&space;\left&space;(3&space;\times&space;N_{B}&space;\right&space;)&plus;\left&space;(2&space;\times&space;N_{C}&space;\right&space;)&plus;\left&space;(1&space;\times&space;N_{D}&space;\right&space;)&plus;\left&space;(0&space;\times&space;N_{F}&space;\right&space;)}{\left&space;(N_{A}&space;\right&space;)&plus;\left&space;(N_{B}&space;\right&space;)&plus;\left&space;(N_{C}&space;\right&space;)&plus;\left&space;(N_{D}&space;\right&space;)&plus;\left&space;(N_{F}&space;\right&space;)}" title="GPA=\frac{\left (4 \times N_{A} \right )+ \left (3 \times N_{B} \right )+\left (2 \times N_{C} \right )+\left (1 \times N_{D} \right )+\left (0 \times N_{F} \right )}{\left (N_{A} \right )+\left (N_{B} \right )+\left (N_{C} \right )+\left (N_{D} \right )+\left (N_{F} \right )}">
-            
             <ul>
                 <li>N<sub>A</sub> : A (優) 학점 총 단위수</li>
                 <li>N<sub>B</sub> : B (美) 학점 총 단위수</li>
@@ -90,8 +89,8 @@
                             <label>F (不可)</label>
                             <input type="number" pattern="\d*" placeholder="F 학점 총 단위수" id="F_Grade" autocomplete="off">
                         </li>
-                    <input type="button" value="계산" onclick="change();">
                     <input type="button" value="All clear" onclick="clearInput();"> 
+                    <input type="button" value="계산" onclick="change();">
                 </fieldset>
                 </div>
 
@@ -130,7 +129,7 @@
             
         
             if(a=="" || b=="" || c=="" || d=="" || f==""){
-               alert("제대로 입력해 주세요.");
+               alert("빠짐없이 입력해 주세요.");
             }
             else {
             document.getElementById("total").value= total;

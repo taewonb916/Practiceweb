@@ -38,9 +38,9 @@
                     </button>
                     <button class="dropdown-button" oncontextmenu="return false" ondragstart="return false" onselectstart="return false"><a>관련사이트</a>
                         <div class="dropdown-content">
-                            <a href="https://www.kagoshima-u.ac.jp/" target="_blank">가고시마대학 홈페이지</a>
+                            <a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a>
                             <a href="https://www.kagoshima-u.ac.jp/manaba/" target="_blank">manaba</a>
-                            <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반 센터</a>
+                            <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반센터</a>
                         </div>
                     </button>
                 </ul>
@@ -87,292 +87,294 @@
         <a id="linkpdf"></a>
 
         <h3>공통교육 과목 졸업요건 계산기</h3>
-        <div id = "commoneducation_calculator">
+        
             <p id = "buttonclick">조건 선택 후 확인 버튼을 눌러주세요.</p>
-            <p id = "information">※<u>일본사정 4단위</u>는 <u>인문·사회과목 (선택과목) + 통합Ⅰ·Ⅱ</u>의 단위로<br><b>변환 가능</b>하므로 <b>필수 과목 단위수 합계</b>에 포함되지 않음</p>
+            <p id = "information" style="display: none;">※<u>일본사정 4단위</u>는 <u>인문·사회과목 (선택과목) + 통합Ⅰ·Ⅱ</u>의 단위로<br><b>변환 가능</b>하므로 <b>필수 과목 단위수 합계</b>에 포함되지 않음</p>
+        <div id="All_commoneducation" style="display: none;">
+            <div id = "commoneducation_calculator">
+                <form>
+                    <table id = "table1" class="tg">
+                        <thead>
+                            <tr>
+                                <th class="tg-9wq8" rowspan="4" STYLE="writing-mode: horizontal-tb" width="100px">과목</th>
+                                <th class="tg-9wq8" colspan="11">필수과목</th>
+                            </tr>
+                            <tr>
+                                <th class="tg-9wq8" colspan="6">초년차교육과목</th>
+                                <th class="tg-9wq8" colspan="2">글로벌<br>교육 과목</th>
+                                <th class="tg-9wq8" colspan="2">일본어·<br>일본 사정</th>
+                                <th class="tg-0pky" rowspan="3" STYLE="writing-mode: vertical-lr">필수 과목 단위 수 합계</th>
+                            </tr>
+                            <tr>
+                                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">초년차세미나Ⅰ</th>
+                                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">초년차세미나Ⅱ</th>
+                                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">대학과 지역</th>
+                                <th class="tg-9wq8" colspan="2" STYLE="writing-mode: vertical-lr">체육·건강</th>
+                                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">정보활용</th>
+                                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">영어</th>
+                                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">이문화이해</th>
+                                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">일본어</th>
+                                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">일본사정</th>
+                            </tr>
+                            <tr>
+                                <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">이론</th>
+                                <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">실습</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="d_n" class="tg-9wq8"  STYLE="writing-mode: horizontal-tb">학과</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" id = "seminar" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" id="jp1" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" id="jp2" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-0pky">
+                                    <input type="number" pattern="\d*" class="total" autocomplete="off" readonly style="background-color: #E2E2E2;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-            <form>
-                <table id = "table1" class="tg">
-                    <thead>
-                        <tr>
-                            <th class="tg-9wq8" rowspan="4" STYLE="writing-mode: horizontal-tb" width="100px">과목</th>
-                            <th class="tg-9wq8" colspan="11">필수과목</th>
-                        </tr>
-                        <tr>
-                            <th class="tg-9wq8" colspan="6">초년차교육과목</th>
-                            <th class="tg-9wq8" colspan="2">글로벌<br>교육 과목</th>
-                            <th class="tg-9wq8" colspan="2">일본어·<br>일본 사정</th>
-                            <th class="tg-0pky" rowspan="3" STYLE="writing-mode: vertical-lr">필수 과목 단위 수 합계</th>
-                        </tr>
-                        <tr>
-                            <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">초년차세미나Ⅰ</th>
-                            <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">초년차세미나Ⅱ</th>
-                            <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">대학과 지역</th>
-                            <th class="tg-9wq8" colspan="2" STYLE="writing-mode: vertical-lr">체육·건강</th>
-                            <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">정보활용</th>
-                            <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">영어</th>
-                            <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">이문화이해</th>
-                            <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">일본어</th>
-                            <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">일본사정</th>
-                        </tr>
-                        <tr>
-                            <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">이론</th>
-                            <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">실습</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="d_n" class="tg-9wq8"  STYLE="writing-mode: horizontal-tb">학과</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" id = "seminar" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" id="jp1" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" id="jp2" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-0pky">
-                                <input type="number" pattern="\d*" class="total" autocomplete="off" readonly>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <table id="table2" class="tg">
+                        <thead>
+                            <tr>
+                                <th class="tg-9wq8" rowspan="5" width="100px">과목</th>
+                                <th class="tg-9wq8" colspan="9" width="500px">선택필수과목</th>
+                            </tr>
+                            <tr>
+                                <th class="tg-9wq8" colspan="8">교양교육과목</th>
+                                <th class="tg-9wq8" rowspan="4" STYLE="writing-mode: vertical-lr" >선택 과목 단위 수 합계</th>
+                            </tr>
+                            <tr>
+                                <th class="tg-9wq8" colspan="5">교양기초과목</th>
+                                <th class="tg-9wq8" colspan="2">교양활용과목</th>
+                                <th class="tg-0lax" rowspan="3" STYLE="writing-mode: vertical-lr">자유선택과목</th>
+                            </tr>
+                            <tr>
+                                <th class="tg-9wq8" colspan="2">인문·사회<br>과학분야</th>
+                                <th class="tg-9wq8" colspan="3">자연과학<br>분야</th>
+                                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">통합Ⅰ (과제발견)</th>
+                                <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">통합Ⅱ (과제해결)</th>
+                            </tr>
+                            <tr>
+                                <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">초수외국어</th>
+                                <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">선택과목</th>
+                                <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">실험과목</th>
+                                <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">선택과목</th>
+                                <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">기초교육<br>입문과목</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="d_n2" class="tg-9wq8">학과</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" id="language" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" id="experiment" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" id="choose" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" id="basic" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8" colspan="2">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-0lax">
+                                    <input type="number" id="free" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
+                                </td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" class="total" autocomplete="off" readonly style="background-color: #E2E2E2;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                <table id="table2" class="tg">
-                    <thead>
-                        <tr>
-                            <th class="tg-9wq8" rowspan="5" width="100px">과목</th>
-                            <th class="tg-9wq8" colspan="9" width="500px">선택필수과목</th>
-                        </tr>
-                        <tr>
-                            <th class="tg-9wq8" colspan="8">교양교육과목</th>
-                            <th class="tg-9wq8" rowspan="4" STYLE="writing-mode: vertical-lr" >선택 과목 단위 수 합계</th>
-                        </tr>
-                        <tr>
-                            <th class="tg-9wq8" colspan="5">교양기초과목</th>
-                            <th class="tg-9wq8" colspan="2">교양활용과목</th>
-                            <th class="tg-0lax" rowspan="3" STYLE="writing-mode: vertical-lr">자유선택과목</th>
-                        </tr>
-                        <tr>
-                            <th class="tg-9wq8" colspan="2">인문·사회<br>과학분야</th>
-                            <th class="tg-9wq8" colspan="3">자연과학<br>분야</th>
-                            <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">통합Ⅰ (과제발견)</th>
-                            <th class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">통합Ⅱ (과제해결)</th>
-                        </tr>
-                        <tr>
-                            <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">초수외국어</th>
-                            <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">선택과목</th>
-                            <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">실험과목</th>
-                            <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">선택과목</th>
-                            <th class="tg-9wq8" STYLE="writing-mode: vertical-lr">기초교육<br>입문과목</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="d_n2" class="tg-9wq8">학과</td>
-                            <td class="tg-9wq8">
-                                <input type="number" id="language" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" id="experiment" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" id="choose" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" id="basic" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8" colspan="2">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-0lax">
-                                <input type="number" id="free" pattern="\d*" placeholder="단위" class="unit_input" autocomplete="off">
-                            </td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" class="total" autocomplete="off" readonly>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <table id = "table1_m" class="tg">
+                        <thead>
+                            <tr>
+                                <th class="tg-9wq8" colspan="4" width = "311px">과목</th>
+                                <th id="d_n_m" class="tg-9wq8" width="126px">학과</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tg-9wq8" rowspan="11" STYLE="writing-mode: vertical-lr">필수 과목</td>
+                                <td class="tg-9wq8" rowspan="6">초년차교육과목</td>
+                                <td class="tg-9wq8" colspan="2">초년차세미나1</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" colspan="2">초년차세미나2</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" id = "seminar_m" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" colspan="2">대학과 지역</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" rowspan="2">체육·건강</td>
+                                <td class="tg-9wq8">이론</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8">실습</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" colspan="2">정보활용</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" rowspan="2">글로벌<br>교육 과목</td>
+                                <td class="tg-9wq8" colspan="2">영어</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" colspan="2">이문화이해</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" rowspan="2">일본어·<br>일본 사정</td>   
+                                <td class="tg-9wq8" colspan="2">일본어</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" id="jp1_m" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" colspan="2">일본사정</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" id="jp2_m" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" colspan="3">필수 과목 단위 수 합계</td>
+                                <td class="tg-0pky">
+                                    <input type="number" pattern="\d*" class="total_m" autocomplete="off" readonly style="background-color: #E2E2E2;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                <table id = "table1_m" class="tg">
-                    <thead>
-                        <tr>
-                            <th class="tg-9wq8" colspan="4" width = "311px">과목</th>
-                            <th id="d_n_m" class="tg-9wq8" width="126px">학과</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="tg-9wq8" rowspan="11" STYLE="writing-mode: vertical-lr">필수 과목</td>
-                            <td class="tg-9wq8" rowspan="6">초년차교육과목</td>
-                            <td class="tg-9wq8" colspan="2">초년차세미나1</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" colspan="2">초년차세미나2</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" id = "seminar_m" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" colspan="2">대학과 지역</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" rowspan="2">체육·건강</td>
-                            <td class="tg-9wq8">이론</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8">실습</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" colspan="2">정보활용</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" rowspan="2">글로벌<br>교육 과목</td>
-                            <td class="tg-9wq8" colspan="2">영어</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" colspan="2">이문화이해</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" rowspan="2">일본어·<br>일본 사정</td>   
-                            <td class="tg-9wq8" colspan="2">일본어</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" id="jp1_m" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" colspan="2">일본사정</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" id="jp2_m" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" colspan="3">필수 과목 단위 수 합계</td>
-                            <td class="tg-0pky">
-                                <input type="number" pattern="\d*" class="total_m" autocomplete="off" readonly>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table id="table2_m" class="tg">
-                    <thead>
-                        <tr>
-                            <th class="tg-9wq8" colspan="5">과목</th>
-                            <th class="tg-9wq8" id="d_n2_m" width="126px">학과</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="tg-9wq8" rowspan="9" STYLE="writing-mode: vertical-lr">선택 필수 과목</td>
-                            <td class="tg-9wq8" rowspan="8" STYLE="writing-mode: vertical-lr">교양 교육 과목</td>
-                            <td class="tg-9wq8" rowspan="5" STYLE="writing-mode: vertical-lr">교양 기초 과목</td>
-                            <td class="tg-9wq8" rowspan="2" >인문·사회과학 분야</td>
-                            <td class="tg-9wq8">초수외국어</td>
-                            <td class="tg-9wq8">
-                                <input type="number" id="language_m" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8">선택과목</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" rowspan="3">자연과학 분야</td>
-                            <td class="tg-9wq8">실험과목</td>
-                            <td class="tg-9wq8">
-                                <input type="number" id="experiment_m" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8">선택과목</td>
-                            <td class="tg-9wq8">
-                                <input type="number" id="choose_m" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8">기초교육입문과목</td>
-                            <td class="tg-9wq8">
-                                <input type="number" id="basic_m" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">교양 활용 과목</td>
-                            <td class="tg-9wq8" colspan="2">통합1 (과제발견)</td>
-                            <td class="tg-9wq8" rowspan="2">
-                                <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" colspan="2">통합2 (과제해결)</td>
-                        </tr>
-                        <tr>
-                            <td class="tg-0pky" colspan="3">자유선택과목</td>
-                            <td class="tg-0pky">
-                                <input type="number" id="free_m" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tg-9wq8" colspan="4">선택 과목 단위 수 합계</td>
-                            <td class="tg-9wq8">
-                                <input type="number" pattern="\d*" class="total_m" autocomplete="off" readonly>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            
-                <input type="button" class="calculate" value="계산" onclick="change();">
-                <input type="reset" class= "calculate" value="All clear">
-            </form>
-        </div>
+                    <table id="table2_m" class="tg">
+                        <thead>
+                            <tr>
+                                <th class="tg-9wq8" colspan="5">과목</th>
+                                <th class="tg-9wq8" id="d_n2_m" width="126px">학과</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tg-9wq8" rowspan="9" STYLE="writing-mode: vertical-lr">선택 필수 과목</td>
+                                <td class="tg-9wq8" rowspan="8" STYLE="writing-mode: vertical-lr">교양 교육 과목</td>
+                                <td class="tg-9wq8" rowspan="5" STYLE="writing-mode: vertical-lr">교양 기초 과목</td>
+                                <td class="tg-9wq8" rowspan="2" >인문·사회과학 분야</td>
+                                <td class="tg-9wq8">초수외국어</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" id="language_m" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8">선택과목</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" rowspan="3">자연과학 분야</td>
+                                <td class="tg-9wq8">실험과목</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" id="experiment_m" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8">선택과목</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" id="choose_m" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8">기초교육입문과목</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" id="basic_m" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" rowspan="2" STYLE="writing-mode: vertical-lr">교양 활용 과목</td>
+                                <td class="tg-9wq8" colspan="2">통합1 (과제발견)</td>
+                                <td class="tg-9wq8" rowspan="2">
+                                    <input type="number" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" colspan="2">통합2 (과제해결)</td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky" colspan="3">자유선택과목</td>
+                                <td class="tg-0pky">
+                                    <input type="number" id="free_m" pattern="\d*" placeholder="단위" class="unit_input_m" autocomplete="off">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-9wq8" colspan="4">선택 과목 단위 수 합계</td>
+                                <td class="tg-9wq8">
+                                    <input type="number" pattern="\d*" class="total_m" autocomplete="off" readonly style="background-color: #E2E2E2;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                    <input type="button" class="calculate" value="계산" onclick="change();">
+                    <input type="reset" class= "calculate" value="All clear">
+                </form>
+            </div>
     
         <form id="commoneducation_result">
             <fieldset>
@@ -482,7 +484,7 @@
                 </dd>
             </fieldset>
         </form>
-
+        </div>
     </div>
 
 
@@ -601,10 +603,12 @@
         function Onclick(){
             var year = document.getElementById("year");
             var link = document.getElementById("linkpdf");
+            var All_commoneducation = document.getElementById("All_commoneducation")
             var commoneducation_calculator = document.getElementById("commoneducation_calculator")
             var buttonclick = document.getElementById("buttonclick");
             var department = document.getElementById("department");
             var information = document.getElementById("information");
+            All_commoneducation.style.display = 'grid';
 
             // reset
             document.getElementById("commoneducation_result").style.display = 'none';
@@ -726,560 +730,560 @@
                         case 'a1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'a2':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'b1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'c1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'd1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'd2':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'd3':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'd4':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'e1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'f1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'f2':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'g1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'g2':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'g3':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'g4':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'h1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             choose.setAttribute("value","0");
                             choose.setAttribute("readonly",true);
-                            choose.setAttribute("style","border: none; outline: 0;");
+                            choose.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             choose_m.setAttribute("value","0");
                             choose_m.setAttribute("readonly",true);
-                            choose_m.setAttribute("style","border: none; outline: 0;");
+                            choose_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'h2':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'i1':
                             jp1.setAttribute("value","0");
                             jp1.setAttribute("readonly",true);
-                            jp1.setAttribute("style","border: none; outline: 0;");
+                            jp1.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             jp2.setAttribute("value","0");
                             jp2.setAttribute("readonly",true);
-                            jp2.setAttribute("style","border: none; outline: 0;");
+                            jp2.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             jp1_m.setAttribute("value","0");
                             jp1_m.setAttribute("readonly",true);
-                            jp1_m.setAttribute("style","border: none; outline: 0;");
+                            jp1_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             jp2_m.setAttribute("value","0");
                             jp2_m.setAttribute("readonly",true);
-                            jp2_m.setAttribute("style","border: none; outline: 0;");
+                            jp2_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         }
                     break;
@@ -1291,536 +1295,536 @@
                         case 'a1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'a2':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'b1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'c1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'd1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'd2':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'd3':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'd4':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'e1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'f1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'f2':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'g1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'g2':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'g3':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'g4':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'h1':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             choose.setAttribute("value","0");
                             choose.setAttribute("readonly",true);
-                            choose.setAttribute("style","border: none; outline: 0;");
+                            choose.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             choose_m.setAttribute("value","0");
                             choose_m.setAttribute("readonly",true);
-                            choose_m.setAttribute("style","border: none; outline: 0;");
+                            choose_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'h2':
                             seminar.setAttribute("value","0");
                             seminar.setAttribute("readonly",true);
-                            seminar.setAttribute("style","border: none; outline: 0;");
+                            seminar.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             seminar_m.setAttribute("value","0");
                             seminar_m.setAttribute("readonly",true);
-                            seminar_m.setAttribute("style","border: none; outline: 0;");
+                            seminar_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         case 'i1':
                             jp1.setAttribute("value","0");
                             jp1.setAttribute("readonly",true);
-                            jp1.setAttribute("style","border: none; outline: 0;");
+                            jp1.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             jp2.setAttribute("value","0");
                             jp2.setAttribute("readonly",true);
-                            jp2.setAttribute("style","border: none; outline: 0;");
+                            jp2.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             jp1_m.setAttribute("value","0");
                             jp1_m.setAttribute("readonly",true);
-                            jp1_m.setAttribute("style","border: none; outline: 0;");
+                            jp1_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             jp2_m.setAttribute("value","0");
                             jp2_m.setAttribute("readonly",true);
-                            jp2_m.setAttribute("style","border: none; outline: 0;");
+                            jp2_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language.setAttribute("value","0");
                             language.setAttribute("readonly",true);
-                            language.setAttribute("style","border: none; outline: 0;");
+                            language.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment.setAttribute("value","0");
                             experiment.setAttribute("readonly",true);
-                            experiment.setAttribute("style","border: none; outline: 0;");
+                            experiment.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic.setAttribute("value","0");
                             basic.setAttribute("readonly",true);
-                            basic.setAttribute("style","border: none; outline: 0;");
+                            basic.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free.setAttribute("value","0");
                             free.setAttribute("readonly",true);
-                            free.setAttribute("style","border: none; outline: 0;");
+                            free.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
 
                             language_m.setAttribute("value","0");
                             language_m.setAttribute("readonly",true);
-                            language_m.setAttribute("style","border: none; outline: 0;");
+                            language_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             experiment_m.setAttribute("value","0");
                             experiment_m.setAttribute("readonly",true);
-                            experiment_m.setAttribute("style","border: none; outline: 0;");
+                            experiment_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             basic_m.setAttribute("value","0");
                             basic_m.setAttribute("readonly",true);
-                            basic_m.setAttribute("style","border: none; outline: 0;");
+                            basic_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             free_m.setAttribute("value","0");
                             free_m.setAttribute("readonly",true);
-                            free_m.setAttribute("style","border: none; outline: 0;");
+                            free_m.setAttribute("style","border: none; outline: 0; background-color: #E2E2E2;");
                             break;
                         }
                     break;
