@@ -5,13 +5,13 @@ html, body {
 }
 body{
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /*header start!*/
 header{
     position: fixed;
     width: 100%;
     background-color: whitesmoke;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #Top_AllBox{
     height: 5%;
@@ -44,10 +44,6 @@ header{
     margin-bottom: 5%;
 }
 /*header finish!*/
-
-#top_menu_icon{
-    display: none;
-}
 
 /*top menu start!*/
 #top_menu{
@@ -392,6 +388,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     float: right;
 }
 /*commoneducation.html CSS end!*/
+
+
 
 
 /*
