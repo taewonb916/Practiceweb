@@ -8,6 +8,11 @@ html, body {
 body{
     margin: 0;
 }
+/*top_menu_icon start!*/
+#top_menu_icon{
+    display: none;
+}
+
 /*header start!*/
 header{
     position: fixed;
@@ -113,7 +118,6 @@ header{
 }
 #top_menu button:hover,button a:hover{
     background-color: #e9e9e9;
-    border: solid gray 1px;
     border-bottom: 0;
 }
 #top_menu button a:hover{
@@ -450,100 +454,97 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 */ 
 
 @media (min-width: 320px) and (max-width: 480px) {
+    body{
+        max-width: 480px;
+        min-width: 320px;
+    }
     header{
-        width: auto;
+        position: static;
+        background-color: whitesmoke;
     }
     header .subtitle{
         margin-top: 0;
-        padding-top: 30px;
     }
     /*top_menu_icon*/
     #top_menu_icon{
         display: block;
+        float: right;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-right: 1%;
+        padding-left: 99%;
     }
     #top_menu_icon button{
-        margin: 0;
-        float: left;
-        margin: 1%;
-        background-color: gray;
-        border-radius: 50%;
         border: 0;
         outline: 0;
+        cursor: pointer;
+        background-color: whitesmoke;
     }
-    #top_menu_icon #lefttop_menu{
+    #top_menu_mq{
+        background-color: darkgrey;
+        border-left: solid black 1px;
+        border-right: solid black 1px;
+        border-bottom: solid black 1px;
+    }
+    #top_menu_mq #firstmenu dt{
+        border-bottom: none;
+    }
+    #top_menu_mq a{
+        text-decoration: none;
+        color: black;
+    }
+    #top_menu_mq dl dd:before {
+        content: '\2013';
         position: absolute;
-        margin-top: 70px;
-        float: none;
-        background-color: rgb(97, 96, 96);
+        margin-left: -30px;
+        color: white;
+        text-shadow: 0 0 5px black;
     }
-    #top_menu_icon #lefttop_menu ul{
-        border: solid 3px black;
-        width: 200px;
-        padding: 0;
+    #top_menu_mq dl dd{
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    #top_menu_mq dl dd a{
+        display: block;
+        color: white;
+        text-shadow: 0 0 5px black;
+    }
+    #top_menu_mq dl{
         margin: 0;
     }
-    #top_menu_icon #lefttop_menu li{
-        text-align: left;
-        vertical-align: middle;
-        padding:0;
-        list-style: none;
-    }
-    #top_menu_icon #lefttop_menu a:hover{
+    #top_menu_mq dt{
+        text-shadow: 0 0 2px white;
         background-color: gray;
-    }
-    #top_menu_icon #lefttop_menu li a{
-        padding: 0;
+        border-bottom: solid 1px black;
+        border-top: solid 1px black;
         padding-left: 10px;
-        line-height: 50px;
-        color: white;
-        text-shadow:1px 1px black;
-        border-bottom: dashed 0.5px white;
+        padding-bottom: 10px;
+        padding-top: 10px;
     }
-    #top_menu_icon #lefttop_menu .dropdown-content1{
+    #top_menu_mq dt a, dt{
+        display: block;
+        color: black;
+    }
+
+
+    #Top_AllBox{ 
+        display: block;
+        width: auto;
+    }
+    #Top_AllBox p{
         text-align: center;
-        background-color: #4A4F5A;
+    }
+    #Top_AllBox #home{
+        margin-top: 0;
+        padding: 0;
+    }
+    #Top_AllBox #home .subtitle{
+        padding-top: 10%;
     }
     #top_menu{
         display: none;
     }
-
-    /* #top_menu{
-        margin:0;   
-    }
-    #top_menu ul{
-        padding: 0;
-    }
-    #top_menu ul li{
-        border: none;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        width: auto;
-        display: block;
-        text-align: left;
-    }
-    #top_menu ul li a{
-        padding: 3%;
-    }
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: gray;
-        color: gray;
-    }
-    .dropdown-content a {
-        list-style: circle;
-        color: black;
-        text-decoration: none;
-        text-align: center;
-        width: auto;
-        border-top: dashed 1px;
-    }
-    .dropdown:hover .dropdown-content{
-        position: relative;
-    }
-    .dropdown-content a:hover{
-        background-color: #778899;
-    }*/
+    
 
     #Site_AllBox{
         border: none;
@@ -631,7 +632,6 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     }
     #commoneducation_result dt input{
         float: none;
-        
     }
 }
 

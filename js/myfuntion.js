@@ -1,10 +1,9 @@
-var menu = document.getElementById("lefttop_menu")
-
 function myFunction() {
-        if (matchMedia("(min-width: 320px) and (max-width: 480px)").matches){
-            if(menu.style.display =="none") 
+    var menu = document.getElementById("top_menu_mq")
+    if (matchMedia("(min-width: 320px) and (max-width: 480px)").matches){
+        if(menu.style.display == "none") 
                 menu.style.display = "block";
-            else 
+        else 
                 menu.style.display = "none";
-        }
+    }
 }

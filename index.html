@@ -9,9 +9,12 @@
     <script src="js/myfuntion.js"></script>
 </head>
 <body>
+    <nav id="top_menu_icon">
+        <button onclick="myFunction();"><img src="img/menu_110986.png"></button>
+    </nav> 
     <header>
         <div id="Top_AllBox">
-            <a href="index.html">
+            <a id = "home" href="index.html">
                 <p class="subtitle">한국인 유학생을 위한</p>
                 <p class="title">Kagoshima University</p>
             </a>
@@ -47,6 +50,34 @@
             </nav>
         </div>
     </header>
+
+    <nav id="top_menu_mq" style="display: none;">
+            <dl id="firstmenu">
+                <dt><a href="introduction.html">소개</a></dt>
+            </dl>
+
+            <dl>
+                <dt oncontextmenu="return false" ondragstart="return false" onselectstart="return false">재학생</dt>
+                <dd><a href="facultyintroduction.html">학부</a></dd>
+            </dl>
+            <dl>
+                <dt oncontextmenu="return false" ondragstart="return false" onselectstart="return false">유용한 기능</dt>
+                <dd><a href="gpacalculator.html">GPA 계산기</a></dd>
+                <dd><a href="commoneducation.html">공통교육 과목</a></dd>
+                <dd><a href="requirementsforgraduation.html">졸업요건 확인</a></dd>
+            </dl>
+            <dl>
+                <dt><a oncontextmenu="return false" ondragstart="return false" onselectstart="return false">게시판</a></dt>
+                <dd><a href="noticeboard.html">공지사항</a></dd>
+                <dd><a href="freeboard.html">자유게시판</a></dd>
+            </dl>
+            <dl>
+                <dt oncontextmenu="return false" ondragstart="return false" onselectstart="return false"><a>관련사이트</a></dt>
+                <dd><a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a></dd>
+                <dd><a href="https://www.kagoshima-u.ac.jp/manaba/" target="_blank">manaba</a></dd>
+                <dd><a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반센터</a></dd>
+            </dl>
+    </nav>
 
     <div id="Site_AllBox">
         <h3>가고시마 대학 소개영상</h3>
