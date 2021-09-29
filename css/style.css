@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
-@import url('https://allfont.net/allfont.css?fonts=franklin-gothic-medium');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
 
 /*모바일 모드 가로 스크롤 금지*/
 html, body {
@@ -7,6 +9,8 @@ html, body {
     overflow-x: hidden;
 }
 body{
+    width: 100%;
+    font-family: 'Poor Story', cursive;
     margin: 0;
 }
 /*top_menu_icon start!*/
@@ -18,7 +22,7 @@ body{
 header{
     position: fixed;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: #ced4da;
     border-bottom: gray solid 1px;
 }
 #Top_AllBox{
@@ -29,9 +33,9 @@ header{
     display: flex;
 }
 #Top_AllBox .title{
-    font-size: 30px;
+    font-size: 35px;
     margin-top: 0px;
-    font-family: 'Franklin Gothic Medium', arial;
+    font-family: 'Teko', sans-serif;
 }
 
 #Top_AllBox .subtitle{
@@ -40,6 +44,7 @@ header{
     font-family: 'Do Hyeon', sans-serif;
 }
 #Top_AllBox a{
+    font-family: 'Sunflower', sans-serif;
     width: 300px;
     text-decoration: none;
     padding: 0;
@@ -47,9 +52,9 @@ header{
     padding-left: 3%;
 }
 #Top_AllBox a:hover{
-    background-color: whitesmoke;
+    background-color: #ced4da;
 }
-#Top_AllBox a p{
+#Top_AllBox #home{
     color: black;
 }
 #Top_AllBox .title{
@@ -77,7 +82,7 @@ header{
 }
 #top_menu ul button{
     cursor: pointer;
-    background-color: whitesmoke;
+    background-color: #ced4da;
     border: 0;
     display: inline-flex;
     width: 15%;
@@ -89,15 +94,17 @@ header{
     padding-bottom: 1%;
 }
 #top_menu button a{
-    color: black;
+    font-size: 17px;
+    text-shadow: 1px 1px 3px black;
+    color: white;
     text-decoration: none;
     width: 100%;
 }
 #top_menu a:link{
-    color: black;
+    color: white;
 }
 #top_menu a:visited{
-    color: black;
+    color: white;
 }
 #top_menu .dropdown-content {
     border: solid 1px #666666;
@@ -105,11 +112,11 @@ header{
     position: absolute;
     top: 100%;
 	min-width: 75px;
-    width: 8%;
+    width: 10%;
 }
 #top_menu .dropdown-content a {
     color: white;
-    text-shadow: 0 0 5px black;
+    text-shadow: 0 0 3px black;
     padding-left: 0;
     padding-top: 0;
     display: block;
@@ -118,7 +125,7 @@ header{
     text-align: center;
 }
 #top_menu button:hover,button a:hover{
-    background-color: #e9e9e9;
+    background-color: #ced4da;
     border-bottom: 0;
 }
 #top_menu button a:hover{
@@ -462,7 +469,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     }
     header{
         position: static;
-        background-color: whitesmoke;
+        background-color: #ced4da;
     }
     header .subtitle{
         margin-top: 0;
@@ -480,7 +487,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         border: 0;
         outline: 0;
         cursor: pointer;
-        background-color: whitesmoke;
+        background-color: #ced4da;
     }
     #top_menu_mq{
         background-color: darkgrey;
@@ -509,7 +516,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     #top_menu_mq dl dd a{
         display: block;
         color: white;
-        text-shadow: 0 0 5px black;
+        text-shadow: 0 0 2px black;
     }
     #top_menu_mq dl{
         margin: 0;
