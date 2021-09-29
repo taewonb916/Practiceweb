@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://allfont.net/allfont.css?fonts=franklin-gothic-medium');
 
 /*모바일 모드 가로 스크롤 금지*/
 html, body {
@@ -30,7 +31,7 @@ header{
 #Top_AllBox .title{
     font-size: 30px;
     margin-top: 0px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', arial;
 }
 
 #Top_AllBox .subtitle{
@@ -160,6 +161,7 @@ header{
     background-color: gray;
     width: 960px;
     margin: 0 auto;
+    margin-top: 5%;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;
@@ -385,15 +387,15 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     border-width:1px;
     font-family:Arial, sans-serif;
     font-size:14px;
-    font-weight:normal
-    ;overflow:hidden;
+    font-weight:normal;
+    overflow:hidden;
     padding:10px 5px;
     word-break:normal;
 }
 #commoneducation_calculator .tg .tg-9wq8{
     border-color:black;
     text-align:center;
-    vertical-align:middle
+    vertical-align:middle;
 }
 #commoneducation_calculator .tg input{
     padding: 1%;
@@ -571,6 +573,10 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     #GPA_calculator{
         display: inline-block;
     }
+    #GPA_calculator #Result{
+        width: auto;
+        text-align: center;
+    }
     #Calculator{
         padding: 0;
         margin: auto;
@@ -628,9 +634,26 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         float: none;
     }
     #commoneducation_result dt{
-        text-align: left;
+        text-align: center;
     }
     #commoneducation_result dt input{
+        float: none;
+        display: inline-block;
+    }
+    #All_commoneducation{
+        display: block;
+    }
+    #All_graduation{
+        display: block;
+    }
+    #All_graduation #graduation_result dt{
+        text-align: center;
+    }
+    #All_graduation #graduation_result dt input{
+        float: none;
+        display: inline-block;
+    }
+    #All_graduation #graduation_result dd input{
         float: none;
     }
 }

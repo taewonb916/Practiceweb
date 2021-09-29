@@ -14,7 +14,7 @@
     </nav> 
     <header>
         <div id="Top_AllBox">
-            <a href="index.html">
+            <a id= "home" href="index.html">
                 <p class="subtitle">한국인 유학생을 위한</p>
                 <p class="title">Kagoshima University</p>
             </a>
@@ -639,7 +639,10 @@
             var buttonclick = document.getElementById("buttonclick");
             var department = document.getElementById("department");
             var information = document.getElementById("information");
-            All_commoneducation.style.display = 'grid';
+            if (matchMedia("(min-width: 320px) and (max-width: 480px)").matches)
+                All_commoneducation.style.display = 'block';
+            else
+                All_commoneducation.style.display = 'grid';
 
             // reset
             document.getElementById("commoneducation_result").style.display = 'none';
