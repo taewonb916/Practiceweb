@@ -30,7 +30,8 @@ header{
     width: 1200px;
     margin: 0 auto;
     text-align: left;
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 60%;
 }
 #Top_AllBox .title{
     font-size: 35px;
@@ -60,27 +61,22 @@ header{
 #Top_AllBox .title{
     margin-bottom: 5%;
 }
-/*header finish!*/
 
 /*top menu start!*/
 #top_menu{
-    display: flex;
     width: 700px;
     font-size: 0;
     margin: 0;
-    margin-left: 200px;
     text-align: center;
     list-style: none;
-}
-#top_menu ul{
     padding: 0;
     display: inline-flex;
     justify-content: space-around;
     align-items: flex-end;
     width: 100%;
-    display: flex;
 }
-#top_menu ul button{
+#top_menu span{
+    margin-bottom: 0;
     cursor: pointer;
     background-color: #ced4da;
     border: 0;
@@ -93,7 +89,8 @@ header{
     padding-top: 1%;
     padding-bottom: 1%;
 }
-#top_menu button a{
+#top_menu span a{
+    text-align: center;
     font-size: 17px;
     text-shadow: 1px 1px 3px black;
     color: white;
@@ -124,20 +121,17 @@ header{
     background-color: #a0a0a0;
     text-align: center;
 }
-#top_menu button:hover,button a:hover{
+#top_menu span:hover,span a:hover{
     background-color: #ced4da;
     border-bottom: 0;
 }
-#top_menu button a:hover{
+#top_menu span a:hover{
     background-color: #e9e9e9;
     border: 0;
 }
-#top_menu button:hover .dropdown-content{
+#top_menu span:hover .dropdown-content{
     display: block;
 }
-
-/*top_menu finish!*/
-
 
 /*Site Layout start!*/
 #Site_AllBox{
@@ -183,9 +177,11 @@ header{
 #Sitetotop a:visited{   
     color: honeydew;
 }
-/*Site Layout finish!*/
 
-
+/*index.html start!*/
+#youtubeintro {
+    border: 0;
+}
 /*gpacalculator.html CSS start!*/
 #GPA_formula{
     text-align: center;
@@ -272,8 +268,6 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     text-align: right;
 }
 
-/*gpacalculator.html CSS finish!*/
-
 /*requirementsforgraduation.html CSS start!*/
 #graduation {
     margin: 2%;
@@ -349,7 +343,6 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     grid-template-columns: 50% 50%;
     align-items: center;
 }
-/*requirementsforgraduation.html CSS end!*/
 
 /*commoneducation.html CSS start!*/
 .department_name{
@@ -450,9 +443,6 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 #commoneducation_result dd input{
     float: right;
 }
-/*commoneducation.html CSS end!*/
-
-
 
 
 /*
@@ -467,6 +457,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         max-width: 480px;
         min-width: 320px;
     }
+
+    /*header start!*/
     header{
         position: static;
         background-color: #ced4da;
@@ -474,7 +466,27 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     header .subtitle{
         margin-top: 0;
     }
-    /*top_menu_icon*/
+
+    /* Top_allBox start!*/
+    #Top_AllBox{ 
+        display: block;
+        width: auto;
+    }
+    #Top_AllBox p{
+        text-align: center;
+    }
+    #Top_AllBox #home{
+        margin-top: 0;
+        padding: 0;
+    }
+    #Top_AllBox #home .subtitle{
+        padding-top: 10%;
+    }
+    #top_menu{
+        display: none;
+    }
+
+    /*top_menu_icon start!*/
     #top_menu_icon{
         display: block;
         float: right;
@@ -495,7 +507,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         border-right: solid black 1px;
         border-bottom: solid black 1px;
     }
-    #top_menu_mq #firstmenu dt{
+    #top_menu_mq #firstmenu dd{
         border-bottom: none;
     }
     #top_menu_mq a{
@@ -533,28 +545,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     #top_menu_mq dt a, dt{
         display: block;
         color: black;
-    }
+    }    
 
-
-    #Top_AllBox{ 
-        display: block;
-        width: auto;
-    }
-    #Top_AllBox p{
-        text-align: center;
-    }
-    #Top_AllBox #home{
-        margin-top: 0;
-        padding: 0;
-    }
-    #Top_AllBox #home .subtitle{
-        padding-top: 10%;
-    }
-    #top_menu{
-        display: none;
-    }
-    
-
+    /*Site Layout start!*/    
     #Site_AllBox{
         border: none;
         padding: 0;
@@ -568,6 +561,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         width: auto;
         height: auto;
     }
+
+    /*cgpacalculator.html CSS start!*/
     #GPA_formula{
         padding: 3%;
     }
@@ -606,6 +601,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         margin: auto;
         padding: 25px;
     }
+
+    /*commoneducation.html CSS start!*/
     #graduation{
         margin: 3%;
     }
@@ -650,6 +647,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     #All_commoneducation{
         display: block;
     }
+
+    /*requirementsforgraduation.html start!*/
     #All_graduation{
         display: block;
     }

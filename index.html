@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav id="top_menu_icon">
-        <button type="button" onclick="myFunction();"><img src="img/menu_110986.png"></button>
+        <button type="button" onclick="myFunction();"><img src="img/menu_110986.png" alt="menu"></button>
     </nav> 
     <header>
         <div id="Top_AllBox">
@@ -19,59 +19,63 @@
                 <p class="title">Kagoshima University</p>
             </a>
             <nav id="top_menu">
-                <ul>
-                    <button type="button"><a href="1-1.introduction.html">소개</a></button>
-                    <button type="button" class="dropdown-button"><a a oncontextmenu="return false" ondragstart="return false" onselectstart="return false">재학생</a>
+                    <span>
+                        <a href="1-1.introduction.html">소개</a>
+                    </span>
+                    <span>
+                        <a a oncontextmenu="return false" ondragstart="return false" onselectstart="return false">재학생</a>
                         <div class="dropdown-content">
                             <a href="2-1.facultyintroduction.html">학부</a>
                         </div>
-                    </button>
-                    <button type="button" class="dropdown-button"><a oncontextmenu="return false" ondragstart="return false" onselectstart="return false">유용한 기능</a>
+                    </span>
+                    <span>
+                        <a oncontextmenu="return false" ondragstart="return false" onselectstart="return false">유용한 기능</a>
                         <div class="dropdown-content">
                             <a href="3-1.gpacalculator.html">GPA 계산기</a>
                             <a href="3-2.commoneducation.html">공통교육 과목</a>
                             <a href="3-3.requirementsforgraduation.html">졸업요건 확인</a>
                         </div>
-                    <button type="button" class="dropdown-button"><a oncontextmenu="return false" ondragstart="return false" onselectstart="return false">게시판</a>
+                    </span>
+                    <span>
+                        <a oncontextmenu="return false" ondragstart="return false" onselectstart="return false">게시판</a>
                         <div class="dropdown-content">
                             <a href="4-1.noticeboard.html">공지사항</a>
                             <a href="4-2.freeboard.html">자유게시판</a>
                         </div>
-                    </button>
-                    </button>
-                    <button type="button" class="dropdown-button"><a oncontextmenu="return false" ondragstart="return false" onselectstart="return false">관련사이트</a>
+                    </span>
+                    <span>
+                        <a oncontextmenu="return false" ondragstart="return false" onselectstart="return false">관련사이트</a>
                         <div class="dropdown-content">
                             <a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a>
                             <a href="https://www.kagoshima-u.ac.jp/manaba/" target="_blank">manaba</a>
                             <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반센터</a>
                         </div>
-                    </button>
-                </ul>
+                    </span>
             </nav>
         </div>
     </header>
     
     <nav id="top_menu_mq" style="display: none;">
         <dl id="firstmenu">
-            <dt><a href="1-1.introduction.html"><b>소개</b></a></dt>
+            <dd><a href="1-1.introduction.html"><b>소개</b></a></dd>
         </dl>
         <dl>
-            <dt oncontextmenu="return false" ondragstart="return false" onselectstart="return false"><b>재학생</b></dt>
+            <dt><b>재학생</b></dt>
             <dd><a href="2-1.facultyintroduction.html">학부</a></dd>
         </dl>
         <dl>
-            <dt oncontextmenu="return false" ondragstart="return false" onselectstart="return false"><b>유용한 기능</b></dt>
+            <dt><b>유용한 기능</b></dt>
             <dd><a href="3-1.gpacalculator.html">GPA 계산기</a></dd>
             <dd><a href="3-2.commoneducation.html">공통교육 과목</a></dd>
             <dd><a href="3-3.requirementsforgraduation.html">졸업요건 확인</a></dd>
         </dl>
         <dl>
-            <dt><a oncontextmenu="return false" ondragstart="return false" onselectstart="return false"><b>게시판</b></a></dt>
+            <dt><a><b>게시판</b></a></dt>
             <dd><a href="4-1.noticeboard.html">공지사항</a></dd>
             <dd><a href="4-2.freeboard.html">자유게시판</a></dd>
         </dl>
         <dl>
-            <dt oncontextmenu="return false" ondragstart="return false" onselectstart="return false"><a><b>관련사이트</b></a></dt>
+            <dt><a><b>관련사이트</b></a></dt>
             <dd><a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a></dd>
             <dd><a href="https://www.kagoshima-u.ac.jp/manaba/" target="_blank">manaba</a></dd>
             <dd><a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반센터</a></dd>
@@ -80,7 +84,7 @@
 
     <div id="Site_AllBox">
         <h3>가고시마 대학 소개영상</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/fZbJSzXkIk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="youtubeintro" width="560" height="315" src="https://www.youtube.com/embed/fZbJSzXkIk8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         <h3>가고시마 대학 위치</h3>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6798.696652432617!2d130.53811571762148!3d31.56949457194798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e673721815b35%3A0x9b3f4b312f179b73!2z6rCA6rOg7Iuc66eIIOuMgO2VmQ!5e0!3m2!1sko!2sjp!4v1631433311133!5m2!1sko!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -91,7 +95,4 @@
     </nav>
 
 </body>
-<script>
-    
-</script>
 </html>
