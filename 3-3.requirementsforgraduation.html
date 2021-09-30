@@ -87,7 +87,7 @@
         <h3>졸업 요건 확인</h3>
 
         <form id="graduation">
-            <p>이학부, 공학부(건축학과) 준비 중</p>
+            <p>2018, 2019년 이학부(이학과) 준비 중<br>2020,2021년 공학부(건축학과) 준비 중</p>
             <select id="faculty" onchange="categoryChange(this)">
                 <option selected disabled>학부 선택</option>
                 <option value="1">법문학부</option>
@@ -1528,7 +1528,7 @@
                             specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
                             specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
                             specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
-                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력양성과목)';
                             specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
                             specialty_subject[7].innerText = '프로그램과목 (분야전문과목 [선택필수과목])';
                             for(var j = 8; j < spceialty.length; j++){
@@ -1555,8 +1555,8 @@
                             specialty_subject[3].innerText = '프로그램과목 (공학기초교육강화과목)';
                             specialty_subject[4].innerText = '프로그램과목 (취업력육성과목)';
                             specialty_subject[5].innerText = '프로그램과목 (공학기반정보과목)';
-                            specialty_subject[6].innerText = '프로그램과목 (종합력육성기초과목)';
-                            specialty_subject[7].innerText = '프로그램과목 (종합력육성실천과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (종합력양성기초과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (종합력양성실천과목)';
                             specialty_subject[8].innerText = '프로그램과목 (분야기반과목)';
                             specialty_subject[9].innerText = '프로그램과목 (분야전문과목 [A군])';
                             specialty_subject[10].innerText = '프로그램과목 (분야전문과목 [B군])';
@@ -2005,7 +2005,7 @@
                             specialty_subject[2].innerText = '학부·학과공통과목 (분야융합과목)';
                             specialty_subject[3].innerText = '학부·학과공통과목 (공학기반정보과목)';
                             specialty_subject[4].innerText = '프로그램과목 (공학기초교육강화과목)';
-                            specialty_subject[5].innerText = '프로그램과목 (취업력육성과목)';
+                            specialty_subject[5].innerText = '프로그램과목 (취업력양성과목)';
                             specialty_subject[6].innerText = '프로그램과목 (분야기반과목)';
                             specialty_subject[7].innerText = '프로그램과목 (분야전문과목 [선택필수과목])';
                             for(var j = 8; j < spceialty.length; j++){
@@ -2032,8 +2032,8 @@
                             specialty_subject[3].innerText = '프로그램과목 (공학기초교육강화과목)';
                             specialty_subject[4].innerText = '프로그램과목 (취업력육성과목)';
                             specialty_subject[5].innerText = '프로그램과목 (공학기반정보과목)';
-                            specialty_subject[6].innerText = '프로그램과목 (종합력육성기초과목)';
-                            specialty_subject[7].innerText = '프로그램과목 (종합력육성실천과목)';
+                            specialty_subject[6].innerText = '프로그램과목 (종합력양성기초과목)';
+                            specialty_subject[7].innerText = '프로그램과목 (종합력양성실천과목)';
                             specialty_subject[8].innerText = '프로그램과목 (분야기반과목)';
                             specialty_subject[9].innerText = '프로그램과목 (분야전문과목 [A군])';
                             specialty_subject[10].innerText = '프로그램과목 (분야전문과목 [B군])';
@@ -2252,7 +2252,10 @@
             all.style.display = 'none';
 
             //unit
+            if(unit_input[0].value == "")
+                unit_input[0].value = 0;
             sum_common = parseFloat(unit_input[0].value);
+            
             for(var i = 1; i< unit_input.length; i++){
                 if(unit_input[i].value == "")
                     unit_input[i].value = 0;
@@ -3683,177 +3686,620 @@
                 case 'c1':
                     switch (year.value){
                         case '2018':
-                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
-                            need_unit[1].textContent = "공통교육과목 30 이상";
-                            need_unit[2].textContent = "전문교육과목 92 이상 (전문영어필수 2 기초교육필수 12 기초전문필수 21 전문필수 8 전문선택필수 9이상 전문선택 40이상 자유선택[인정가능])";
-                            unit_now[0].value = total;
-                            unit_now[1].value = sum_common;
-                            unit_now[2].value = sum_specialty;
-                            if(total >= 126)
-                                complete.textContent = "졸업 요건을 충족했습니다!";
-                            else if(total < 126) {
-                                all.style.display = 'block';
-                                all_unit.value = 126 - total;
-                            }
-                            if(unit_input[0].value < 30){
-                                spceialty1[0].style.display = 'block';
-                                unit_input1[0].value = 30 - unit_input[0].value;
-                            }
-                            if(unit_input[1].value < 2){
-                                spceialty1[1].style.display = 'block';
-                                specialty_subject1[1].textContent = "전문영어필수";
-                                unit_input1[1].value = 2 - unit_input[1].value;
-                            }
-                            if(unit_input[2].value < 12){
-                                spceialty1[2].style.display = 'block';
-                                specialty_subject1[2].textContent = "기초교육필수";
-                                unit_input1[2].value = 12 - unit_input[2].value;
-                            }
-                            if(unit_input[3].value < 21){
-                                spceialty1[3].style.display = 'block';
-                                specialty_subject1[3].textContent = "기초전문필수";
-                                unit_input1[3].value = 21 - unit_input[3].value;
-                            }
-                            if(unit_input[4].value < 8){
-                                spceialty1[4].style.display = 'block';
-                                specialty_subject1[4].textContent = "전문필수";
-                                unit_input1[4].value = 8 - unit_input[4].value;
-                            }
-                            if(unit_input[5].value < 9){
-                                spceialty1[5].style.display = 'block';
-                                specialty_subject1[5].textContent = "전문선택필수";
-                                unit_input1[5].value = 5 - unit_input[5].value;
-                            }
-                            if(unit_input[6].value < 40){
-                                spceialty1[6].style.display = 'block';
-                                specialty_subject1[6].textContent = "전문선택"
-                                unit_input1[6].value = 40 - unit_input[6].value;
-                            }
-                            if(unit_input[0].value > 30)
-                                w = unit_input[0].value - 30;
-                            if(unit_input[5].value > 9)
-                                x = unit_input[5].value - 9;
-                            if(unit_input[6].value > 40)
-                                y = unit_input[6].value - 40;
-                            if(unit_input[7].value > 0)
-                                z = unit_input[7].value;
-                            if (w + x + y + z < 4){
-                                spceialty1[7].style.display = 'block';
-                                specialty_subject1[7].textContent = "공통교육 과목 + 전문교육 과목 (전문선택필수, 전문선택, 자유과목)"
-                                unit_input1[7].value = 4 - (w + x + y + z);
-                            }
+                            need_unit[0].textContent = '준비 중 입니다.'
+                            break;
                         case '2019':
-                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
-                            need_unit[1].textContent = "공통교육과목 30 이상";
-                            need_unit[2].textContent = "전문교육과목 92 이상 (전문영어필수 2 기초교육필수 12 기초전문필수 21 전문필수 8 전문선택필수 9이상 전문과목 57이상 자유선택[인정가능])";
-                            unit_now[0].value = total;
-                            unit_now[1].value = sum_common;
-                            unit_now[2].value = sum_specialty;
-                            if(total >= 126)
-                                complete.textContent = "졸업 요건을 충족했습니다!";
-                            else if(total < 126) {
-                                all.style.display = 'block';
-                                all_unit.value = 126 - total;
-                            }
-                            if(unit_input[0].value < 30){
-                                spceialty1[0].style.display = 'block';
-                                unit_input1[0].value = 30 - unit_input[0].value;
-                            }
-                            if(unit_input[1].value < 2){
-                                spceialty1[1].style.display = 'block';
-                                specialty_subject1[1].textContent = "전문영어필수";
-                                unit_input1[1].value = 2 - unit_input[1].value;
-                            }
-                            if(unit_input[2].value < 12){
-                                spceialty1[2].style.display = 'block';
-                                specialty_subject1[2].textContent = "기초교육필수";
-                                unit_input1[2].value = 12 - unit_input[2].value;
-                            }
-                            if(unit_input[3].value < 21){
-                                spceialty1[3].style.display = 'block';
-                                specialty_subject1[3].textContent = "기초전문필수";
-                                unit_input1[3].value = 21 - unit_input[3].value;
-                            }
-                            if(unit_input[4].value < 8){
-                                spceialty1[4].style.display = 'block';
-                                specialty_subject1[4].textContent = "전문필수";
-                                unit_input1[4].value = 8 - unit_input[4].value;
-                            }
-                            if(unit_input[5].value < 9){
-                                spceialty1[5].style.display = 'block';
-                                specialty_subject1[5].textContent = "전문선택필수";
-                                unit_input1[5].value = 5 - unit_input[5].value;
-                            }
-                            if(unit_input[6].value < 56){
-                                spceialty1[6].style.display = 'block';
-                                specialty_subject1[6].textContent = "전문과목"
-                                unit_input1[6].value = 56 - unit_input[6].value;
-                            }
-                            if(unit_input[0].value > 30)
-                                w = unit_input[0].value - 30;
-                            if(unit_input[5].value > 9)
-                                x = unit_input[5].value - 9;
-                            if(unit_input[6].value > 40)
-                                y = unit_input[6].value - 40;
-                            if(unit_input[7].value > 0)
-                                z = unit_input[7].value;
-                            if (w + x + y + z < 4){
-                                spceialty1[7].style.display = 'block';
-                                specialty_subject1[7].textContent = "공통교육 과목 + 전문교육 과목 (전문선택필수, 전문선택, 자유과목)"
-                                unit_input1[7].value = 4 - (w + x + y + z);
-                            }
+                            need_unit[0].textContent = '준비 중 입니다.'
                             break;
                         case '2020':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 32 이상";
+                            need_unit[2].textContent = "전문교육과목 84 이상 (기초교육선택필수 3 커리어교육과목필수 1 기초전문선택필수 8 전문과목 (특별연구 or 특별연습) 선택필수 8 전문과목 (논문구독) 선택필수 4 전문과목 (강의, 실험, 세미나등) 선택필수 or 선택 60)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 32){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 32 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 3){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육선택필수";
+                                unit_input1[1].value = 3 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 1){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "커리어교육과목필수";
+                                unit_input1[2].value = 1 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 8){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "기초전문선택필수";
+                                unit_input1[3].value = 8 - unit_input[3].value;
+                            }
+                            if(unit_input[4].value < 8){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (특별연구 or 특별연습) 선택필수";
+                                unit_input1[4].value = 8 - unit_input[4].value;
+                            }
+                            if(unit_input[5].value < 4){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (논문구독) 선택필수";
+                                unit_input1[5].value = 4 - unit_input[5].value;
+                            }
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 60){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (강의, 실험, 세미나등) 선택필수 or 선택"
+                                unit_input1[6].value = 60 - unit_input[6].value - unit_input[7].value;
+                            }
+                            if(unit_input[0].value > 32)
+                                w = unit_input[0].value - 32;
+                            if(sum_specialty > 84)
+                                x = sum_specialty - 84;
+                            if(sum_common + sum_specialty < 126){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "공통교육과목 + 전문교육과목"
+                                unit_input1[7].value = 10 - w - x;
+                            }
                             break;
                         case '2021':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 32 이상";
+                            need_unit[2].textContent = "전문교육과목 84 이상 (기초교육선택필수 3 커리어교육과목필수 1 기초전문선택필수 8 전문과목 (특별연구 or 특별연습) 선택필수 8 전문과목 (논문구독) 선택필수 4 전문과목 (강의, 실험, 세미나등) 선택필수 or 선택 60)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 32){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 32 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 3){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육선택필수";
+                                unit_input1[1].value = 3 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 1){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "커리어교육과목필수";
+                                unit_input1[2].value = 1 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 8){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "기초전문선택필수";
+                                unit_input1[3].value = 8 - unit_input[3].value;
+                            }
+                            if(unit_input[4].value < 8){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (특별연구 or 특별연습) 선택필수";
+                                unit_input1[4].value = 8 - unit_input[4].value;
+                            }
+                            if(unit_input[5].value < 4){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (논문구독) 선택필수";
+                                unit_input1[5].value = 4 - unit_input[5].value;
+                            }
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 60){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (강의, 실험, 세미나등) 선택필수 or 선택"
+                                unit_input1[6].value = 60 - unit_input[6].value - unit_input[7].value;
+                            }
+                            if(unit_input[0].value > 32)
+                                w = unit_input[0].value - 32;
+                            if(sum_specialty > 84)
+                                x = sum_specialty - 84;
+                            if(sum_common + sum_specialty < 126){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "공통교육과목 + 전문교육과목"
+                                unit_input1[7].value = 10 - w - x;
+                            }
                             break;
                     }
                     break; 
                 case 'c2':
                     switch (year.value){
                         case '2018':
+                            need_unit[0].textContent = '준비 중 입니다.'
                             break;
                         case '2019':
+                            need_unit[0].textContent = '준비 중 입니다.'
                             break;
                         case '2020':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 32 이상";
+                            need_unit[2].textContent = "전문교육과목 84 이상 (기초교육선택필수 3 커리어교육과목필수 1 기초전문선택필수 8 전문과목 (특별연구 or 특별연습) 선택필수 8 전문과목 (논문구독) 선택필수 4 전문과목 (강의, 실험, 세미나등) 선택필수 or 선택 60)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 32){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 32 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 3){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육선택필수";
+                                unit_input1[1].value = 3 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 1){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "커리어교육과목필수";
+                                unit_input1[2].value = 1 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 8){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "기초전문선택필수";
+                                unit_input1[3].value = 8 - unit_input[3].value;
+                            }
+                            if(unit_input[4].value < 8){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (특별연구 or 특별연습) 선택필수";
+                                unit_input1[4].value = 8 - unit_input[4].value;
+                            }
+                            if(unit_input[5].value < 4){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (논문구독) 선택필수";
+                                unit_input1[5].value = 4 - unit_input[5].value;
+                            }
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 60){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (강의, 실험, 세미나등) 선택필수 or 선택"
+                                unit_input1[6].value = 60 - unit_input[6].value - unit_input[7].value;
+                            }
+                            if(unit_input[0].value > 32)
+                                w = unit_input[0].value - 32;
+                            if(sum_specialty > 84)
+                                x = sum_specialty - 84;
+                            if(sum_common + sum_specialty < 126){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "공통교육과목 + 전문교육과목"
+                                unit_input1[7].value = 10 - w - x;
+                            }
                             break;
                         case '2021':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 32 이상";
+                            need_unit[2].textContent = "전문교육과목 84 이상 (기초교육선택필수 3 커리어교육과목필수 1 기초전문선택필수 8 전문과목 (특별연구 or 특별연습) 선택필수 8 전문과목 (논문구독) 선택필수 4 전문과목 (강의, 실험, 세미나등) 선택필수 or 선택 60)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 32){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 32 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 3){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육선택필수";
+                                unit_input1[1].value = 3 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 1){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "커리어교육과목필수";
+                                unit_input1[2].value = 1 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 8){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "기초전문선택필수";
+                                unit_input1[3].value = 8 - unit_input[3].value;
+                            }
+                            if(unit_input[4].value < 8){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (특별연구 or 특별연습) 선택필수";
+                                unit_input1[4].value = 8 - unit_input[4].value;
+                            }
+                            if(unit_input[5].value < 4){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (논문구독) 선택필수";
+                                unit_input1[5].value = 4 - unit_input[5].value;
+                            }
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 60){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (강의, 실험, 세미나등) 선택필수 or 선택"
+                                unit_input1[6].value = 60 - unit_input[6].value - unit_input[7].value;
+                            }
+                            if(unit_input[0].value > 32)
+                                w = unit_input[0].value - 32;
+                            if(sum_specialty > 84)
+                                x = sum_specialty - 84;
+                            if(sum_common + sum_specialty < 126){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "공통교육과목 + 전문교육과목"
+                                unit_input1[7].value = 10 - w - x;
+                            }
                             break;
                     }
                     break; 
                 case 'c3':
                     switch (year.value){
                         case '2018':
+                            need_unit[0].textContent = '준비 중 입니다.'
                             break;
                         case '2019':
+                            need_unit[0].textContent = '준비 중 입니다.'
                             break;
                         case '2020':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 32 이상";
+                            need_unit[2].textContent = "전문교육과목 84 이상 (기초교육선택필수 3 커리어교육과목필수 1 기초전문선택필수 8 전문과목 (특별연구 or 특별연습) 선택필수 8 전문과목 (논문구독) 선택필수 4 전문과목 (강의, 실험, 세미나등) 선택필수 or 선택 60)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 32){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 32 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 3){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육선택필수";
+                                unit_input1[1].value = 3 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 1){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "커리어교육과목필수";
+                                unit_input1[2].value = 1 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 8){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "기초전문선택필수";
+                                unit_input1[3].value = 8 - unit_input[3].value;
+                            }
+                            if(unit_input[4].value < 8){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (특별연구 or 특별연습) 선택필수";
+                                unit_input1[4].value = 8 - unit_input[4].value;
+                            }
+                            if(unit_input[5].value < 4){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (논문구독) 선택필수";
+                                unit_input1[5].value = 4 - unit_input[5].value;
+                            }
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 60){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (강의, 실험, 세미나등) 선택필수 or 선택"
+                                unit_input1[6].value = 60 - unit_input[6].value - unit_input[7].value;
+                            }
+                            if(unit_input[0].value > 32)
+                                w = unit_input[0].value - 32;
+                            if(sum_specialty > 84)
+                                x = sum_specialty - 84;
+                            if(sum_common + sum_specialty < 126){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "공통교육과목 + 전문교육과목"
+                                unit_input1[7].value = 10 - w - x;
+                            }
                             break;
                         case '2021':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 32 이상";
+                            need_unit[2].textContent = "전문교육과목 84 이상 (기초교육선택필수 3 커리어교육과목필수 1 기초전문선택필수 8 전문과목 (특별연구 or 특별연습) 선택필수 8 전문과목 (논문구독) 선택필수 4 전문과목 (강의, 실험, 세미나등) 선택필수 or 선택 60)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 32){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 32 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 3){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육선택필수";
+                                unit_input1[1].value = 3 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 1){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "커리어교육과목필수";
+                                unit_input1[2].value = 1 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 8){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "기초전문선택필수";
+                                unit_input1[3].value = 8 - unit_input[3].value;
+                            }
+                            if(unit_input[4].value < 8){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (특별연구 or 특별연습) 선택필수";
+                                unit_input1[4].value = 8 - unit_input[4].value;
+                            }
+                            if(unit_input[5].value < 4){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (논문구독) 선택필수";
+                                unit_input1[5].value = 4 - unit_input[5].value;
+                            }
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 60){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (강의, 실험, 세미나등) 선택필수 or 선택"
+                                unit_input1[6].value = 60 - unit_input[6].value - unit_input[7].value;
+                            }
+                            if(unit_input[0].value > 32)
+                                w = unit_input[0].value - 32;
+                            if(sum_specialty > 84)
+                                x = sum_specialty - 84;
+                            if(sum_common + sum_specialty < 126){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "공통교육과목 + 전문교육과목"
+                                unit_input1[7].value = 10 - w - x;
+                            }
                             break;
                     }
                     break; 
                 case 'c4':
                     switch (year.value){
                         case '2018':
+                            need_unit[0].textContent = '준비 중 입니다.'
                             break;
                         case '2019':
+                            need_unit[0].textContent = '준비 중 입니다.'
                             break;
                         case '2020':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 32 이상";
+                            need_unit[2].textContent = "전문교육과목 84 이상 (기초교육선택필수 3 커리어교육과목필수 1 기초전문선택필수 8 전문과목 (특별연구 or 특별연습) 선택필수 8 전문과목 (논문구독) 선택필수 4 전문과목 (강의, 실험, 세미나등) 선택필수 or 선택 60)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 32){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 32 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 3){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육선택필수";
+                                unit_input1[1].value = 3 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 1){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "커리어교육과목필수";
+                                unit_input1[2].value = 1 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 8){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "기초전문선택필수";
+                                unit_input1[3].value = 8 - unit_input[3].value;
+                            }
+                            if(unit_input[4].value < 8){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (특별연구 or 특별연습) 선택필수";
+                                unit_input1[4].value = 8 - unit_input[4].value;
+                            }
+                            if(unit_input[5].value < 4){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (논문구독) 선택필수";
+                                unit_input1[5].value = 4 - unit_input[5].value;
+                            }
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 60){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (강의, 실험, 세미나등) 선택필수 or 선택"
+                                unit_input1[6].value = 60 - unit_input[6].value - unit_input[7].value;
+                            }
+                            if(unit_input[0].value > 32)
+                                w = unit_input[0].value - 32;
+                            if(sum_specialty > 84)
+                                x = sum_specialty - 84;
+                            if(sum_common + sum_specialty < 126){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "공통교육과목 + 전문교육과목"
+                                unit_input1[7].value = 10 - w - x;
+                            }
                             break;
                         case '2021':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 32 이상";
+                            need_unit[2].textContent = "전문교육과목 84 이상 (기초교육선택필수 3 커리어교육과목필수 1 기초전문선택필수 8 전문과목 (특별연구 or 특별연습) 선택필수 8 전문과목 (논문구독) 선택필수 4 전문과목 (강의, 실험, 세미나등) 선택필수 or 선택 60)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 32){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 32 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 3){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육선택필수";
+                                unit_input1[1].value = 3 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 1){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "커리어교육과목필수";
+                                unit_input1[2].value = 1 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 8){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "기초전문선택필수";
+                                unit_input1[3].value = 8 - unit_input[3].value;
+                            }
+                            if(unit_input[4].value < 8){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (특별연구 or 특별연습) 선택필수";
+                                unit_input1[4].value = 8 - unit_input[4].value;
+                            }
+                            if(unit_input[5].value < 4){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (논문구독) 선택필수";
+                                unit_input1[5].value = 4 - unit_input[5].value;
+                            }
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 60){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (강의, 실험, 세미나등) 선택필수 or 선택"
+                                unit_input1[6].value = 60 - unit_input[6].value - unit_input[7].value;
+                            }
+                            if(unit_input[0].value > 32)
+                                w = unit_input[0].value - 32;
+                            if(sum_specialty > 84)
+                                x = sum_specialty - 84;
+                            if(sum_common + sum_specialty < 126){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "공통교육과목 + 전문교육과목"
+                                unit_input1[7].value = 10 - w - x;
+                            }
                             break;
                     }
                     break; 
                 case 'c5':
                     switch (year.value){
                         case '2018':
+                            need_unit[0].textContent = '준비 중 입니다.'
                             break;
                         case '2019':
+                            need_unit[0].textContent = '준비 중 입니다.'
                             break;
                         case '2020':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 32 이상";
+                            need_unit[2].textContent = "전문교육과목 84 이상 (기초교육선택필수 3 커리어교육과목필수 1 기초전문선택필수 8 전문과목 (특별연구 or 특별연습) 선택필수 8 전문과목 (논문구독) 선택필수 4 전문과목 (강의, 실험, 세미나등) 선택필수 or 선택 60)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 32){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 32 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 3){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육선택필수";
+                                unit_input1[1].value = 3 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 1){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "커리어교육과목필수";
+                                unit_input1[2].value = 1 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 8){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "기초전문선택필수";
+                                unit_input1[3].value = 8 - unit_input[3].value;
+                            }
+                            if(unit_input[4].value < 8){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (특별연구 or 특별연습) 선택필수";
+                                unit_input1[4].value = 8 - unit_input[4].value;
+                            }
+                            if(unit_input[5].value < 4){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (논문구독) 선택필수";
+                                unit_input1[5].value = 4 - unit_input[5].value;
+                            }
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 60){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (강의, 실험, 세미나등) 선택필수 or 선택"
+                                unit_input1[6].value = 60 - unit_input[6].value - unit_input[7].value;
+                            }
+                            if(unit_input[0].value > 32)
+                                w = unit_input[0].value - 32;
+                            if(sum_specialty > 84)
+                                x = sum_specialty - 84;
+                            if(sum_common + sum_specialty < 126){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "공통교육과목 + 전문교육과목"
+                                unit_input1[7].value = 10 - w - x;
+                            }
                             break;
                         case '2021':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 32 이상";
+                            need_unit[2].textContent = "전문교육과목 84 이상 (기초교육선택필수 3 커리어교육과목필수 1 기초전문선택필수 8 전문과목 (특별연구 or 특별연습) 선택필수 8 전문과목 (논문구독) 선택필수 4 전문과목 (강의, 실험, 세미나등) 선택필수 or 선택 60)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 32){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 32 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 3){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육선택필수";
+                                unit_input1[1].value = 3 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 1){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "커리어교육과목필수";
+                                unit_input1[2].value = 1 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 8){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "기초전문선택필수";
+                                unit_input1[3].value = 8 - unit_input[3].value;
+                            }
+                            if(unit_input[4].value < 8){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (특별연구 or 특별연습) 선택필수";
+                                unit_input1[4].value = 8 - unit_input[4].value;
+                            }
+                            if(unit_input[5].value < 4){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (논문구독) 선택필수";
+                                unit_input1[5].value = 4 - unit_input[5].value;
+                            }
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 60){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (강의, 실험, 세미나등) 선택필수 or 선택"
+                                unit_input1[6].value = 60 - unit_input[6].value - unit_input[7].value;
+                            }
+                            if(unit_input[0].value > 32)
+                                w = unit_input[0].value - 32;
+                            if(sum_specialty > 84)
+                                x = sum_specialty - 84;
+                            if(sum_common + sum_specialty < 126){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "공통교육과목 + 전문교육과목"
+                                unit_input1[7].value = 10 - w - x;
+                            }
                             break;
                     }
                     break; 
@@ -5866,7 +6312,7 @@
                         case '2020':
                             need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
                             need_unit[1].textContent = "공통교육과목 32";
-                            need_unit[2].textContent = "전문교육과목 94 (학부·학과공통과목 14 [공학기초교육강화과목 6 공학개론계과목 2 분야융합과목 4 공학기반정보과목 2] 프로그램과목 80 [공학기초교육강화과목 6 취업력육성과목 2 분야기반과목 42 분야전문과목 (선택필수과목 30)])";
+                            need_unit[2].textContent = "전문교육과목 94 (학부·학과공통과목 14 [공학기초교육강화과목 6 공학개론계과목 2 분야융합과목 4 공학기반정보과목 2] 프로그램과목 80 [공학기초교육강화과목 6 취업력양성과목 2 분야기반과목 42 분야전문과목 (선택필수과목 30)])";
                             unit_now[0].value = total;
                             unit_now[1].value = sum_common;
                             unit_now[2].value = sum_specialty;
@@ -5907,7 +6353,7 @@
                             }
                             if(unit_input[6].value < 2){
                                 spceialty1[6].style.display = 'block';
-                                specialty_subject1[6].textContent = "프로그램과목 (취업력육성과목)";
+                                specialty_subject1[6].textContent = "프로그램과목 (취업력양성과목)";
                                 unit_input1[6].value = 2 - unit_input[6].value;
                             }
                             if(unit_input[7].value < 42){
@@ -5924,7 +6370,7 @@
                         case '2021':
                             need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
                             need_unit[1].textContent = "공통교육과목 32";
-                            need_unit[2].textContent = "전문교육과목 94 (학부·학과공통과목 14 [공학기초교육강화과목 6 공학개론계과목 2 분야융합과목 4 공학기반정보과목 2] 프로그램과목 80 [공학기초교육강화과목 6 취업력육성과목 2 분야기반과목 42 분야전문과목 (선택필수과목 30)])";
+                            need_unit[2].textContent = "전문교육과목 94 (학부·학과공통과목 14 [공학기초교육강화과목 6 공학개론계과목 2 분야융합과목 4 공학기반정보과목 2] 프로그램과목 80 [공학기초교육강화과목 6 취업력양성과목 2 분야기반과목 42 분야전문과목 (선택필수과목 30)])";
                             unit_now[0].value = total;
                             unit_now[1].value = sum_common;
                             unit_now[2].value = sum_specialty;
@@ -5965,7 +6411,7 @@
                             }
                             if(unit_input[6].value < 2){
                                 spceialty1[6].style.display = 'block';
-                                specialty_subject1[6].textContent = "프로그램과목 (취업력육성과목)";
+                                specialty_subject1[6].textContent = "프로그램과목 (취업력양성과목)";
                                 unit_input1[6].value = 2 - unit_input[6].value;
                             }
                             if(unit_input[7].value < 42){
@@ -6210,12 +6656,136 @@
                 case 'f7':
                     switch (year.value){
                         case '2018':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 33";
+                            need_unit[2].textContent = "전문교육과목 93 (기초교육과목 【필수과목 12】 전문과목 81 【필수과목 59 선택과목 22 (A군 + B군 + C군 20 [A군 2이상 + B군 4이상 + C군 8이상] D군 + E군 2】)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 33){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 33 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 12){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육과목 (필수과목)";
+                                unit_input1[1].value = 12 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 59){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "전문과목 (필수과목)";
+                                unit_input1[2].value = 59 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 2){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "전문과목 (선택과목 [A군])";
+                                unit_input1[3].value = 2 - unit_input[3].value;
+                            }
+                            else if(unit_input[3].value > 2)
+                                w = unit_input[3].value - 2;
+
+                            if(unit_input[4].value < 4){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (선택과목 [B군])";
+                                unit_input1[4].value = 4 - unit_input[4].value;
+                            }
+                            else if(unit_input[4].value > 4)
+                                x = unit_input[4].value - 4;
+
+                            if(unit_input[5].value < 8){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (선택과목 [C군])";
+                                unit_input1[5].value = 8 - unit_input[5].value;
+                            }
+                            else if(unit_input[5].value > 8)
+                                y = unit_input[5].value - 8;
+
+                            if(w + x + y < 6){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (선택과목 [A군] + [B군] + [C군])";
+                                unit_input1[6].value = 6 - w - x - y;
+                            }
+
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 2){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "전문과목 (선택과목 [D군] + [E군])";
+                                unit_input1[7].value = 2 - unit_input[6].value - unit_input[7].value;
+                            }
                             break;
                         case '2019':
+                            need_unit[0].textContent = department.options[department.selectedIndex].text + " 졸업 요건 단위수: 126";
+                            need_unit[1].textContent = "공통교육과목 33";
+                            need_unit[2].textContent = "전문교육과목 93 (기초교육과목 【필수과목 12】 전문과목 81 【필수과목 59 선택과목 22 (A군 + B군 + C군 20 [A군 2이상 + B군 4이상 + C군 8이상] D군 + E군 2】)";
+                            unit_now[0].value = total;
+                            unit_now[1].value = sum_common;
+                            unit_now[2].value = sum_specialty;
+                            if(total >= 126)
+                                complete.textContent = "졸업 요건을 충족했습니다!";
+                            else if(total < 126) {
+                                all.style.display = 'block';
+                                all_unit.value = 126 - total;
+                            }
+                            if(unit_input[0].value < 33){
+                                spceialty1[0].style.display = 'block';
+                                unit_input1[0].value = 33 - unit_input[0].value;
+                            }
+                            if(unit_input[1].value < 12){
+                                spceialty1[1].style.display = 'block';
+                                specialty_subject1[1].textContent = "기초교육과목 (필수과목)";
+                                unit_input1[1].value = 12 - unit_input[1].value;
+                            }
+                            if(unit_input[2].value < 59){
+                                spceialty1[2].style.display = 'block';
+                                specialty_subject1[2].textContent = "전문과목 (필수과목)";
+                                unit_input1[2].value = 59 - unit_input[2].value;
+                            }
+                            if(unit_input[3].value < 2){
+                                spceialty1[3].style.display = 'block';
+                                specialty_subject1[3].textContent = "전문과목 (선택과목 [A군])";
+                                unit_input1[3].value = 2 - unit_input[3].value;
+                            }
+                            else if(unit_input[3].value > 2)
+                                w = unit_input[3].value - 2;
+
+                            if(unit_input[4].value < 4){
+                                spceialty1[4].style.display = 'block';
+                                specialty_subject1[4].textContent = "전문과목 (선택과목 [B군])";
+                                unit_input1[4].value = 4 - unit_input[4].value;
+                            }
+                            else if(unit_input[4].value > 4)
+                                x = unit_input[4].value - 4;
+
+                            if(unit_input[5].value < 8){
+                                spceialty1[5].style.display = 'block';
+                                specialty_subject1[5].textContent = "전문과목 (선택과목 [C군])";
+                                unit_input1[5].value = 8 - unit_input[5].value;
+                            }
+                            else if(unit_input[5].value > 8)
+                                y = unit_input[5].value - 8;
+
+                            if(w + x + y < 6){
+                                spceialty1[6].style.display = 'block';
+                                specialty_subject1[6].textContent = "전문과목 (선택과목 [A군] + [B군] + [C군])";
+                                unit_input1[6].value = 6 - w - x - y;
+                            }
+
+                            if(parseInt(unit_input[6].value) + parseInt(unit_input[7].value) < 2){
+                                spceialty1[7].style.display = 'block';
+                                specialty_subject1[7].textContent = "전문과목 (선택과목 [D군] + [E군])";
+                                unit_input1[7].value = 2 - unit_input[6].value - unit_input[7].value;
+                            }
                             break;
                         case '2020':
+                            need_unit[0].textContent = '준비 중 입니다.'
                             break;
                         case '2021':
+                            need_unit[0].textContent = '준비 중 입니다.'
                             break;
                     }
                     break; 
