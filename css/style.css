@@ -507,7 +507,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         border-right: solid black 1px;
         border-bottom: solid black 1px;
     }
-    #top_menu_mq #firstmenu dd{
+    #top_menu_mq #firstmenu dt{
         border-bottom: none;
     }
     #top_menu_mq a{
