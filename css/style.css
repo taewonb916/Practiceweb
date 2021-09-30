@@ -179,7 +179,7 @@ header{
 }
 
 /*index.html start!*/
-#youtubeintro {
+#Google_calendar {
     border: 0;
 }
 /*gpacalculator.html CSS start!*/
@@ -560,6 +560,11 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     #Site_AllBox iframe{
         width: auto;
         height: auto;
+    }
+
+    /**index.html start!*/
+    #Google_calendar{
+        display: none;
     }
 
     /*cgpacalculator.html CSS start!*/
