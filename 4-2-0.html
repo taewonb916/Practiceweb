@@ -11,8 +11,11 @@
 <body>
     <nav id="top_menu_icon">
         <button type="button" onclick="myFunction();"><img src="img/menu_110986.png" alt="menu"></button>
-    </nav> 
+    </nav>
     <header>
+        <nav id="warning">
+            <p><b>※ 이 사이트는 가고시마 대학의 공식 홈페이지가 아닙니다. ※</b></p>
+        </nav>
         <div id="Top_AllBox">
             <a id = "home" href="index.html">
                 <p class="subtitle">한국인 유학생을 위한</p>
@@ -20,27 +23,27 @@
             </a>
             <nav id="top_menu">
                     <div>
-                        <a href="1-1.introduction.html">소개</a>
+                        <a href="1-1-0.html">소개</a>
                     </div>    
                     <div>
                         <a>재학생</a>
                         <span class="dropdown-content">
-                            <a href="2-1.facultyintroduction.html">학부</a>
+                            <a href="2-1-0.html">학부</a>
                         </span>
                     </div>
                     <div>
                         <a>유용한 기능</a>
                         <span class="dropdown-content">
-                            <a href="3-1.gpacalculator.html">GPA 계산기</a>
-                            <a href="3-2.commoneducation.html">공통교육 과목</a>
-                            <a href="3-3.requirementsforgraduation.html">졸업요건 확인</a>
+                            <a href="3-1-0.html">GPA 계산기</a>
+                            <a href="3-2-0.html">공통교육 과목</a>
+                            <a href="3-3-0.html">졸업요건 확인</a>
                         </span>
                     </div>
                     <div>
-                        <a style="color: black;">게시판</a>
+                        <a>게시판</a>
                         <span class="dropdown-content">
-                            <a href="4-1.noticeboard.html">공지사항</a>
-                            <a href="4-2.freeboard.html">자유게시판</a>
+                            <a href="4-1-0.html">공지사항</a>
+                            <a href="4-2-0.html">자유게시판</a>
                         </span>
                     </div>
                     <div>
@@ -53,35 +56,34 @@
                     </div>
             </nav>
         </div>
-
-        <div id="breadcrumb">
-            <a href="index.html">Home</a>
-            <a class="next">></a> 
-            <a>게시판</a>
-            <a class="next">></a>
-            <a href="4-2.freeboard.html">자유게시판</a>
-        </div>
+        <aside>
+            <div id="breadcrumb">
+                <a href="index.html">Home</a>
+                <a class="next">></a>
+                <a href="4-2-0.html">자유게시판</a>
+            </div>
+        </aside>
     </header>
-
+    
     <nav id="top_menu_mq" style="display: none;">
         <dl id="firstmenu">
-            <dt><a href="1-1.introduction.html"><b>소개</b></a></dt>
+            <dt><a href="1-1-0.html"><b>소개</b></a></dt>
             <dd style="display: none;"></dd>
         </dl>
         <dl>
             <dt><b>재학생</b></dt>
-            <dd><a href="2-1.facultyintroduction.html">학부</a></dd>
+            <dd><a href="2-1-0.html">학부</a></dd>
         </dl>
         <dl>
             <dt><b>유용한 기능</b></dt>
-            <dd><a href="3-1.gpacalculator.html">GPA 계산기</a></dd>
-            <dd><a href="3-2.commoneducation.html">공통교육 과목</a></dd>
-            <dd><a href="3-3.requirementsforgraduation.html">졸업요건 확인</a></dd>
+            <dd><a href="3-1-0.html">GPA 계산기</a></dd>
+            <dd><a href="3-2-0.html">공통교육 과목</a></dd>
+            <dd><a href="3-3-0.html">졸업요건 확인</a></dd>
         </dl>
         <dl>
             <dt><a><b>게시판</b></a></dt>
-            <dd><a href="4-1.noticeboard.html">공지사항</a></dd>
-            <dd><a href="4-2.freeboard.html">자유게시판</a></dd>
+            <dd><a href="4-1-0.html">공지사항</a></dd>
+            <dd><a href="4-2-0.html">자유게시판</a></dd>
         </dl>
         <dl>
             <dt><a><b>관련사이트</b></a></dt>
@@ -93,7 +95,11 @@
     
 
     <div id="Site_AllBox">
-        <h3>준비 중 입니다.</h3>
+        <div id="sidebar"></div>
+
+        <div id="body_content">
+            <h3>준비 중 입니다.</h3>
+        </div>
     </div>
 
         <nav id="Sitetotop">

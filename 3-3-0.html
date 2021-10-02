@@ -11,77 +11,79 @@
 <body>
     <nav id="top_menu_icon">
         <button type="button" onclick="myFunction();"><img src="img/menu_110986.png" alt="menu"></button>
-    </nav> 
+    </nav>
     <header>
+        <nav id="warning">
+            <p><b>※ 이 사이트는 가고시마 대학의 공식 홈페이지가 아닙니다. ※</b></p>
+        </nav>
         <div id="Top_AllBox">
             <a id = "home" href="index.html">
                 <p class="subtitle">한국인 유학생을 위한</p>
                 <p class="title">Kagoshima University</p>
             </a>
             <nav id="top_menu">
-                <div>
-                    <a href="1-1.introduction.html">소개</a>
-                </div>    
-                <div>
-                    <a>재학생</a>
-                    <span class="dropdown-content">
-                        <a href="2-1.facultyintroduction.html">학부</a>
-                    </span>
-                </div>
-                <div>
-                    <a style="color: black;">유용한 기능</a>
-                    <span class="dropdown-content">
-                        <a href="3-1.gpacalculator.html">GPA 계산기</a>
-                        <a href="3-2.commoneducation.html">공통교육 과목</a>
-                        <a href="3-3.requirementsforgraduation.html">졸업요건 확인</a>
-                    </span>
-                </div>
-                <div>
-                    <a>게시판</a>
-                    <span class="dropdown-content">
-                        <a href="4-1.noticeboard.html">공지사항</a>
-                        <a href="4-2.freeboard.html">자유게시판</a>
-                    </span>
-                </div>
-                <div>
-                    <a>관련사이트</a>
-                    <span class="dropdown-content">
-                        <a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a>
-                        <a href="https://www.kagoshima-u.ac.jp/manaba/" target="_blank">manaba</a>
-                        <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반센터</a>
-                    </span>
-                </div>
+                    <div>
+                        <a href="1-1-0.html">소개</a>
+                    </div>    
+                    <div>
+                        <a>재학생</a>
+                        <span class="dropdown-content">
+                            <a href="2-1-0.html">학부</a>
+                        </span>
+                    </div>
+                    <div>
+                        <a>유용한 기능</a>
+                        <span class="dropdown-content">
+                            <a href="3-1-0.html">GPA 계산기</a>
+                            <a href="3-2-0.html">공통교육 과목</a>
+                            <a href="3-3-0.html">졸업요건 확인</a>
+                        </span>
+                    </div>
+                    <div>
+                        <a>게시판</a>
+                        <span class="dropdown-content">
+                            <a href="4-1-0.html">공지사항</a>
+                            <a href="4-2-0.html">자유게시판</a>
+                        </span>
+                    </div>
+                    <div>
+                        <a>관련사이트</a>
+                        <span class="dropdown-content">
+                            <a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a>
+                            <a href="https://www.kagoshima-u.ac.jp/manaba/" target="_blank">manaba</a>
+                            <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반센터</a>
+                        </span>
+                    </div>
             </nav>
         </div>
-
-        <div id="breadcrumb">
-            <a href="index.html">Home</a>
-            <a class="next">></a> 
-            <a>유용한 기능</a>
-            <a class="next">></a>
-            <a href="3-3.requirementsforgraduation.html">졸업요건 확인</a>
-        </div>
+        <aside>
+            <div id="breadcrumb">
+                <a href="index.html">Home</a>
+                <a class="next">></a>
+                <a href="3-3-0.html">졸업요건 확인</a>
+            </div>
+        </aside>
     </header>
-
+    
     <nav id="top_menu_mq" style="display: none;">
         <dl id="firstmenu">
-            <dt><a href="1-1.introduction.html"><b>소개</b></a></dt>
+            <dt><a href="1-1-0.html"><b>소개</b></a></dt>
             <dd style="display: none;"></dd>
         </dl>
         <dl>
             <dt><b>재학생</b></dt>
-            <dd><a href="2-1.facultyintroduction.html">학부</a></dd>
+            <dd><a href="2-1-0.html">학부</a></dd>
         </dl>
         <dl>
             <dt><b>유용한 기능</b></dt>
-            <dd><a href="3-1.gpacalculator.html">GPA 계산기</a></dd>
-            <dd><a href="3-2.commoneducation.html">공통교육 과목</a></dd>
-            <dd><a href="3-3.requirementsforgraduation.html">졸업요건 확인</a></dd>
+            <dd><a href="3-1-0.html">GPA 계산기</a></dd>
+            <dd><a href="3-2-0.html">공통교육 과목</a></dd>
+            <dd><a href="3-3-0.html">졸업요건 확인</a></dd>
         </dl>
         <dl>
             <dt><a><b>게시판</b></a></dt>
-            <dd><a href="4-1.noticeboard.html">공지사항</a></dd>
-            <dd><a href="4-2.freeboard.html">자유게시판</a></dd>
+            <dd><a href="4-1-0.html">공지사항</a></dd>
+            <dd><a href="4-2-0.html">자유게시판</a></dd>
         </dl>
         <dl>
             <dt><a><b>관련사이트</b></a></dt>
@@ -92,196 +94,200 @@
     </nav>
     
     <div id="Site_AllBox">
-        <h3>졸업 요건 확인</h3>
+        <div id="sidebar"></div>
 
-        <form id="graduation">
-            <p>2018, 2019년 이학부(이학과) 준비 중<br>2020,2021년 공학부(건축학과) 준비 중</p>
-            <select id="faculty" onchange="categoryChange(this)">
-                <option value="" selected disabled>학부 선택</option>
-                <option value="1">법문학부</option>
-                <option value="2">교육학부</option>
-                <option value="3">이학부</option>
-                <option value="4">의학부</option>
-                <option value="5">치학부</option>
-                <option value="6">공학부</option>
-                <option value="7">농학부</option>
-                <option value="8">수산학부</option>
-                <option value="9">공동수의학부</option>
-            </select>
-            
-            <select id="department">
-                <option value="" selected disabled>학과 선택</option>
-            </select>
+        <div id="body_content">
+            <h3>졸업 요건 확인</h3>
 
-            <select id="year">
-                <option value="" selected disabled>입학 년도</option>
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option>추가 예정</option>
-            </select>
+            <form id="graduation">
+                <p>2018, 2019년 이학부(이학과) 준비 중<br>2020,2021년 공학부(건축학과) 준비 중</p>
+                <select id="faculty" onchange="categoryChange(this)">
+                    <option value="" selected disabled>학부 선택</option>
+                    <option value="1">법문학부</option>
+                    <option value="2">교육학부</option>
+                    <option value="3">이학부</option>
+                    <option value="4">의학부</option>
+                    <option value="5">치학부</option>
+                    <option value="6">공학부</option>
+                    <option value="7">농학부</option>
+                    <option value="8">수산학부</option>
+                    <option value="9">공동수의학부</option>
+                </select>
+                
+                <select id="department">
+                    <option value="" selected disabled>학과 선택</option>
+                </select>
 
-            <input type="button" value="확인" onclick="Onclick();">
-        </form>
+                <select id="year">
+                    <option value="" selected disabled>입학 년도</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option>추가 예정</option>
+                </select>
 
-        <a id="linkpdf"></a>
-
-        <h3>졸업 요건 계산기</h3>
-        <p id="buttonclick"> 조건 선택 후 확인 버튼을 눌러주세요.</p>
-        <div id="All_graduation">
-            <form id="graduation_calculator">
-
-                <fieldset>
-                    <legend id="department_name"></legend>
-                    <li>
-                        <label>공통 교육</label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                    <li class="spceialty">
-                        <label class="specialty_subject"></label>
-                        <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
-                    </li>
-                <input type="button" value="계산" onclick="calculate();">
-                <input type="reset" value="All clear"> 
-            </fieldset>
+                <input type="button" value="확인" onclick="Onclick();">
             </form>
-        
-            <form id="graduation_result">
-                <dl>
-                    <dt class="need_unit"></dt>
-                    <dd class="need_unit"></dd>
-                    <dd class="need_unit"></dd>
-                </dl>
 
-                <fieldset>
-                    <dl>
-                        <dt>
-                            <label>현재 이수 단위</label>
-                            <input type="number" pattern="\d*" class="unit_now" autocomplete="off" readonly>
-                        </dt>
-                        <dd>
-                            <label>공통교육 과목</label>
-                            <input type="number" pattern="\d*" class="unit_now" autocomplete="off" readonly>
-                        </dd>
-                        <dd>
-                            <label>전문교육 과목</label>
-                            <input type="number" pattern="\d*" class="unit_now" autocomplete="off" readonly>
-                        </dd>
-                    </dl>
-                    <p id="complete"></p>
-                    <dl>
-                        <dt id="all">
-                            <label>부족한 단위 수</label>
-                            <input type="number" pattern="\d*" id="all_unit" autocomplete="off" readonly>
-                        </dt>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1">공통교육 과목</label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                        <dd class="spceialty1">
-                            <label class="specialty_subject1"></label>
-                            <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
-                        </dd>
-                    </dl>
+            <a id="linkpdf"></a>
+
+            <h3>졸업 요건 계산기</h3>
+            <p id="buttonclick"> 조건 선택 후 확인 버튼을 눌러주세요.</p>
+            <div id="All_graduation">
+                <form id="graduation_calculator">
+
+                    <fieldset>
+                        <legend id="department_name"></legend>
+                        <li>
+                            <label>공통 교육</label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                        <li class="spceialty">
+                            <label class="specialty_subject"></label>
+                            <input type="number" pattern="\d*" placeholder="단위 수" class="unit_input" autocomplete="off">
+                        </li>
+                    <input type="button" value="계산" onclick="calculate();">
+                    <input type="reset" value="All clear"> 
                 </fieldset>
-            </form>
+                </form>
+            
+                <form id="graduation_result">
+                    <dl>
+                        <dt class="need_unit"></dt>
+                        <dd class="need_unit"></dd>
+                        <dd class="need_unit"></dd>
+                    </dl>
+
+                    <fieldset>
+                        <dl>
+                            <dt>
+                                <label>현재 이수 단위</label>
+                                <input type="number" pattern="\d*" class="unit_now" autocomplete="off" readonly>
+                            </dt>
+                            <dd>
+                                <label>공통교육 과목</label>
+                                <input type="number" pattern="\d*" class="unit_now" autocomplete="off" readonly>
+                            </dd>
+                            <dd>
+                                <label>전문교육 과목</label>
+                                <input type="number" pattern="\d*" class="unit_now" autocomplete="off" readonly>
+                            </dd>
+                        </dl>
+                        <p id="complete"></p>
+                        <dl>
+                            <dt id="all">
+                                <label>부족한 단위 수</label>
+                                <input type="number" pattern="\d*" id="all_unit" autocomplete="off" readonly>
+                            </dt>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1">공통교육 과목</label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                            <dd class="spceialty1">
+                                <label class="specialty_subject1"></label>
+                                <input type="number" pattern="\d*" class="unit_input1" autocomplete="off" readonly>
+                            </dd>
+                        </dl>
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </div>
     

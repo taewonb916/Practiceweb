@@ -7,12 +7,26 @@
     <title>가고시마 대학 한국인유학생</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/myfuntion.js"></script>
+
+    <style>
+        #body_content #caution{
+            font-size: 20px;
+            text-align: center;
+        }
+        #body_content p{
+            text-align: left;
+            line-height: 30px;
+        }
+    </style>
 </head>
 <body>
     <nav id="top_menu_icon">
         <button type="button" onclick="myFunction();"><img src="img/menu_110986.png" alt="menu"></button>
-    </nav> 
+    </nav>
     <header>
+        <nav id="warning">
+            <p><b>※ 이 사이트는 가고시마 대학의 공식 홈페이지가 아닙니다. ※</b></p>
+        </nav>
         <div id="Top_AllBox">
             <a id = "home" href="index.html">
                 <p class="subtitle">한국인 유학생을 위한</p>
@@ -20,27 +34,27 @@
             </a>
             <nav id="top_menu">
                     <div>
-                        <a href="1-1.introduction.html" style="color: black;">소개</a>
+                        <a href="1-1-0.html">소개</a>
                     </div>    
                     <div>
                         <a>재학생</a>
                         <span class="dropdown-content">
-                            <a href="2-1.facultyintroduction.html">학부</a>
+                            <a href="2-1-0.html">학부</a>
                         </span>
                     </div>
                     <div>
                         <a>유용한 기능</a>
                         <span class="dropdown-content">
-                            <a href="3-1.gpacalculator.html">GPA 계산기</a>
-                            <a href="3-2.commoneducation.html">공통교육 과목</a>
-                            <a href="3-3.requirementsforgraduation.html">졸업요건 확인</a>
+                            <a href="3-1-0.html">GPA 계산기</a>
+                            <a href="3-2-0.html">공통교육 과목</a>
+                            <a href="3-3-0.html">졸업요건 확인</a>
                         </span>
                     </div>
                     <div>
                         <a>게시판</a>
                         <span class="dropdown-content">
-                            <a href="4-1.noticeboard.html">공지사항</a>
-                            <a href="4-2.freeboard.html">자유게시판</a>
+                            <a href="4-1-0.html">공지사항</a>
+                            <a href="4-2-0.html">자유게시판</a>
                         </span>
                     </div>
                     <div>
@@ -53,33 +67,36 @@
                     </div>
             </nav>
         </div>
-
-        <div id="breadcrumb">
-            <a href="index.html">Home</a>
-            <a class="next">></a> 
-            <a href="1-1.introduction.html">소개</a>
-        </div>
+        <aside>
+            <div id="breadcrumb">
+                <a href="index.html">Home</a>
+                <a class="next">></a>
+                <a href="1-1-0.html">소개</a>
+                <a class="next">></a>
+                <a href="1-1-1.html">개발자 소개</a>
+            </div>
+        </aside>
     </header>
-
+    
     <nav id="top_menu_mq" style="display: none;">
         <dl id="firstmenu">
-            <dt><a href="1-1.introduction.html"><b>소개</b></a></dt>
+            <dt><a href="1-1-0.html"><b>소개</b></a></dt>
             <dd style="display: none;"></dd>
         </dl>
         <dl>
             <dt><b>재학생</b></dt>
-            <dd><a href="2-1.facultyintroduction.html">학부</a></dd>
+            <dd><a href="2-1-0.html">학부</a></dd>
         </dl>
         <dl>
             <dt><b>유용한 기능</b></dt>
-            <dd><a href="3-1.gpacalculator.html">GPA 계산기</a></dd>
-            <dd><a href="3-2.commoneducation.html">공통교육 과목</a></dd>
-            <dd><a href="3-3.requirementsforgraduation.html">졸업요건 확인</a></dd>
+            <dd><a href="3-1-0.html">GPA 계산기</a></dd>
+            <dd><a href="3-2-0.html">공통교육 과목</a></dd>
+            <dd><a href="3-3-0.html">졸업요건 확인</a></dd>
         </dl>
         <dl>
             <dt><a><b>게시판</b></a></dt>
-            <dd><a href="4-1.noticeboard.html">공지사항</a></dd>
-            <dd><a href="4-2.freeboard.html">자유게시판</a></dd>
+            <dd><a href="4-1-0.html">공지사항</a></dd>
+            <dd><a href="4-2-0.html">자유게시판</a></dd>
         </dl>
         <dl>
             <dt><a><b>관련사이트</b></a></dt>
@@ -92,7 +109,21 @@
     
 
     <div id="Site_AllBox">
-        <h3>준비 중 입니다.</h3>
+        <div id="sidebar">
+                <a href="1-1.introduction.html" style="color: black;">커버 페이지</a>
+                <h3><b>목록</b></h3>
+                <a href="1-1-1.html" style="color: white; background-color: #8fbc8f;">개발자 소개</a>
+                <a href="1-1-2.html">사이트 소개</a>
+
+        </div>
+
+        <div id="body_content">
+            <h3>개발자 소개</h3>
+            <p id="caution"><b>※ 이 사이트는 가고시마 대학의 공식 홈페이지가 아닙니다. ※</b></p>
+            <p>2021년 현재 공학부에 재학 중인 한국인 유학생.</p>
+            <p style="text-indent: 10px;">항상 이수 신청을 할 때, 졸업요건 확인을 위한 이수 단위를 계산하는 게 귀찮았고, 문득 계산을 도와주는 프로그램이 있으면 어떨까 생각했다. 그 후 웹 개발을 우연히 접하게 되었고, 실습을 하던 도중, 가고시마 유학생들을 위한 사이트를 만들면 어떨까 하는 생각에 제작하게 되었다.</p>
+            
+        </div>
         
     </div>
 

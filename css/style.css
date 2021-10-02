@@ -10,7 +10,7 @@ html, body {
 }
 body{
     width: 100%;
-    font-family: 'Poor Story', cursive;
+    font-family: 'Sunflower', sans-serif;
     margin: 0;
 }
 /*top_menu_icon start!*/
@@ -48,7 +48,7 @@ header{
     width: 300px;
     text-decoration: none;
     padding: 0;
-    margin-top: 10%;
+    margin-top: 5%;
     padding-left: 3%;
 }
 #Top_AllBox a:hover{
@@ -59,6 +59,15 @@ header{
 }
 #Top_AllBox .title{
     margin-bottom: 5%;
+}
+
+/* warning start! */
+#warning {
+    text-align: center;
+}
+#warning p {
+    margin: 0;
+    margin-top: 15px;
 }
 
 /*top menu start!*/
@@ -106,7 +115,7 @@ header{
     border: solid 1px #666666;
     display: none;
     position: absolute;
-    top: 163px;
+    top: 176px;
 	min-width: 75px;
     width: 10%;
 }
@@ -134,13 +143,16 @@ header{
 }
 
 /*breadcrumb start!*/
-#breadcrumb {
-    padding-right: 40%;
-    padding-left: 40%;
+aside {
     background-color: #eee;
     line-height: 30px;
     border-bottom: 1px solid #ddd;
     border-top: 1px solid #ddd;
+}
+#breadcrumb{
+    background-color: #eee;
+    width: 1150px;
+    margin: 0 auto;
 }
 #breadcrumb a{
     text-decoration: none;
@@ -150,8 +162,8 @@ header{
     background-color: #eee;
 }
 #breadcrumb .next{
-    padding-left: 5%;
-    padding-right: 5%
+    padding-left: 3%;
+    padding-right: 3%
 }
 
 /*Site Layout start!*/
@@ -159,26 +171,50 @@ header{
     border-right: solid 1px #ddd;
     border-left: solid 1px #ddd;
     margin: 0 auto;
-    margin-top: 195px;
+    margin-top: 208px;
     text-align: center;
-    padding-right: 100px;
-    padding-left: 100px;
-    padding-bottom: 100px;
-    width: 1000px;
+    width: 1200px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+    /* (sidebar) */
+#sidebar {
+    border-right: solid 1px #ddd;
+    text-align: left;
+}
+#sidebar a, h3{
+    margin: 0;
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: block;
+    text-decoration: none;
+}
+#sidebar a{
+    color: #666;
+}
+#sidebar a:hover{
     background-color: white;
 }
-#Site_AllBox h3{
+
+#Site_AllBox #body_content{
+    padding-bottom: 100px;
+}
+#Site_AllBox #body_content h3{
     margin: 0;
     margin-bottom: 3%;
     padding: 3%;
     padding-top: 5%;
     padding-left: 0;
     text-align: left;
+    font-size: 25px;
     border-bottom: dotted 1px gray;
 }
-#Site_AllBox iframe{
+#Site_AllBox #body_content iframe{
     padding-top: 30px;
 }
+    /* (Sitetotop) */
 #Sitetotop{
     text-align: left;
     border: 2px solid rgb(97, 96, 96);
@@ -200,12 +236,12 @@ header{
     color: honeydew;
 }
 
-/*index.html start!*/
-#Google_calendar {
-    border: 0;
-    display: block;
-    margin: 0 auto;
+/*body_content start!*/
+#body_content{
+    padding-left: 100px;
+    padding-right: 100px;
 }
+
 /*gpacalculator.html CSS start!*/
 #GPA_formula{
     text-align: center;
@@ -481,7 +517,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         max-width: 480px;
         min-width: 320px;
     }
-
+    #warning {
+        display: none;
+    }
     /*header start!*/
     header{
         position: static;
@@ -576,18 +614,29 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     
     /*breadcrumb start!*/
     #breadcrumb {
-        display: none;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    #breadcrumb .next{
+        padding: 1%;
     }
 
     /*Site Layout start!*/    
-    #Site_AllBox{
+    #Site_AllBox {
+        display: block;
         border: none;
         padding: 0;
         margin: 0;
         width: 100%;
     }
-    #Site_AllBox h3{
+    #body_content{
+        padding: 3%
+    }
+    #body_content h3{
         padding-left: 3%;
+    }
+    #sidebar{
+        display: none;
     }
 
     /*Sitetotop*/
@@ -602,9 +651,6 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     }
 
     /*cgpacalculator.html CSS start!*/
-    #GPA_formula{
-        padding: 3%;
-    }
     #GPA_formula img{
         width: 94%;        
     }
