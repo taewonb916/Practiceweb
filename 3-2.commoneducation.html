@@ -53,6 +53,14 @@
                     </div>
             </nav>
         </div>
+
+        <div id="breadcrumb">
+            <a href="index.html">Home</a>
+            <a class="next">></a> 
+            <a>유용한 기능</a>
+            <a class="next">></a>
+            <a href="3-2.commoneducation.html">공통교육 과목</a>
+        </div>
     </header>
 
     <nav id="top_menu_mq" style="display: none;">
@@ -89,7 +97,7 @@
 
         <form id="graduation">
             <select id="faculty" onchange="categoryChange();">
-                <option selected disabled>학부 선택</option>
+                <option value="" selected disabled>학부 선택</option>
                 <option value="1">법문학부</option>
                 <option value="2">교육학부</option>
                 <option value="3">이학부</option>
@@ -102,7 +110,7 @@
             </select>
             
             <select id="department">
-                <option id="choice" selected disabled>학과 선택</option>
+                <option id="choice" value="" selected disabled>학과 선택</option>
                 <option class="department_name"></option>
                 <option class="department_name"></option>
                 <option class="department_name"></option>
@@ -110,7 +118,7 @@
             </select>
 
             <select id="year">
-                <option selected disabled>입학 년도</option>
+                <option value="" selected disabled>입학 년도</option>
                 <option value="2020">2020</option>
                 <option value="2021">2021</option>
                 <option>추가 예정</option>
@@ -641,12 +649,21 @@
             var All_commoneducation = document.getElementById("All_commoneducation")
             var commoneducation_calculator = document.getElementById("commoneducation_calculator")
             var buttonclick = document.getElementById("buttonclick");
+            var faculty = document.getElementById("faculty");
             var department = document.getElementById("department");
             var information = document.getElementById("information");
+
+            // required
+            if( faculty.value == ''|| department.value ==''|| year.value ==''){
+                alert("모두 선택해 주세요.");
+                return 0;
+            }
+
             if (matchMedia("(min-width: 320px) and (max-width: 480px)").matches)
                 All_commoneducation.style.display = 'block';
             else
                 All_commoneducation.style.display = 'grid';
+
 
             // reset
             document.getElementById("commoneducation_result").style.display = 'none';

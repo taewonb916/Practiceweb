@@ -23,7 +23,6 @@ header{
     position: fixed;
     width: 100%;
     background-color: #ced4da;
-    border-bottom: gray solid 1px;
 }
 #Top_AllBox{
     height: 5%;
@@ -49,7 +48,7 @@ header{
     width: 300px;
     text-decoration: none;
     padding: 0;
-    padding-top: 1%;
+    margin-top: 10%;
     padding-left: 3%;
 }
 #Top_AllBox a:hover{
@@ -107,13 +106,14 @@ header{
     border: solid 1px #666666;
     display: none;
     position: absolute;
-    top: 100%;
+    top: 163px;
 	min-width: 75px;
     width: 10%;
 }
 #top_menu .dropdown-content a {
     color: white;
     text-shadow: 0 0 3px black;
+    margin: 0;
     padding-left: 0;
     padding-top: 0;
     display: block;
@@ -133,10 +133,33 @@ header{
     display: block;
 }
 
+/*breadcrumb start!*/
+#breadcrumb {
+    padding-right: 40%;
+    padding-left: 40%;
+    background-color: #eee;
+    line-height: 30px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+#breadcrumb a{
+    text-decoration: none;
+    color: #666;
+}
+#breadcrumb a:hover{
+    background-color: #eee;
+}
+#breadcrumb .next{
+    padding-left: 5%;
+    padding-right: 5%
+}
+
 /*Site Layout start!*/
 #Site_AllBox{
+    border-right: solid 1px #ddd;
+    border-left: solid 1px #ddd;
     margin: 0 auto;
-    margin-top: 104px;
+    margin-top: 195px;
     text-align: center;
     padding-right: 100px;
     padding-left: 100px;
@@ -160,9 +183,8 @@ header{
     text-align: left;
     border: 2px solid rgb(97, 96, 96);
     background-color: gray;
-    width: 960px;
+    width: 1160px;
     margin: 0 auto;
-    margin-top: 5%;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;
@@ -181,6 +203,8 @@ header{
 /*index.html start!*/
 #Google_calendar {
     border: 0;
+    display: block;
+    margin: 0 auto;
 }
 /*gpacalculator.html CSS start!*/
 #GPA_formula{
@@ -479,6 +503,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         margin-top: 0;
         padding: 0;
     }
+    #Top_AllBox #home .title{
+        margin-bottom: 0;
+    }
     #Top_AllBox #home .subtitle{
         padding-top: 10%;
     }
@@ -545,7 +572,12 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     #top_menu_mq dt a, dt{
         display: block;
         color: black;
-    }    
+    }
+    
+    /*breadcrumb start!*/
+    #breadcrumb {
+        display: none;
+    }
 
     /*Site Layout start!*/    
     #Site_AllBox{
@@ -557,14 +589,16 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     #Site_AllBox h3{
         padding-left: 3%;
     }
-    #Site_AllBox iframe{
-        width: auto;
-        height: auto;
+
+    /*Sitetotop*/
+    #Sitetotop {
+        margin-top: 5%;
     }
 
     /**index.html start!*/
     #Google_calendar{
-        display: none;
+        height: 500px;
+        width: 90%;
     }
 
     /*cgpacalculator.html CSS start!*/
