@@ -13,6 +13,13 @@ body{
     font-family: 'Sunflower', sans-serif;
     margin: 0;
 }
+a {
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 /*top_menu_icon start!*/
 #top_menu_icon{
     display: none;
@@ -20,7 +27,6 @@ body{
 
 /*header start!*/
 header{
-    position: fixed;
     width: 100%;
     background-color: #ced4da;
 }
@@ -67,7 +73,7 @@ header{
 }
 #warning p {
     margin: 0;
-    margin-top: 15px;
+    padding-top: 15px;
 }
 
 /*top menu start!*/
@@ -171,12 +177,12 @@ aside {
     border-right: solid 1px #ddd;
     border-left: solid 1px #ddd;
     margin: 0 auto;
-    margin-top: 208px;
     text-align: center;
     width: 1200px;
     background-color: white;
     display: grid;
     grid-template-columns: 20% 80%;
+    min-height: 1000px;
 }
     /* (sidebar) */
 #sidebar {
@@ -574,6 +580,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     }
     #top_menu_mq #firstmenu dt{
         border-bottom: none;
+    }
+    #top_menu_mq dt a{
+        font-weight: bolder;
     }
     #top_menu_mq a{
         text-decoration: none;

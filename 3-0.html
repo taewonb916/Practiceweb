@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>가고시마 대학 한국인유학생</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/myfuntion.js"></script>
+
+    <style>
+        #body_content p{
+            line-height: 30px;
+            text-indent: 20px;
+        }
+        #body_content li{
+            text-align: left;
+            line-height: 30px;
+        }
+        #body_content img {
+            border: 1px solid black;
+        }
+        #body_content h3 a{
+            text-decoration: underline;
+            font-size: 15px;
+            font-weight: lighter;
+            float: right;
+            cursor: pointer;
+            margin-top: 3%;
+            -ms-user-select: none; 
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <nav id="top_menu_icon">
+        <button type="button" onclick="myFunction();"><img src="img/menu_110986.png" alt="menu"></button>
+    </nav>
+    <header>
+        <nav id="warning">
+            <p><b>※ 이 사이트는 가고시마 대학의 공식 홈페이지가 아닙니다. ※</b></p>
+        </nav>
+        <div id="Top_AllBox">
+            <a id = "home" href="index.html">
+                <p class="subtitle">한국인 유학생을 위한</p>
+                <p class="title">Kagoshima University</p>
+            </a>
+            <nav id="top_menu">
+                    <div>
+                        <a href="1-1-0.html">소개</a>
+                    </div>    
+                    <div>
+                        <a href="2-0.html">재학생</a>
+                        <span class="dropdown-content">
+                            <a href="2-1-0.html">학부</a>
+                        </span>
+                    </div>
+                    <div>
+                        <a href="3-0.html" style="color: black;">유용한 기능</a>
+                        <span class="dropdown-content">
+                            <a href="3-1-0.html">GPA 계산기</a>
+                            <a href="3-2-0.html">공통교육 과목</a>
+                            <a href="3-3-0.html">졸업요건 확인</a>
+                        </span>
+                    </div>
+                    <div>
+                        <a>게시판</a>
+                        <span class="dropdown-content">
+                            <a href="4-1-0.html">공지사항</a>
+                            <a href="4-2-0.html">자유게시판</a>
+                        </span>
+                    </div>
+                    <div>
+                        <a>관련사이트</a>
+                        <span class="dropdown-content">
+                            <a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a>
+                            <a href="https://www.kagoshima-u.ac.jp/manaba/" target="_blank">manaba</a>
+                            <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반센터</a>
+                        </span>
+                    </div>
+            </nav>
+        </div>
+    </header>
+    
+    <nav id="top_menu_mq" style="display: none;">
+        <dl id="firstmenu">
+            <dt><a href="1-1-0.html">소개</a></dt>
+            <dd style="display: none;"></dd>
+        </dl>
+        <dl>
+            <dt><a href="2-0.html">재학생</a></dt>
+            <dd><a href="2-1-0.html">학부</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="3-0.html">유용한 기능</a></dt>
+            <dd><a href="3-1-0.html">GPA 계산기</a></dd>
+            <dd><a href="3-2-0.html">공통교육 과목</a></dd>
+            <dd><a href="3-3-0.html">졸업요건 확인</a></dd>
+        </dl>
+        <dl>
+            <dt><a>게시판</a></dt>
+            <dd><a href="4-1-0.html">공지사항</a></dd>
+            <dd><a href="4-2-0.html">자유게시판</a></dd>
+        </dl>
+        <dl>
+            <dt><a>관련사이트</a></dt>
+            <dd><a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a></dd>
+            <dd><a href="https://www.kagoshima-u.ac.jp/manaba/" target="_blank">manaba</a></dd>
+            <dd><a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반센터</a></dd>
+        </dl>
+    </nav>
+    
+    <aside>
+        <div id="breadcrumb">
+            <a href="index.html">Home</a>
+            <a class="next">></a>
+            <a href="3-0.html">유용한 기능</a>
+        </div>
+    </aside>
+
+    <div id="Site_AllBox">
+        <div id="sidebar">
+            <a href="3-0.html" style="color: white; background-color: #8fbc8f;" >커버 페이지</a>
+            <h3><b>목록</b></h3>
+            <a href="3-1-0.html">GPA 계산기</a>
+            <a href="3-2-0.html">공통교육 과목</a>
+            <a href="3-3-0.html">졸업요건 확인</a>
+        </div>
+
+        <div id="body_content">
+            <h3>GPA 계산기 사용법
+                <a class="open" onclick="detail1();">보기 ▽</a>
+            </h3>
+            <ol class="detail" style="display: none;">
+                <li>각 학점의 단위 수를 입력합니다.</li>
+                <img src="img/Gpa_calucaltor.PNG">
+                <li>계산을 누릅니다.</li>
+            </ol>
+
+            <h3>공통교육 과목 사용법
+                <a class="open" onclick="detail2();">보기 ▽</a>
+            </h3>
+            <ol class="detail" style="display: none;">
+                <li>학부, 학과, 입학년도를 선택하고 확인을 누릅니다.</li>
+                <img src="img/common_calculator1.PNG">
+                <li>pdf를 열어 학과 별 공통교육 과목의 졸업요건 단위 수를 확인합니다.</li>
+                <li>각 과목에 단위 수를 입력 후 계산을 누릅니다.</li>
+                <img src="img/common_calculator2.PNG">
+                <li>선택한 학과의 공통교육 과목의 졸업요건 단위 수와 부족한 단위 수를 확인합니다.</li>
+                <img src="img/common_calculator3.PNG">
+                
+            </ol>
+
+            <h3>졸업요건 확인 사용법
+                <a class="open" onclick="detail3();">보기 ▽</a>
+            </h3>
+            <ol class="detail" style="display: none;">
+                <li>학부, 학과, 입학년도를 선택하고 확인을 누릅니다.</li>
+                <img src="img/graduation_calculator1.PNG">
+                <li>pdf를 열어 학과 별 졸업요건 단위 수를 확인합니다.</li>
+                <li>각 과목에 단위 수를 입력 후 계산을 누릅니다.</li>
+                <img src="img/graduation_calculator2.PNG">
+                <li>선택한 학과의 졸업요건 단위 수와 부족한 단위 수를 확인합니다.</li>
+                <img src="img/graduation_calculator3.PNG">
+            </ol>
+        </div>
+    </div>
+
+    <nav id="Sitetotop">
+            <a href="#">△TOP</a>
+    </nav>
+
+    <script>
+        var detail = document.getElementsByClassName("detail");
+        var click = document.getElementsByClassName("open");
+
+        function detail1(){
+            if(detail[0].style.display == 'none') {
+                detail[0].style.display = 'block';
+                click[0].textContent = "닫기 △";
+            }
+            else if (detail[0].style.display == 'block'){
+                detail[0].style.display = 'none'
+                click[0].textContent = "보기 ▽";
+            }
+        }
+
+        function detail2(){
+            if(detail[1].style.display == 'none'){
+                detail[1].style.display = 'block';
+                click[1].textContent = "닫기 △";
+            }
+            else if (detail[1].style.display == 'block'){
+                detail[1].style.display = 'none'
+                click[1].textContent = "보기 ▽";
+            }
+        }
+
+        function detail3(){
+            if(detail[2].style.display == 'none'){
+                detail[2].style.display = 'block';
+                click[2].textContent = "닫기 △";
+            }
+            else if (detail[2].style.display == 'block'){
+                detail[2].style.display = 'none'
+                click[2].textContent = "보기 ▽";
+            }
+        }
+    </script>
+</body>
+</html>
