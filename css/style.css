@@ -575,47 +575,21 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     #top_menu_mq{
         position: absolute;
         top: 0;
-        width: 85%;
+        width: 88%;
         height: 100%;
-        background-color: darkgrey;
+        background-color: white;
         border-left: solid black 1px;
         border-right: solid black 1px;
         border-bottom: solid black 1px;
-    }
-    #top_menu_mq #firstmenu dt{
-        border-bottom: none;
-    }
-    #top_menu_mq dt a{
-        font-weight: bolder;
+        box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+        z-index : 100;
     }
     #top_menu_mq a{
         text-decoration: none;
         color: black;
-    }
-    #top_menu_mq dl dd:before {
-        content: '\2013';
-        position: absolute;
-        margin-left: -30px;
-        color: white;
-        text-shadow: 0 0 5px black;
-    }
-    #top_menu_mq dl dd{
-        display: none;
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
-    #top_menu_mq dl dd a{
         display: block;
-        color: white;
-        text-shadow: 0 0 2px black;
     }
-    #top_menu_mq dl{  
-        margin: 0;
-    }
-    #top_menu_mq dt a, dt{
-        display: block;
-        color: black;
-    }
+    
     #top_menu_mq .sidemenu{
         text-shadow: 0 0 2px white;
         background-color: gray;
