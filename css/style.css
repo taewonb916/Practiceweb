@@ -573,6 +573,10 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         background-color: #ced4da;
     }
     #top_menu_mq{
+        position: absolute;
+        top: 0;
+        width: 85%;
+        height: 100%;
         background-color: darkgrey;
         border-left: solid black 1px;
         border-right: solid black 1px;
@@ -596,6 +600,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         text-shadow: 0 0 5px black;
     }
     #top_menu_mq dl dd{
+        display: none;
         margin-top: 3%;
         margin-bottom: 3%;
     }
@@ -604,10 +609,14 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         color: white;
         text-shadow: 0 0 2px black;
     }
-    #top_menu_mq dl{
+    #top_menu_mq dl{  
         margin: 0;
     }
-    #top_menu_mq dt{
+    #top_menu_mq dt a, dt{
+        display: block;
+        color: black;
+    }
+    #top_menu_mq .sidemenu{
         text-shadow: 0 0 2px white;
         background-color: gray;
         border-bottom: solid 1px black;
@@ -616,9 +625,13 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         padding-bottom: 10px;
         padding-top: 10px;
     }
-    #top_menu_mq dt a, dt{
+    #top_menu_mq .sidemenu{
+        display: grid;
+        grid-template-columns: 90% 10%;
+    }
+    #top_menu_mq .sidemenu img{
         display: block;
-        color: black;
+        margin: 0 auto;
     }
     
     /*breadcrumb start!*/
