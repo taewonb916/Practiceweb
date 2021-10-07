@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
 /*모바일 모드 가로 스크롤 금지*/
 html, body {
@@ -44,7 +45,7 @@ header{
     font-family: 'Teko', sans-serif;
 }
 
-#Top_AllBox .subtitle{
+.subtitle{
     margin-bottom: 0px;
     font-size: 20px;
     font-family: 'Do Hyeon', sans-serif;
@@ -542,6 +543,8 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     }
     #Top_AllBox p{
         text-align: center;
+        margin-right: 10%;
+        margin-left: 10%;
     }
     #Top_AllBox #home{
         margin-top: 0;
@@ -584,28 +587,71 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
         z-index : 100;
     }
+    #top_menu_mq .title{
+        font-family: 'Kosugi Maru', sans-serif;
+        font-size: 20px;
+    }
     #top_menu_mq a{
         text-decoration: none;
         color: black;
         display: block;
     }
-    
-    #top_menu_mq .sidemenu{
-        text-shadow: 0 0 2px white;
-        background-color: gray;
-        border-bottom: solid 1px black;
-        border-top: solid 1px black;
-        padding-left: 10px;
-        padding-bottom: 10px;
-        padding-top: 10px;
+    #top_menu_mq #sidemenu_top{
+        background-color: #ced4da;
+        padding: 2%;
+    }
+    #top_menu_mq #sidemenu_top p{
+        text-align: center;
+        margin: 2%;
+    }
+    #top_menu_mq #sidemenu_top a{
+        float: left;
+        margin: 2%;
     }
     #top_menu_mq .sidemenu{
-        display: grid;
-        grid-template-columns: 90% 10%;
+        text-shadow: 0 0 2px white;
+        background-color: #f8f8f8;
+        margin: 2%;
+        position: relative;
+    }
+    #top_menu_mq .sidemenu button{
+        display: inline-block;
+        border: 0;
+        outline: 0;
+        color: white;
+        background-color: darkgray;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 40px;
+        width: 40px;
+        padding: 0;
+    }
+    #top_menu_mq .sidemenu a{
+        color: #666;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        line-height: 40px;
+        padding-left: 2%;
+    } 
+    #top_menu_mq .sidemenu a:hover{
+        background-color: transparent;
+        color: #8fbc8f;
     }
     #top_menu_mq .sidemenu img{
         display: block;
         margin: 0 auto;
+    }
+    .dropdown-content_mq{
+        background-color: white;
+        padding-left: 5%;
+    }
+    .dropdown-content_mq a{
+        margin-right: 1%;
+        border-bottom : solid 1px #eee;
+    }
+    .dropdown-content_mq a:hover{
+        border-bottom : solid 1px #eee;
     }
     
     /*breadcrumb start!*/
