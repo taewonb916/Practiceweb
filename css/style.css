@@ -45,7 +45,7 @@ header{
     font-family: 'Teko', sans-serif;
 }
 
-.subtitle{
+#Top_AllBox .subtitle{
     margin-bottom: 0px;
     font-size: 20px;
     font-family: 'Do Hyeon', sans-serif;
@@ -543,18 +543,15 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     }
     #Top_AllBox p{
         text-align: center;
-        margin-right: 10%;
-        margin-left: 10%;
     }
     #Top_AllBox #home{
-        margin-top: 0;
+        display: inline-block;
+        width: 76%;
+        margin: 0 12%;
         padding: 0;
     }
     #Top_AllBox #home .title{
         margin-bottom: 0;
-    }
-    #Top_AllBox #home .subtitle{
-        padding-top: 10%;
     }
     #top_menu{
         display: none;
@@ -576,20 +573,14 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         background-color: #ced4da;
     }
     #top_menu_mq{
+        font-weight: bolder;
         position: absolute;
         top: 0;
         width: 88%;
         height: 100%;
         background-color: white;
-        border-left: solid black 1px;
-        border-right: solid black 1px;
-        border-bottom: solid black 1px;
         box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
         z-index : 100;
-    }
-    #top_menu_mq .title{
-        font-family: 'Kosugi Maru', sans-serif;
-        font-size: 20px;
     }
     #top_menu_mq a{
         text-decoration: none;
@@ -600,18 +591,16 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         background-color: #ced4da;
         padding: 2%;
     }
-    #top_menu_mq #sidemenu_top p{
+    #top_menu_mq #sidemenu_top i{
         text-align: center;
-        margin: 2%;
+        vertical-align: middle;
     }
     #top_menu_mq #sidemenu_top a{
-        float: left;
-        margin: 2%;
+        display: inline-block;
+        margin: 1%;
     }
     #top_menu_mq .sidemenu{
-        text-shadow: 0 0 2px white;
         background-color: #f8f8f8;
-        margin: 2%;
         position: relative;
     }
     #top_menu_mq .sidemenu button{
@@ -627,10 +616,12 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         width: 40px;
         padding: 0;
     }
-    #top_menu_mq .sidemenu a{
+    #top_menu_mq .sidemenu > a{
         color: #666;
         margin-top: 1%;
         margin-bottom: 1%;
+        margin-left: 1%;
+        margin-right: 13%;
         line-height: 40px;
         padding-left: 2%;
     } 
@@ -644,10 +635,16 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     }
     .dropdown-content_mq{
         background-color: white;
+    }
+    #top_menu_mq span a{
         padding-left: 5%;
+        padding-top: 2%;
+        margin: 0 2% 2% 2%;
+        color: #666;
     }
     .dropdown-content_mq a{
-        margin-right: 1%;
+        line-height: 40px;
+        padding-left: 2%;
         border-bottom : solid 1px #eee;
     }
     .dropdown-content_mq a:hover{
