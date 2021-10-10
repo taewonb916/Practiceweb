@@ -78,11 +78,10 @@ function click5() {
 var body = document.getElementsByTagName('body')[0];
 var except = document.getElementById('top_menu_mq');
 
-body.addEventListener("click", function (e) {
-    alert("wrapper");
-    e.stopPropagation();
-}, false);
-except.addEventListener("click", function (ev) {
-    alert("except");
-    ev.stopPropagation();
-}, false);
+body.addEventListener("click", function() {
+        alert("body");
+});
+except.addEventListener("click", function(e) {
+        alert("except");
+        e.stopPropagation();
+});
