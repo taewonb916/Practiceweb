@@ -74,3 +74,15 @@ function click5() {
         c[4].style = "transform: rotate(0deg)";
     }
 }
+
+var body = document.getElementsByTagName('body')[0];
+var except = document.getElementById('top_menu_mq');
+
+body.addEventListener("click", function (e) {
+    alert("wrapper");
+    e.stopPropagation();
+}, false);
+except.addEventListener("click", function (ev) {
+    alert("except");
+    ev.stopPropagation();
+}, false);
