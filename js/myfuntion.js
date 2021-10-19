@@ -2,11 +2,18 @@
 function myFunction() {
     var menu = document.getElementById("top_menu_mq")
     if (matchMedia("(min-width: 320px) and (max-width: 480px)").matches){
-        if(menu.style.display == "none") 
+        if(menu.style.display == "none") {
                 menu.style.display = "block";
+            }
         else 
                 menu.style.display = "none";
     }
+}
+
+function back() {
+    var back = document.getElementById("top_menu_mq")
+    if (matchMedia("(min-width: 320px) and (max-width: 480px)").matches)
+        back.style.display = "none";
 }
 
 var c = document.getElementsByClassName("rotate");
@@ -74,14 +81,3 @@ function click5() {
         c[4].style = "transform: rotate(0deg)";
     }
 }
-
-var body = document.getElementsByTagName('body')[0];
-var except = document.getElementById('top_menu_mq');
-
-body.addEventListener("click", function() {
-        alert("body");
-});
-except.addEventListener("click", function(e) {
-        alert("except");
-        e.stopPropagation();
-});
