@@ -1,4 +1,3 @@
-
 function myFunction() {
     var menu = document.getElementById("top_menu_mq")
     if (matchMedia("(min-width: 320px) and (max-width: 480px)").matches){
@@ -16,7 +15,7 @@ function back() {
         back.style.display = "none";
 }
 
-var c = document.getElementsByClassName("rotate");
+var c = document.getElementsByClassName("fas fa-chevron-right");
 
 function click1() {
     var dropdown1 = document.getElementsByClassName("dropdown-content_mq 1");
@@ -27,7 +26,7 @@ function click1() {
     }
     else if(dropdown1[0].style.display == "block"){ 
         dropdown1[0].style.display = "none";
-        c[0].style = "transform: rotate(0deg)";
+        c[0].style= "transform: rotate(0deg)";
     }
 }
 
@@ -40,7 +39,7 @@ function click2() {
     }
     else if(dropdown2[0].style.display == "block"){ 
         dropdown2[0].style.display = "none";
-        c[1].style = "transform: rotate(0deg)";
+        c[1].style= "transform: rotate(0deg)";
     }
 }
 
@@ -53,7 +52,7 @@ function click3() {
     }
     else if(dropdown3[0].style.display == "block"){ 
         dropdown3[0].style.display = "none";
-        c[2].style = "transform: rotate(0deg)";
+        c[2].style= "transform: rotate(0deg)";
     }
 }
 
@@ -66,7 +65,7 @@ function click4() {
     }
     else if(dropdown4[0].style.display == "block"){ 
         dropdown4[0].style.display = "none";
-        c[3].style = "transform: rotate(0deg)";
+        c[3].style= "transform: rotate(0deg)";
     }
 }
 function click5() {
@@ -78,6 +77,6 @@ function click5() {
     }
     else if(dropdown5[0].style.display == "block"){ 
         dropdown5[0].style.display = "none";
-        c[4].style = "transform: rotate(0deg)";
+        c[4].style= "transform: rotate(0deg)";
     }
 }
