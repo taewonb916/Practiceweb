@@ -227,7 +227,9 @@ aside {
     right: 10px;
     bottom: 10px;
 }
-
+#Sitetotop img{
+    filter:drop-shadow(3px 3px 3px black);
+}
 #Sitetotop a{
     text-decoration: none;
 }
