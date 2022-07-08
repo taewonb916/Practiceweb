@@ -1,0 +1,805 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+/*모바일 모드 가로 스크롤 금지*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    font-family: 'Sunflower', sans-serif;
+    margin: 0;
+}
+a {
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+/*top_menu_icon start!*/
+#top_menu_icon{
+    display: none;
+}
+
+/*header start!*/
+header{
+    width: 100%;
+    background-color: #ced4da;
+}
+#Top_AllBox{
+    height: 5%;
+    width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+#Top_AllBox .title{
+    font-size: 35px;
+    margin-top: 0px;
+    font-family: 'Teko', sans-serif;
+}
+
+#Top_AllBox .subtitle{
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-family: 'Do Hyeon', sans-serif;
+}
+#Top_AllBox a{
+    font-family: 'Sunflower', sans-serif;
+    width: 300px;
+    text-decoration: none;
+    padding: 0;
+    margin-top: 5%;
+    padding-left: 3%;
+}
+#Top_AllBox a:hover{
+    background-color: #ced4da;
+}
+#Top_AllBox #home{
+    color: black;
+}
+#Top_AllBox .title{
+    margin-bottom: 5%;
+}
+
+/* warning start! */
+#warning {
+    text-align: center;
+}
+#warning p {
+    margin: 0;
+    padding-top: 15px;
+}
+
+/*top menu start!*/
+#top_menu{
+    width: 700px;
+    font-size: 0;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+}
+#top_menu div{
+    margin-bottom: 0;
+    cursor: pointer;
+    background-color: #ced4da;
+    border: 0;
+    display: inline-flex;
+    width: 15%;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 15px;
+    list-style: none;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+#top_menu div a{
+    text-align: center;
+    font-size: 17px;
+    text-shadow: 1px 1px 3px black;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+#top_menu a:link{
+    color: white;
+}
+#top_menu a:visited{
+    color: white;
+}
+#top_menu .dropdown-content {
+    border: solid 1px #666666;
+    display: none;
+    position: absolute;
+    top: 176px;
+	min-width: 75px;
+    width: 10%;
+}
+#top_menu .dropdown-content a {
+    color: white;
+    text-shadow: 0 0 3px black;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 0;
+    display: block;
+    line-height: 250%;
+    background-color: #a0a0a0;
+    text-align: center;
+}
+#top_menu div:hover,div a:hover{
+    background-color: #ced4da;
+    border-bottom: 0;
+}
+#top_menu div a:hover{
+    background-color: #e9e9e9;
+    border: 0;
+}
+#top_menu div:hover .dropdown-content{
+    display: block;
+}
+
+/*breadcrumb start!*/
+aside {
+    background-color: #eee;
+    line-height: 30px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+#breadcrumb{
+    background-color: #eee;
+    width: 1150px;
+    margin: 0 auto;
+}
+#breadcrumb a{
+    text-decoration: none;
+    color: #666;
+}
+#breadcrumb a:hover{
+    background-color: #eee;
+}
+#breadcrumb .next{
+    padding-left: 3%;
+    padding-right: 3%
+}
+
+/*Site Layout start!*/
+#Site_AllBox{
+    border-right: solid 1px #ddd;
+    border-left: solid 1px #ddd;
+    margin: 0 auto;
+    text-align: center;
+    width: 1200px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    min-height: 1000px;
+}
+    /* (sidebar) */
+#sidebar {
+    border-right: solid 1px #ddd;
+    text-align: left;
+}
+#sidebar a, h3{
+    margin: 0;
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: block;
+    text-decoration: none;
+}
+#sidebar a{
+    color: #666;
+}
+#sidebar a:hover{
+    background-color: white;
+}
+
+#Site_AllBox #body_content{
+    padding-bottom: 100px;
+}
+#Site_AllBox #body_content h3{
+    margin: 0;
+    margin-bottom: 3%;
+    padding: 3%;
+    padding-top: 5%;
+    padding-left: 0;
+    text-align: left;
+    font-size: 25px;
+    border-bottom: dotted 1px gray;
+}
+#Site_AllBox #body_content iframe{
+    padding-top: 30px;
+}
+    /* (Sitetotop) */
+#Sitetotop{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index:998;
+}
+#Sitetotop img{
+    filter:drop-shadow(3px 3px 3px black);
+}
+#Sitetotop a{
+    text-decoration: none;
+}
+#Sitetotop a:link{
+    color: honeydew;
+}
+#Sitetotop a:visited{   
+    color: honeydew;
+}
+
+/*body_content start!*/
+#body_content{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/*gpacalculator.html CSS start!*/
+#GPA_formula{
+    text-align: center;
+    list-style: none;
+}
+#GPA_formula a{
+    text-decoration: none;
+}
+#GPA_formula a:link{
+    color: black;
+}
+#GPA_formula a:visited{
+    color: black;
+}
+#GPA_formula img{
+    display: block;
+    border: 1px solid;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 2%;
+    background-color: white;
+}
+#GPA_formula ul li{
+    list-style: none;
+}
+
+#GPA_calculator{
+    list-style: none;
+    text-align: left;
+}
+fieldset li{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+#Calculator{
+    border-right: dashed 1px;
+    padding: 25px;
+}
+#Calculator fieldset{
+    background-color: #E2E2E2;
+    width: 70%;
+    margin: 0 auto;
+}
+#Calculator label{
+    width: 40%;
+    float:left;
+    text-align:left;
+}
+#Calculator input{
+    width: 50%;
+    text-align: right;
+}
+#Calculator input[type="button"]{
+    background-color: #5F5F5F;
+    color: white;
+    float: right;
+    text-align: center;
+    width: 70px;
+    margin-top: 10px;
+    margin-right: 3px;
+    height: 30px;
+}
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#GPA_calculator{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+#Result{
+    width: 50%;
+    padding: 25px;
+}
+
+#Result label{
+    width: 100px;
+    float: left;
+    text-align: left;
+}
+#Result input{
+    width:70px;
+    text-align: right;
+}
+
+/*requirementsforgraduation.html CSS start!*/
+#graduation {
+    margin: 2%;
+    margin-top: 0;
+    padding: 1%;
+}
+#graduation p{
+    text-align: center;
+}
+
+#graduation_calculator{
+    display: none;
+    border-right: dashed 1px;
+}
+#graduation_calculator fieldset{
+    margin: 0 auto;
+    background-color: #E2E2E2;
+    margin-bottom: 3%;
+    width: 90%;
+}
+#graduation_calculator fieldset legend{
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+#graduation_calculator fieldset li{
+    border-bottom: dashed 1px;
+    border-collapse: separate;
+    padding: 2%;
+    list-style-type: none;
+}
+#graduation_calculator fieldset li label{
+    text-align: left;
+    float: left;
+}
+#graduation_calculator fieldset li input{
+    width: 11%;
+    text-align: right;
+    display: flex;
+    margin-left: auto;
+    
+}
+#graduation_calculator fieldset li input::-webkit-input-placeholder{
+    text-align: right;
+}
+#graduation_calculator fieldset input{
+    margin-top: 2%;
+}
+#graduation_result{
+    display: none;
+}
+#graduation_result fieldset{
+    width: 80%;
+    margin: 0 auto;
+}
+#graduation_result dt{
+    text-align: center;
+}
+#graduation_result dt,dd{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#graduation_result dt input{
+    float: none;
+}
+#graduation_result input{
+    float: right;
+    text-align: center;
+    width: 25px;
+}
+#All_graduation{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+
+/*commoneducation.html CSS start!*/
+.department_name{
+    display: none;
+}
+#All_commoneducation{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: center;
+}
+#commoneducation_calculator{
+    width: 90%;
+    padding: 5%;
+    border-right: dotted 1px;
+    margin: auto;
+}
+#commoneducation_calculator #table1, #table2, #table1_m, #table2_m{
+    display: none;
+}
+#commoneducation_calculator table input[type="number"]{
+    text-align: center;
+}
+#commoneducation_calculator .tg {
+    width: auto;
+    border-collapse:collapse;
+    border-spacing:0;
+    background-color: #E2E2E2;
+}
+#commoneducation_calculator .tg td{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    overflow: hidden;
+    padding:10px 3px;
+    word-break: normal;
+}
+#commoneducation_calculator .tg th{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+#commoneducation_calculator .tg .tg-9wq8{
+    border-color:black;
+    text-align:center;
+    vertical-align:middle;
+}
+#commoneducation_calculator .tg input{
+    padding: 1%;
+    width: 90%;
+    text-align: right;
+}
+#commoneducation_calculator .calculate{
+    display: none;
+    margin-top: 3%;
+}
+#commoneducation_calculator .total, .total_m{
+    border: 0;
+    outline: 0;
+}
+#commoneducation_calculator #information{
+    display: none;
+}
+#commoneducation_result{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3%;
+    display: none;
+}
+#commoneducation_result fieldset{
+    background-color: white;
+}
+#commoneducation_result input[type="number"]{
+    text-align: center;
+    width: 20px;
+}
+#commoneducation_result li, dl{
+    text-align: left;
+    list-style-type: none;
+}
+#commoneducation_result dd{
+    border-top: dashed 1px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+#commoneducation_result dt{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 1%;
+}
+#commoneducation_result dd input{
+    float: right;
+}
+
+
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+##Device = 대부분의 스마트폰 모바일 기기(세로)
+##Screen = 320px에서 479px 사이
+*/ 
+
+@media (min-width: 320px) and (max-width: 480px) {
+    body{
+        max-width: 480px;
+        min-width: 320px;
+    }
+    #warning {
+        display: none;
+    }
+    /*header start!*/
+    header{
+        position: static;
+        background-color: #ced4da;
+    }
+    header .subtitle{
+        margin-top: 0;
+    }
+
+    /* Top_allBox start!*/
+    #Top_AllBox{ 
+        display: block;
+        width: auto;
+    }
+    #Top_AllBox p{
+        text-align: center;
+    }
+    #Top_AllBox #home{
+        display: inline-block;
+        width: 76%;
+        margin: 0 12%;
+        padding: 0;
+    }
+    #Top_AllBox #home .title{
+        margin-bottom: 0;
+    }
+    #top_menu{
+        display: none;
+    }
+
+    /*top_menu_icon start!*/
+    #top_menu_icon{
+        display: block;
+        float: right;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-right: 1%;
+        padding-left: 99%;
+    }
+    #top_menu_icon button{
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        background-color: #ced4da;
+    }
+    #top_menu_mq{
+        font-weight: bolder;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 999;
+    }
+    #top_menu_mq i{
+        transition: all 0.3s;
+    }
+    #top_menu_mq a{
+        text-decoration: none;
+        color: black;
+        display: block;
+    }
+    #top_menu_mq #sidemenu_top #return{
+        float: right;
+    }
+    #top_menu_mq #sidemenu_top{
+        background-color: #ced4da;
+        padding: 2%;
+    }
+    #top_menu_mq #sidemenu_top i{
+        text-align: center;
+        vertical-align: middle;
+    }
+    #top_menu_mq #sidemenu_top a{
+        display: inline-block;
+        margin: 1%;
+    }
+    #top_menu_mq .sidemenu{
+        background-repeat: no-repeat;
+        background-color: #f8f8f8;
+        position: relative;
+    }
+    #top_menu_mq .sidemenu button{
+        display: inline-block;
+        border: 0;
+        outline: 0;
+        color: white;
+        background-color: darkgray;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 40px;
+        width: 40px;
+        padding: 0;
+    }
+    #top_menu_mq .sidemenu > a{
+        color: #666;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        margin-left: 1%;
+        margin-right: 13%;
+        line-height: 40px;
+        padding-left: 2%;
+    } 
+    #top_menu_mq .sidemenu a:hover{
+        background-color: transparent;
+        color: #8fbc8f;
+    }
+    #top_menu_mq .sidemenu img{
+        display: block;
+        margin: 0 auto;
+    }
+    .dropdown-content_mq{
+        background-color: white;
+    }
+    #top_menu_mq span a{
+        padding-left: 5%;
+        padding-top: 2%;
+        margin: 0 2% 2% 2%;
+        color: #666;
+    }
+    .dropdown-content_mq a{
+        line-height: 40px;
+        padding-left: 2%;
+        border-bottom : solid 1px #eee;
+    }
+    .dropdown-content_mq a:hover{
+        border-bottom : solid 1px #eee;
+    }
+    
+    /*breadcrumb start!*/
+    #breadcrumb {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    #breadcrumb .next{
+        padding: 1%;
+    }
+
+    /*Site Layout start!*/    
+    #Site_AllBox {
+        display: block;
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    #body_content{
+        padding: 3%
+    }
+    #body_content h3{
+        padding-left: 3%;
+    }
+    #sidebar{
+        display: none;
+    }
+
+    /*Sitetotop*/
+    #Sitetotop {
+        margin-top: 5%;
+    }
+
+    /**index.html start!*/
+    #Google_calendar{
+        height: 500px;
+        width: 90%;
+    }
+
+    /*cgpacalculator.html CSS start!*/
+    #GPA_formula img{
+        width: 94%;        
+    }
+    #GPA_formula p{
+        width: 100%;
+    }
+    #GPA_calculator{
+        display: inline-block;
+    }
+    #GPA_calculator #Result{
+        width: auto;
+        text-align: center;
+    }
+    #Calculator{
+        padding: 0;
+        margin: auto;
+        border: none;
+        width: 100%;
+        height: 100%;
+    }
+    #Calculator fieldset {
+        padding:2%;
+    }
+    #Calculator label{
+        display: inline-block;
+        width: 40%;
+    }
+    #Calculator input{
+        display: inline-block;
+        width: 50%;
+    }
+    #Result{
+        margin: auto;
+        padding: 25px;
+    }
+
+    /*commoneducation.html CSS start!*/
+    #graduation{
+        margin: 3%;
+    }
+    #graduation select, input{
+        margin: 2%;
+        display: block;
+    }
+    #graduation_calculator {
+        padding: 2%;
+        width: 96%;
+    }
+    #graduation_calculator fieldset li{
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+    #graduation_calculator fieldset input{
+        margin-top: 4%;
+        display: inline;
+    } 
+    #graduation_calculator fieldset li label{
+        width: 70%;
+    }
+    #graduation_calculator fieldset li input{
+        width: 20%;
+    }
+    #linkpdf{
+        margin: 3%;
+    }
+    #commoneducation_calculator #table2_m{
+        margin-bottom: 5%;
+    }
+    #commoneducation_result dd input{
+        float: none;
+    }
+    #commoneducation_result dt{
+        text-align: center;
+    }
+    #commoneducation_result dt input{
+        float: none;
+        display: inline-block;
+    }
+    #All_commoneducation{
+        display: block;
+    }
+
+    /*requirementsforgraduation.html start!*/
+    #All_graduation{
+        display: block;
+    }
+    #All_graduation #graduation_result dt{
+        text-align: center;
+    }
+    #All_graduation #graduation_result dt input{
+        float: none;
+        display: inline-block;
+    }
+    #All_graduation #graduation_result dd input{
+        float: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

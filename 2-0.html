@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>가고시마 대학 한국인유학생</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/myfuntion.js"></script>
+    <script src="https://kit.fontawesome.com/4ef4eb791a.js" crossorigin="anonymous"></script>
+
+    <style>
+        #Google_calendar {
+            border: 0;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <nav id="top_menu_icon">
+        <button type="button" onclick="myFunction();"><img src="img/menu_110986.png" alt="menu"></button>
+    </nav>
+    <header>
+        <nav id="warning">
+            <p><b>※ 이 사이트는 가고시마 대학의 공식 홈페이지가 아닙니다. ※</b></p>
+        </nav>
+        <div id="Top_AllBox">
+            <a id = "home" href="index.html">
+                <p class="subtitle">한국인 유학생을 위한</p>
+                <p class="title">Kagoshima University</p>
+            </a>
+            <nav id="top_menu">
+                    <div>
+                        <a href="1-1-0.html">소개</a>
+                    </div>    
+                    <div>
+                        <a href="2-0.html" style="color: black;">재학생</a>
+                        <span class="dropdown-content">
+                            <a href="2-1-0.html">학부</a>
+                        </span>
+                    </div>
+                    <div>
+                        <a href="3-0.html">유용한 기능</a>
+                        <span class="dropdown-content">
+                            <a href="3-1-0.html">GPA 계산기</a>
+                            <a href="3-2-0.html">공통교육 과목</a>
+                            <a href="3-3-0.html">졸업요건 확인</a>
+                        </span>
+                    </div>
+                    <div>
+                        <a>게시판</a>
+                        <span class="dropdown-content">
+                            <a href="4-1-0.html">공지사항</a>
+                            <a href="4-2-0.html">자유게시판</a>
+                        </span>
+                    </div>
+                    <div>
+                        <a>관련사이트</a>
+                        <span class="dropdown-content">
+                            <a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a>
+                            <a href="https://www.kagoshima-u.ac.jp/manaba/" target="_blank">manaba</a>
+                            <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반센터</a>
+                        </span>
+                    </div>
+            </nav>
+        </div>
+    </header>
+    
+    <nav id="top_menu_mq" style="display: none;">
+        <div id="sidemenu_top">
+            <a href="index.html" style="font-size:20px; color:white;"><i class="fas fa-home"></i></a>
+            <a onclick="back();" id="return" style="font-size:20px; color: white;"><i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="sidemenu">
+            <a href="1-1-0.html">소개</a>
+            <button type="button" class="rotate" onclick="click1();"><i class="fas fa-chevron-right"></i></button>
+            <span class="dropdown-content_mq 1" style="display: none;">
+                <a href="1-1-1.html">개발자 소개</a>
+                <a href="1-1-2.html">사이트 소개</a>
+            </span> 
+        </div>
+        <div class="sidemenu">
+            <a href="2-0.html" style ="background-color: darkgray; color: white;">재학생</a>
+            <button type="button" class="rotate " onclick="click2();"><i class="fas fa-chevron-right" style = "transform: rotate(90deg);"></i></button>
+            <span class="dropdown-content_mq 2" style="display: block;">
+                <a href="2-1-0.html">학부</a>
+            </span>
+        </div>
+        <div class="sidemenu">
+            <a href="3-0.html">유용한 기능</a>
+            <button type="button" class="rotate " onclick="click3();"><i class="fas fa-chevron-right"></i></button>
+            <span class="dropdown-content_mq 3" style="display: none;">
+                <a href="3-1-0.html">GPA 계산기</a>
+                <a href="3-2-0.html">공통교육 과목</a>
+                <a href="3-3-0.html">졸업요건 확인</a>
+            </span>
+        </div>
+        <div class="sidemenu">
+            <a>게시판</a>
+            <button type="button" class="rotate " onclick="click4();"><i class="fas fa-chevron-right"></i></button>
+            <span class="dropdown-content_mq 4" style="display: none;">
+                <a href="4-1-0.html">공지사항</a> 
+                <a href="4-2-0.html">자유게시판</a>
+            </span>
+        </div>
+        <div class="sidemenu">
+            <a>관련사이트</a>
+            <button type="button" class="rotate " onclick="click5();"><i class="fas fa-chevron-right"></i></button>
+            <span class="dropdown-content_mq 5" style="display: none;">
+                <a href="https://www.kagoshima-u.ac.jp/" target="_blank">대학 홈페이지</a>
+                <a href="https://www.kagoshima-u.ac.jp/manaba/" target="_blank">manaba</a>
+                <a href="https://www.cc.kagoshima-u.ac.jp/" target="_blank">학술정보기반센터</a>
+            </span>
+        </div>
+    </nav>
+
+    <aside>
+        <div id="breadcrumb">
+            <a href="index.html">Home</a>
+            <a class="next">></a>
+            <a href="2-0.html">재학생</a>
+        </div>
+    </aside>
+
+    <div id="Site_AllBox">
+        <div id="sidebar"></div>
+        <div id="body_content">
+        </div>
+    </div>
+
+    <nav id="Sitetotop">
+        <a href="#"><img src="img/SeekPng.com_top-arrow-png_2557754.png" style="width:50px;"></a>
+</nav>
+
+</body>
+</html>
